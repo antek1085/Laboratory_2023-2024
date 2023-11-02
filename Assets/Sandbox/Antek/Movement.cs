@@ -12,8 +12,8 @@ public class Movement : MonoBehaviour
     [SerializeField] float m_Speed_Sprint;
 
     [SerializeField] float m_Speed_walk;
-    [SerializeField] private float m_Speed_cd;
     [SerializeField] private float m_Speed_cd_max;
+    [SerializeField] private SOFloat moveSpeed;
 
     public float speed_Limit;
     // Start is called before the first frame update
@@ -41,21 +41,14 @@ public class Movement : MonoBehaviour
             if (speed_Limit > 0)
             {
                 speed_Limit -= Time.deltaTime;
+                speed_Limit =  Mathf.Max(0, speed_Limit);
                 m_Speed_cd_max -= Time.deltaTime;
+                m_Speed_cd_max = Mathf.Max(0, m_Speed_cd_max);
             }
 
-            if (speed_Limit < 0)
-            {
-                speed_Limit = 0;
-                m_Speed_cd_max = Mathf.Max(0, m_Speed_cd);
-            }
-            
         }
 
-        if (m_Speed_cd_max > 0)     
-        {
-            m_Speed_cd_max -= Time.deltaTime;
-        }
+        moveSpeed.Value = speed_Limit;
     }
     void FixedUpdate()
     {
