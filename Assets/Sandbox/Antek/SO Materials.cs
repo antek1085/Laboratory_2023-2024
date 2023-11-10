@@ -4,5 +4,5 @@ using UnityEngine;
 [CreateAssetMenu]
 public class SOMaterials : ScriptableObject
 {
-   
+    public float iD;
 }

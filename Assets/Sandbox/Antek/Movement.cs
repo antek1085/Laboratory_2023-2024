@@ -1,7 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
+using Unity.VisualScripting;
 using UnityEngine;
+using Quaternion = UnityEngine.Quaternion;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
 public class Movement : MonoBehaviour
 {
@@ -18,17 +23,22 @@ public class Movement : MonoBehaviour
 
     public float speed_Limit;
 
+    private float horizontal;
+    private float vertical;
+
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        horizontal = Input.GetAxis("Horizontal");
+        vertical = Input.GetAxis("Vertical");
     }
 
     // Update is called once per frame
 
     void Update()
     {
-        LookAt();
+        PlayerRotation();
         if (Input.GetKey(KeyCode.LeftShift) && speed_Limit < 5 && m_Speed_cd_max == 0)
         {
             m_speed = m_Speed_Sprint;
@@ -62,20 +72,58 @@ public class Movement : MonoBehaviour
     }
 
 
-    void LookAt()
+    // void LookAt()
+    // {
+    //     RaycastHit hit;
+    //     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+    //     if (Physics.Raycast(ray, out hit))
+    //     {
+    //         Vector3 position = hit.point - transform.position;
+    //         position.y = 0.656f;
+    //         if (Vector3.Distance(hit.point, transform.position) < 1.5f)
+    //         {
+    //             return;
+    //         }
+    //         Quaternion rotation = Quaternion.LookRotation(position.normalized);
+    //         transform.rotation = rotation;
+    //     }
+    // }
+
+    void PlayerRotation()
     {
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit))
-        {
-            Vector3 position = hit.point - transform.position;
-            position.y = 0.656f;
-            if (Vector3.Distance(hit.point, transform.position) < 1.5f)
-            {
-                return;
-            }
-            Quaternion rotation = Quaternion.LookRotation(position.normalized);
-            transform.rotation = rotation;
-        }
+        horizontal = -Input.GetAxisRaw("Horizontal");
+        vertical = Input.GetAxisRaw("Vertical");
+        Vector2 InputVector = new Vector2(horizontal, vertical);
+
+        if(InputVector == Vector2.zero)
+            return;
+        transform.rotation = Quaternion.Euler(0,Vector2.SignedAngle(Vector2.up, InputVector),0);
+        // Quaternion forwardQuaternion = Quaternion.Euler(0,0,0);
+        // Quaternion backQuaternion = Quaternion.Euler(0,180,0);
+        // Quaternion leftQuaternion = Quaternion.Euler(0,270,0);
+        // Quaternion rightQuaternion = Quaternion.Euler(0,90,0);
+        // switch (horizontal)
+        // {
+        //     case > 0:
+        //         transform.rotation = forwardQuaternion;
+        //         break;
+        //     case < 0 :
+        //         transform.rotation = backQuaternion;
+        //         break;
+        //     default:
+        //         break;
+        // }
+        //     //chdozenei na boki do zrobienia 
+        // switch (vertical)
+        // {
+        //     case > 0 :
+        //         transform.rotation = leftQuaternion;
+        //         break;
+        //     case < 0 :
+        //         transform.rotation = rightQuaternion;
+        //         break;
+        //     default:
+        //         break;
+        // }
     }
 }
