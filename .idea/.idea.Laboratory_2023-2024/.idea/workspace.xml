@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c9096d1f-a5a7-49a5-90e5-074bfea24c04" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Antek Sandbox.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Antek Sandbox.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Materiay/Oset.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Materiay/Oset.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Materiay/Pokrzywa.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Materiay/Pokrzywa.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Movement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SO Materials.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/SO Materials.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +88,7 @@
       <workItem from="1698929363558" duration="10236000" />
       <workItem from="1699355375487" duration="1593000" />
       <workItem from="1699543270688" duration="3505000" />
+      <workItem from="1699642610481" duration="8994000" />
     </task>
     <servers />
   </component>
