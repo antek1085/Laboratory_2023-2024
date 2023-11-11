@@ -21,10 +21,11 @@ public class PickUpItems : MonoBehaviour
         if (Input.GetKey(KeyCode.E))
         {
             Ray PickUpRay = new Ray(transform.position, transform.forward);
+           
                     
-                    if(Physics.Raycast(PickUpRay, out RaycastHit hitInfo,PickUpRange,PickUpLayer))
+                    if(Physics.SphereCast(PickUpRay,0.5f, out RaycastHit hitInfo,PickUpRange,PickUpLayer))
                     {
-                        if (CurrentObjectRigidbody)
+                        if (CurrentObjectRigidbody) 
                         {
                             CurrentObjectRigidbody.isKinematic = false;
                             CurrentObjectCollider.enabled = true;
@@ -35,7 +36,7 @@ public class PickUpItems : MonoBehaviour
                             CurrentObjectCollider = hitInfo.collider;
             
                             CurrentObjectRigidbody.isKinematic = true;
-                            CurrentObjectCollider.enabled = false;
+                           // CurrentObjectCollider.enabled = false;
                         }
                         return;
                     }
