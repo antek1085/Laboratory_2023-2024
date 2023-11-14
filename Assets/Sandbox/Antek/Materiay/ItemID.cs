@@ -7,8 +7,9 @@ public class ItemID : MonoBehaviour
 {
     [SerializeField] SOMaterials soMaterials;
      public float iD;
+     public Item _item;
 
-    void Awake()
+     void Awake()
     {
         iD = soMaterials.iD;
     }

@@ -27,7 +27,7 @@ public class PickUpItems : MonoBehaviour
                     {
                         if (CurrentObjectRigidbody) 
                         {
-                            CurrentObjectRigidbody.isKinematic = false;
+                            CurrentObjectRigidbody.isKinematic = true;
                             CurrentObjectCollider.enabled = true;
                         }
                         else
@@ -43,7 +43,7 @@ public class PickUpItems : MonoBehaviour
 
                     if (CurrentObjectRigidbody)
                     {
-                        CurrentObjectRigidbody.isKinematic = false;
+                        CurrentObjectRigidbody.isKinematic = true;
                         CurrentObjectCollider.enabled = true;
 
                         CurrentObjectRigidbody = null;
