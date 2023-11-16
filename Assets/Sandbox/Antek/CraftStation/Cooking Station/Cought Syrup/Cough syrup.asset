@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44d8c870e552574c9def44736781577, type: 3}
+  m_Name: Cough syrup
+  m_EditorClassIdentifier: 
+  firstItem: {fileID: 11400000, guid: 05de4c7763071d543a77375b75111baf, type: 2}
+  secondItem: {fileID: 11400000, guid: db4e5869163e8c6449b8742c37b1b72d, type: 2}
+  thirdItem: {fileID: 11400000, guid: 449e200c73f85714b9da60a1445d77eb, type: 2}
+  result: {fileID: 11400000, guid: 3209a3b8847120840af1c68b69a7e7aa, type: 2}
