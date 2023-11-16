@@ -160,7 +160,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 155438794}
-  - component: {fileID: 155438793}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -168,18 +167,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &155438793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 155438792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf0f0335d816c3d4bb8ccbadd146c76d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &155438794
 Transform:
   m_ObjectHideFlags: 0
@@ -496,6 +483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInputText: {fileID: 1331934493}
   itemSpawn: {fileID: 441013452}
+  dung: {fileID: 8437310474438761681, guid: 19dc25248458ddd4087d27c35f76b5f3, type: 3}
   recipeList: {fileID: 11400000, guid: a566518000dfbf84aa46405843ed810a, type: 2}
 --- !u!65 &229282631
 BoxCollider:
@@ -746,8 +734,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73108a67afa33f742ba2b3334bc8b250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInputText: {fileID: 0}
-  itemSpawn: {fileID: 1331934491}
+  playerInputText: {fileID: 1331934493}
+  itemSpawn: {fileID: 1115589449}
+  dung: {fileID: 8437310474438761681, guid: 19dc25248458ddd4087d27c35f76b5f3, type: 3}
   recipeList: {fileID: 11400000, guid: 931999e9faba9f643917e989e82b7aaf, type: 2}
 --- !u!1 &392187386
 GameObject:
@@ -1305,6 +1294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInputText: {fileID: 1331934493}
   itemSpawn: {fileID: 104607032}
+  dung: {fileID: 8437310474438761681, guid: 19dc25248458ddd4087d27c35f76b5f3, type: 3}
   recipeList: {fileID: 11400000, guid: 2e9b4142b09d82741828a54e866278b9, type: 2}
 --- !u!65 &907410334
 BoxCollider:
@@ -1651,7 +1641,7 @@ GameObject:
   - component: {fileID: 1331934494}
   - component: {fileID: 1331934493}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Interaction Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1696,7 +1686,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: dfghjk
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

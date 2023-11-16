@@ -8,6 +8,7 @@ public class PillsCraftingStation : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI playerInputText;
     [SerializeField] GameObject itemSpawn;
+    [SerializeField] GameObject dung;
     
     private Item firstMaterial;
     private Item secondMaterial;
@@ -40,6 +41,11 @@ public class PillsCraftingStation : MonoBehaviour
                     StartCoroutine(ItemCraft(i));
                     break;
                 }
+            }
+
+            if (firstMaterial != null && secondMaterial != null)
+            {
+                StartCoroutine(DungSpawn());
             }
 
           
@@ -75,6 +81,14 @@ public class PillsCraftingStation : MonoBehaviour
         firstMaterial = null; secondMaterial = null;
         yield return new WaitForSeconds(5);
         Instantiate(recipeList.itemList[i].Result.itemToSpawn, itemSpawn.transform.position,itemSpawn.transform.rotation);
+        StopAllCoroutines();
+    }
+
+    IEnumerator DungSpawn()
+    {
+        firstMaterial = null; secondMaterial = null;
+        yield return new WaitForSeconds(5);
+        Instantiate(dung, itemSpawn.transform.position,itemSpawn.transform.rotation);
         StopAllCoroutines();
     }
 }
