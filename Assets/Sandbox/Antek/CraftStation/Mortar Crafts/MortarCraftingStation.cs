@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -16,8 +17,7 @@ public class MortarCraftingStation : MonoBehaviour
     void Start()
     {
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (firstMaterial != null)
@@ -26,6 +26,7 @@ public class MortarCraftingStation : MonoBehaviour
             playerInputText.text = "Click Space to start crafting";
             if (Input.GetKeyUp(KeyCode.Space))
             {
+                playerInputText.enabled = false;
               for (int i = 0; i < recipeList.itemList.Count; i++)
               {
                   firstItem = recipeList.itemList[i].FirstItem;
@@ -50,11 +51,19 @@ public class MortarCraftingStation : MonoBehaviour
         {
             playerInputText.enabled = true;
             playerInputText.text = "Click R to insert the material";
-            if(Input.GetKeyDown(KeyCode.R))
+            if(Input.GetKey(KeyCode.R))
             {
                 firstMaterial = other.GetComponent<ItemID>()._item;
+                playerInputText.enabled = false;
                 Destroy(other.gameObject);
             }
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Material")
+        {
+            playerInputText.enabled = false;
         }
     }
 

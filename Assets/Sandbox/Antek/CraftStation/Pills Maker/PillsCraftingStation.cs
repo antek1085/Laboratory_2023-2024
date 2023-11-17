@@ -26,29 +26,32 @@ public class PillsCraftingStation : MonoBehaviour
     {
         if (firstMaterial != null && secondMaterial != null)
         {
-            for (int i = 0; i < recipeList.itemList.Count; i++)
+            playerInputText.enabled = true;
+            playerInputText.text = "Click Space to start crafting";
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log("Loop");
-                firstItem = recipeList.itemList[i].FirstItem;
-                secondItem = recipeList.itemList[i].SeconItem;
-                if (firstMaterial == firstItem && secondMaterial == secondItem)
-                {
-                    StartCoroutine(ItemCraft(i));
-                    break;
-                }
-                if (secondMaterial == firstItem && firstMaterial == secondItem)
-                {
-                    StartCoroutine(ItemCraft(i));
-                    break;
-                }
+                playerInputText.enabled = false;
+              for (int i = 0; i < recipeList.itemList.Count; i++)
+              {
+                  Debug.Log("Loop");
+                  firstItem = recipeList.itemList[i].FirstItem;
+                  secondItem = recipeList.itemList[i].SeconItem;
+                  if (firstMaterial == firstItem && secondMaterial == secondItem)
+                  {
+                      StartCoroutine(ItemCraft(i));
+                      break;
+                  }
+                  if (secondMaterial == firstItem && firstMaterial == secondItem)
+                  {
+                      StartCoroutine(ItemCraft(i));
+                      break;
+                  } 
+              }
+              if (firstMaterial != null && secondMaterial != null)
+              {
+                  StartCoroutine(DungSpawn());
+              }  
             }
-
-            if (firstMaterial != null && secondMaterial != null)
-            {
-                StartCoroutine(DungSpawn());
-            }
-
-          
         }
     }
 
@@ -58,7 +61,7 @@ public class PillsCraftingStation : MonoBehaviour
         { 
             playerInputText.enabled = true;
            
-            if(Input.GetKeyDown(KeyCode.R))
+            if(Input.GetKeyUp(KeyCode.R))
             {
                 if (firstMaterial != null)
               {
@@ -69,9 +72,15 @@ public class PillsCraftingStation : MonoBehaviour
                   firstMaterial = other.GetComponent<ItemID>()._item;
               }
               playerInputText.enabled = false;
-              // dodać bool
               Destroy(other.gameObject);
             }
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Material")
+        {
+            playerInputText.enabled = false;
         }
     }
 

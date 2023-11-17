@@ -63,7 +63,6 @@ public class CookingCraftingStation : MonoBehaviour
         
         IEnumerator ItemCraft(int i)
         {
-            Debug.Log("Sadwitch");
             firstMaterial = null;
             secondMaterial = null;
             thirdMaterial = null;
@@ -89,7 +88,7 @@ public class CookingCraftingStation : MonoBehaviour
             playerInputText.enabled = true;
             playerInputText.text = "Click R to insert the material";
             
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKey(KeyCode.R))
             {
                 if (firstMaterial != null)
                 {
@@ -106,6 +105,13 @@ public class CookingCraftingStation : MonoBehaviour
                 playerInputText.enabled = false;
                 Destroy(other.gameObject);
             }
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Material")
+        {
+            playerInputText.enabled = false;
         }
     }
 }
