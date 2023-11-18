@@ -28,7 +28,6 @@ public class PickUpItems : MonoBehaviour
                     {
                         if (CurrentObjectRigidbody && isInHand == false) 
                         {
-                            Debug.Log("FirstIf");
                             CurrentObjectRigidbody.isKinematic = true;
                             CurrentObjectCollider.enabled = true;
                             return;
@@ -36,7 +35,6 @@ public class PickUpItems : MonoBehaviour
                          
                         if(isInHand == false)
                         {
-                            Debug.Log("Else");
                             CurrentObjectRigidbody = hitInfo.rigidbody;
                             CurrentObjectCollider = hitInfo.collider;
             
@@ -49,7 +47,6 @@ public class PickUpItems : MonoBehaviour
 
                     if (CurrentObjectRigidbody && isInHand)
                     {
-                        Debug.Log("if poza Raya");
                         CurrentObjectRigidbody.isKinematic = true;
                         CurrentObjectCollider.enabled = true;
 
@@ -62,7 +59,6 @@ public class PickUpItems : MonoBehaviour
         
         if (CurrentObjectRigidbody)
         {
-            Debug.Log("HandPosition");
             CurrentObjectRigidbody.position = Hand.position;
             CurrentObjectRigidbody.rotation = Hand.rotation;
         }

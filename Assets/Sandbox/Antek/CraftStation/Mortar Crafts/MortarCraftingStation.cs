@@ -13,6 +13,9 @@ public class MortarCraftingStation : MonoBehaviour
     private Item firstMaterial;
     private Item firstItem;
     [SerializeField] ItemsDBOneIngridient recipeList;
+    [SerializeField] Transform playerTransform;
+    private float distance;
+    private bool isCrafting = false;
 
     void Start()
     {
@@ -20,12 +23,15 @@ public class MortarCraftingStation : MonoBehaviour
     
     void Update()
     {
-        if (firstMaterial != null)
+        distance = Vector3.Distance(playerTransform.position, transform.position);
+       
+        if (firstMaterial != null && distance < 2)
         {
             playerInputText.enabled = true;
             playerInputText.text = "Click Space to start crafting";
-            if (Input.GetKeyUp(KeyCode.Space))
+            if (Input.GetKeyUp(KeyCode.Space) && distance < 2)
             {
+                isCrafting = true;
                 playerInputText.enabled = false;
               for (int i = 0; i < recipeList.itemList.Count; i++)
               {
@@ -43,15 +49,19 @@ public class MortarCraftingStation : MonoBehaviour
               }  
             }
         }
+        else if (firstMaterial != null && distance > 2)
+        {
+            playerInputText.enabled = false;
+        }
     }
 
     void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Material")
+        if (other.tag == "Material" && isCrafting == false && firstMaterial == null)
         {
             playerInputText.enabled = true;
             playerInputText.text = "Click R to insert the material";
-            if(Input.GetKey(KeyCode.R))
+            if (Input.GetKey(KeyCode.R) && distance < 2)
             {
                 firstMaterial = other.GetComponent<ItemID>()._item;
                 playerInputText.enabled = false;
@@ -72,6 +82,7 @@ public class MortarCraftingStation : MonoBehaviour
         firstMaterial = null;
         yield return new WaitForSeconds(5);
         Instantiate(recipeList.itemList[i].Result.itemToSpawn, itemSpawn.transform.position,itemSpawn.transform.rotation);
+        isCrafting = false;
         StopAllCoroutines();
     }
 
@@ -80,6 +91,7 @@ public class MortarCraftingStation : MonoBehaviour
         firstMaterial = null;
         yield return new WaitForSeconds(5);
         Instantiate(dung, itemSpawn.transform.position,itemSpawn.transform.rotation);
+        isCrafting = false;
         StopAllCoroutines();
     }
 }

@@ -18,6 +18,10 @@ public class CookingCraftingStation : MonoBehaviour
     private Item thirdItem;
 
     [SerializeField] private ItemDBThreeIngridients recipeList;
+    
+    [SerializeField] Transform playerTransform;
+    private float distance;
+    private bool isCrafting = false;
 
     void Start()
     {
@@ -26,13 +30,14 @@ public class CookingCraftingStation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (firstMaterial != null && secondMaterial != null && thirdMaterial != null)
+        distance = Vector3.Distance(playerTransform.position, transform.position);
+        if (firstMaterial != null && secondMaterial != null && thirdMaterial != null && distance < 2)
         {
             playerInputText.enabled = true;
             playerInputText.text = "Click Space to start crafting";
-            if (Input.GetKeyUp(KeyCode.Space))
+            if (Input.GetKeyUp(KeyCode.Space) && distance < 2)
             {
+                isCrafting = true;
                 playerInputText.enabled = false;
                 for (int i = 0; i < recipeList.itemList.Count; i++) 
                 {
@@ -58,8 +63,16 @@ public class CookingCraftingStation : MonoBehaviour
                     StartCoroutine(DungSpawn());
                 }
             }
-                 
+            
         }
+        else if (secondMaterial != null && distance > 2)
+        {
+            playerInputText.enabled = false;
+        }
+        
+        
+        
+        
         
         IEnumerator ItemCraft(int i)
         {
@@ -68,6 +81,7 @@ public class CookingCraftingStation : MonoBehaviour
             thirdMaterial = null;
             yield return new WaitForSeconds(5);
             Instantiate(recipeList.itemList[i].Result.itemToSpawn, itemSpawn.transform.position, itemSpawn.transform.rotation);
+            isCrafting = false;
             StopAllCoroutines();
         }
 
@@ -78,6 +92,7 @@ public class CookingCraftingStation : MonoBehaviour
             thirdMaterial = null;
             yield return new WaitForSeconds(5);
             Instantiate(dung, itemSpawn.transform.position, itemSpawn.transform.rotation);
+            isCrafting = false;
             StopAllCoroutines();
         }
     }
@@ -88,7 +103,7 @@ public class CookingCraftingStation : MonoBehaviour
             playerInputText.enabled = true;
             playerInputText.text = "Click R to insert the material";
             
-            if (Input.GetKey(KeyCode.R))
+            if (Input.GetKey(KeyCode.R) && distance < 2 && isCrafting == false && thirdMaterial == null)
             {
                 if (firstMaterial != null)
                 {
@@ -105,6 +120,7 @@ public class CookingCraftingStation : MonoBehaviour
                 playerInputText.enabled = false;
                 Destroy(other.gameObject);
             }
+            
         }
     }
     void OnTriggerExit(Collider other)
