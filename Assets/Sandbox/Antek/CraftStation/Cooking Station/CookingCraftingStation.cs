@@ -98,20 +98,26 @@ public class CookingCraftingStation : MonoBehaviour
     }
     void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Material")
+        if (other.tag == "Material" && isCrafting == false & thirdMaterial == null)
         { 
-            playerInputText.enabled = true;
-            playerInputText.text = "Click R to insert the material";
-            
-            if (Input.GetKey(KeyCode.R) && distance < 2 && isCrafting == false && thirdMaterial == null)
+            if (distance < 2)
             {
-                if (firstMaterial != null)
-                {
-                    secondMaterial = other.GetComponent<ItemID>()._item;
-                }
+                playerInputText.enabled = true;
+                playerInputText.text = "Click R to insert the material";
+            }
+            else
+            {
+                playerInputText.enabled = false;
+            }
+            if (Input.GetKey(KeyCode.R) && distance < 2)
+            {
                 if (firstMaterial != null && secondMaterial != null)
                 {
                     thirdMaterial = other.GetComponent<ItemID>()._item;
+                }
+                else if (firstMaterial != null)
+                {
+                    secondMaterial = other.GetComponent<ItemID>()._item;
                 }
                 else
                 {

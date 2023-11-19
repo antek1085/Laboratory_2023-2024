@@ -59,8 +59,16 @@ public class MortarCraftingStation : MonoBehaviour
     {
         if (other.tag == "Material" && isCrafting == false && firstMaterial == null)
         {
-            playerInputText.enabled = true;
-            playerInputText.text = "Click R to insert the material";
+            if (distance < 2)
+            {
+                 playerInputText.enabled = true;
+                 playerInputText.text = "Click R to insert the material";
+            }
+            else
+            {
+                playerInputText.enabled = false;
+            }
+           
             if (Input.GetKey(KeyCode.R) && distance < 2)
             {
                 firstMaterial = other.GetComponent<ItemID>()._item;

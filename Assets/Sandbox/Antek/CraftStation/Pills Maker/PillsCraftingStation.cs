@@ -68,8 +68,15 @@ public class PillsCraftingStation : MonoBehaviour
     {
         if (other.tag == "Material" && isCrafting == false && secondMaterial == null)
         { 
-            playerInputText.enabled = true;
-            playerInputText.text = "Click R to insert the material";
+            if (distance < 2)
+            {
+                playerInputText.enabled = true;
+                playerInputText.text = "Click R to insert the material";
+            }
+            else
+            {
+                playerInputText.enabled = false;
+            }
             if(Input.GetKeyUp(KeyCode.R) && distance < 2)
             {
                 if (firstMaterial != null)
