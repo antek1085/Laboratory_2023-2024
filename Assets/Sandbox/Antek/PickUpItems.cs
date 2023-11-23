@@ -60,7 +60,7 @@ public class PickUpItems : MonoBehaviour
         if (CurrentObjectRigidbody)
         {
             CurrentObjectRigidbody.position = Hand.position;
-            CurrentObjectRigidbody.rotation = Hand.rotation;
+            //CurrentObjectRigidbody.rotation = Hand.rotation;
         }
 
         if (CurrentObjectRigidbody == null)
