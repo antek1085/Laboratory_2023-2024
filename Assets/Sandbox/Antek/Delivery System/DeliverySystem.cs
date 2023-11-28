@@ -8,7 +8,7 @@ public class DeliverySystem : MonoBehaviour
 {
     [SerializeField] private deliveryListDEV deliveryListDev; 
     private ItemID newItem;
-    [SerializeField] private List<ItemID> deliveryItemList = new List<ItemID>();
+    [SerializeField] private List<Item> deliveryItemList = new List<Item>();
     private bool isCorutineOn;
 
     [Header("Time for Designers")]
@@ -21,6 +21,8 @@ public class DeliverySystem : MonoBehaviour
     private int listNumber;
 
     private int deliveryItemNumber;
+
+    [SerializeField] private SOFloat NumberOfPoins;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,12 +46,13 @@ public class DeliverySystem : MonoBehaviour
             if (deliveredItem != null)
             {
                 Debug.Log("2");
-                deliveryItemNumber = deliveryItemList.IndexOf(deliveredItem);
+                deliveryItemNumber = deliveryItemList.IndexOf(deliveredItem._item);
                 //Different Instance
                 Debug.Log(deliveryItemNumber);
                 deliveredItem = null;
                 deliveryItemList.RemoveAt(deliveryItemNumber);
-                deliveryItemList = null;
+                deliveryItemNumber = -1;
+                NumberOfPoins.Value += 1;
 
             }
         }
@@ -60,7 +63,7 @@ public class DeliverySystem : MonoBehaviour
         yield return new WaitForSeconds(spawnTimeOfDelivery);
         listNumber = Random.Range(0, deliveryListDev.itemList.Count -1);
         newItem = deliveryListDev.itemList[listNumber];
-        deliveryItemList.Add(newItem);
+        deliveryItemList.Add(newItem._item);
         StartCoroutine(DeleteDeliveryItem());
         isCorutineOn = false;
     }

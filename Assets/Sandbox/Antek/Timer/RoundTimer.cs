@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class RoundTimer : MonoBehaviour
 {
-    [SerializeField] float totalTime = 360f;
+    public float totalTime;
 
     [SerializeField] TextMeshProUGUI timer;
 
