@@ -16,7 +16,7 @@ public class DeliverySystem : MonoBehaviour
     [SerializeField] private float timeToDelivery;
 
     [SerializeField] private DeliverySpace deliverySpace;
-    private ItemID deliveredItem;
+    private float deliveredItem;
     
     private int listNumber;
 
@@ -38,15 +38,15 @@ public class DeliverySystem : MonoBehaviour
             StartCoroutine(RandomDelivery());
         }
 
-        if (deliverySpace.deliveredItemID != null)
+        if (deliverySpace.deliveredItemID != -1)
         {
             deliveredItem = deliverySpace.deliveredItemID;
-            deliverySpace.deliveredItemID = null;
+            deliverySpace.deliveredItemID = -1;
             Debug.Log("1");
             if (deliveredItem != null)
             {
                 Debug.Log("2");
-                deliveryItemNumber = deliveryItemList.IndexOf(deliveredItem._item);
+                deliveryItemNumber = deliveryItemList.IndexOf(deliveredItem.);
                 //Different Instance
                 Debug.Log(deliveryItemNumber);
                 deliveredItem = null;
@@ -63,7 +63,7 @@ public class DeliverySystem : MonoBehaviour
         yield return new WaitForSeconds(spawnTimeOfDelivery);
         listNumber = Random.Range(0, deliveryListDev.itemList.Count -1);
         newItem = deliveryListDev.itemList[listNumber];
-        deliveryItemList.Add(newItem._item);
+        deliveryItemList.Add(GameObject.Instantiate(newItem._item));
         StartCoroutine(DeleteDeliveryItem());
         isCorutineOn = false;
     }

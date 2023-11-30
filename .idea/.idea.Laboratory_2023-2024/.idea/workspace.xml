@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9096d1f-a5a7-49a5-90e5-074bfea24c04" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Antek Sandbox.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Antek Sandbox.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliverySpace.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliverySpace.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliverySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliverySystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Timer/RoundTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Timer/RoundTimer.cs" afterDir="false" />
-    </list>
+    <list default="true" id="c9096d1f-a5a7-49a5-90e5-074bfea24c04" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,7 +110,7 @@
       <workItem from="1700924274034" duration="11025000" />
       <workItem from="1700942671730" duration="640000" />
       <workItem from="1701168991314" duration="348000" />
-      <workItem from="1701184188015" duration="8930000" />
+      <workItem from="1701184188015" duration="10013000" />
     </task>
     <servers />
   </component>
@@ -127,30 +121,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Pills Maker/PillsCraftingStation.cs</url>
-          <line>35</line>
-          <properties documentPath="C:\Laboratory_2023-2024\Assets\Sandbox\Antek\CraftStation\Pills Maker\PillsCraftingStation.cs" initialLine="31" containingFunctionPresentation="method 'Update'" />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliverySystem.cs</url>
-          <line>51</line>
-          <properties documentPath="C:\Laboratory_2023-2024\Assets\Sandbox\Antek\Delivery System\DeliverySystem.cs" initialLine="51" containingFunctionPresentation="method 'Update'">
-            <startOffsets>
-              <option value="1549" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1570" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
