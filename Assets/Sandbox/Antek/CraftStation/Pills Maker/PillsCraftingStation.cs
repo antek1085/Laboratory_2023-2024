@@ -15,21 +15,26 @@ public class PillsCraftingStation : MonoBehaviour
     private Item firstItem;
     private Item secondItem;
     [SerializeField] private ItemsDBTwoIngridients recipeList;
+    
+    [SerializeField] Transform playerTransform;
+    private float distance;
+    private bool isCrafting = false;
 
     void Start()
     {
-        playerInputText.enabled = false;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        if (firstMaterial != null && secondMaterial != null)
+        distance = Vector3.Distance(playerTransform.position, transform.position);
+       
+        if (firstMaterial != null && secondMaterial != null && distance < 2)
         {
             playerInputText.enabled = true;
             playerInputText.text = "Click Space to start crafting";
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && distance < 2)
             {
+                isCrafting = true;
                 playerInputText.enabled = false;
               for (int i = 0; i < recipeList.itemList.Count; i++)
               {
@@ -53,15 +58,26 @@ public class PillsCraftingStation : MonoBehaviour
               }  
             }
         }
+        else if (secondMaterial != null && distance > 2)
+        {
+            playerInputText.enabled = false;
+        }
     }
 
     void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Material")
+        if (other.tag == "Material" && isCrafting == false && secondMaterial == null)
         { 
-            playerInputText.enabled = true;
-           
-            if(Input.GetKeyUp(KeyCode.R))
+            if (distance < 2)
+            {
+                playerInputText.enabled = true;
+                playerInputText.text = "Click R to insert the material";
+            }
+            else
+            {
+                playerInputText.enabled = false;
+            }
+            if(Input.GetKeyUp(KeyCode.R) && distance < 2)
             {
                 if (firstMaterial != null)
               {
@@ -90,6 +106,7 @@ public class PillsCraftingStation : MonoBehaviour
         firstMaterial = null; secondMaterial = null;
         yield return new WaitForSeconds(5);
         Instantiate(recipeList.itemList[i].Result.itemToSpawn, itemSpawn.transform.position,itemSpawn.transform.rotation);
+        isCrafting = false;
         StopAllCoroutines();
     }
 
@@ -98,6 +115,7 @@ public class PillsCraftingStation : MonoBehaviour
         firstMaterial = null; secondMaterial = null;
         yield return new WaitForSeconds(5);
         Instantiate(dung, itemSpawn.transform.position,itemSpawn.transform.rotation);
+        isCrafting = false;
         StopAllCoroutines();
     }
 }

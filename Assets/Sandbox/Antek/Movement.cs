@@ -45,7 +45,7 @@ public class Movement : MonoBehaviour
             speed_Limit += Time.deltaTime;
             if (speed_Limit > 5)
             {
-                m_Speed_cd_max = 5;
+                m_Speed_cd_max = 1;
             }
         }
         else
@@ -68,7 +68,7 @@ public class Movement : MonoBehaviour
     {
         Vector3 p_Input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
-        _rigidbody.MovePosition(transform.position + p_Input * Time.deltaTime * m_speed);
+        _rigidbody.AddForce(p_Input * m_speed,ForceMode.VelocityChange);
     }
 
 
