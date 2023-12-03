@@ -9,6 +9,7 @@ public class DeliverySystem : MonoBehaviour
     [SerializeField] private deliveryListDEV deliveryListDev; 
     private ItemID newItem;
     [SerializeField] private List<Item> deliveryItemList = new List<Item>();
+    [SerializeField] private List<float> deliverItemTimer = new List<float>();
     private bool isCorutineOn;
 
     [Header("Time for Designers")]
@@ -16,7 +17,7 @@ public class DeliverySystem : MonoBehaviour
     [SerializeField] private float timeToDelivery;
 
     [SerializeField] private DeliverySpace deliverySpace;
-    private float deliveredItem;
+    private ItemID deliveredItem;
     
     private int listNumber;
 
@@ -38,32 +39,40 @@ public class DeliverySystem : MonoBehaviour
             StartCoroutine(RandomDelivery());
         }
 
-        if (deliverySpace.deliveredItemID != -1)
+        if (deliverySpace.deliveredItemID != null)
         {
             deliveredItem = deliverySpace.deliveredItemID;
-            deliverySpace.deliveredItemID = -1;
-            Debug.Log("1");
+            deliverySpace.deliveredItemID = null;
+            
             if (deliveredItem != null)
             {
-                Debug.Log("2");
-                deliveryItemNumber = deliveryItemList.IndexOf(deliveredItem.);
-                //Different Instance
-                Debug.Log(deliveryItemNumber);
+                deliveryItemNumber = deliveryItemList.IndexOf(deliveredItem._item);
                 deliveredItem = null;
                 deliveryItemList.RemoveAt(deliveryItemNumber);
+                deliverItemTimer.RemoveAt(deliveryItemNumber);
                 deliveryItemNumber = -1;
                 NumberOfPoins.Value += 1;
-
             }
         }
-       
+        
+        for (int i = 0; i < deliverItemTimer.Count; i++)
+        {
+            deliverItemTimer[i] -= Time.deltaTime;
+            if (deliverItemTimer[i] < 0)
+            {
+                deliveryItemList.RemoveAt(i);
+                deliverItemTimer.RemoveAt(i);
+            }
+        }
     }
     IEnumerator RandomDelivery()
     {
         yield return new WaitForSeconds(spawnTimeOfDelivery);
         listNumber = Random.Range(0, deliveryListDev.itemList.Count -1);
         newItem = deliveryListDev.itemList[listNumber];
-        deliveryItemList.Add(GameObject.Instantiate(newItem._item));
+        deliveryItemList.Add(newItem._item);
+        deliverItemTimer.Add(newItem.time);
+       //deliveryItemList.Add(GameObject.Instantiate(newItem._item));
         StartCoroutine(DeleteDeliveryItem());
         isCorutineOn = false;
     }

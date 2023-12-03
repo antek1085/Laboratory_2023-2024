@@ -444,9 +444,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51ba0b92f617c834a899a38228de4d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 5
-  m_Speed_Sprint: 10
-  m_Speed_walk: 5
+  m_speed: 1
+  m_Speed_Sprint: 2
+  m_Speed_walk: 1
   m_Speed_cd_max: 0
   moveSpeed: {fileID: 11400000, guid: c7d7c2fea6a95ff4db7ee9e2ec37fd12, type: 2}
   speed_Limit: 0
@@ -459,7 +459,7 @@ Rigidbody:
   m_GameObject: {fileID: 198803523}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 10
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -728,6 +728,63 @@ Transform:
   - {fileID: 441013453}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &273491928 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1905624299119778016, guid: 5533ff8e7e91cc640ab93f4549f6afcd, type: 3}
+  m_PrefabInstance: {fileID: 2084625729}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &273491935
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273491928}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: d8ea5ba811543744c9beb1bd1602a366, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2.56, y: 2.56}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &296914641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1577,7 +1634,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deliveryListDev: {fileID: 11400000, guid: 6079f556acdb606478b265e36630704c, type: 2}
   deliveryItemList: []
-  spawnTimeOfDelivery: 2
+  deliverItemTimer: []
+  spawnTimeOfDelivery: 5
   timeToDelivery: 50
   deliverySpace: {fileID: 1593883514}
   NumberOfPoins: {fileID: 11400000, guid: 92a76c3fd8ed2aa4bb1dd6cd2a756cd6, type: 2}
@@ -2869,15 +2927,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 745784885306002363, guid: 5533ff8e7e91cc640ab93f4549f6afcd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.64645
       objectReference: {fileID: 0}
     - target: {fileID: 745784885306002363, guid: 5533ff8e7e91cc640ab93f4549f6afcd, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.64645
       objectReference: {fileID: 0}
     - target: {fileID: 745784885306002363, guid: 5533ff8e7e91cc640ab93f4549f6afcd, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.64645
       objectReference: {fileID: 0}
     - target: {fileID: 745784885306002363, guid: 5533ff8e7e91cc640ab93f4549f6afcd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2931,10 +2989,15 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6081540634877447816, guid: 5533ff8e7e91cc640ab93f4549f6afcd, type: 3}
+    - {fileID: 3034826701825818853, guid: 5533ff8e7e91cc640ab93f4549f6afcd, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1905624299119778016, guid: 5533ff8e7e91cc640ab93f4549f6afcd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 273491935}
   m_SourcePrefab: {fileID: 100100000, guid: 5533ff8e7e91cc640ab93f4549f6afcd, type: 3}
 --- !u!1 &2118115269
 GameObject:

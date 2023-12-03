@@ -122,6 +122,8 @@ MonoBehaviour:
   soMaterials: {fileID: 0}
   iD: 0
   _item: {fileID: 11400000, guid: db4e5869163e8c6449b8742c37b1b72d, type: 2}
+  time: 5
+  isTimeFlowing: 1
 --- !u!54 &782631685337554038
 Rigidbody:
   m_ObjectHideFlags: 0

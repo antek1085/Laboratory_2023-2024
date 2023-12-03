@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9096d1f-a5a7-49a5-90e5-074bfea24c04" name="Changes" comment="" />
+    <list default="true" id="c9096d1f-a5a7-49a5-90e5-074bfea24c04" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Antek Sandbox.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Antek Sandbox.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/ItemID.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/ItemID.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Materials/Water/Water.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Materials/Water/Water.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliverySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliverySystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/Materials/syrop.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/Materials/syrop.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/syrop.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/syrop.png.meta" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +24,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32aa1a112152478c9615faa98d49f9673e00/60/a5d9e5d0/NativeInputSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3e2118a0a67041869c87922a11f4a02f1a1c00/8a/6ea781b4/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3e2118a0a67041869c87922a11f4a02f1a1c00/f1/32ce56cf/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46a5f68c38604d68a85231bbf55f6b8f46ac00/ea/e386ff8e/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -69,10 +78,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="33564">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="33564" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -111,6 +120,8 @@
       <workItem from="1700942671730" duration="640000" />
       <workItem from="1701168991314" duration="348000" />
       <workItem from="1701184188015" duration="10013000" />
+      <workItem from="1701355558385" duration="5883000" />
+      <workItem from="1701453050711" duration="756000" />
     </task>
     <servers />
   </component>
