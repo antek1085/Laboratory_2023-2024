@@ -8,8 +8,8 @@ public class DeliverySystem : MonoBehaviour
 {
     [SerializeField] private deliveryListDEV deliveryListDev; 
     private ItemID newItem;
-    [SerializeField] private List<Item> deliveryItemList = new List<Item>();
-    [SerializeField] private List<float> deliverItemTimer = new List<float>();
+    [SerializeField] public List<Item> deliveryItemList = new List<Item>();
+    [SerializeField] public List<float> deliverItemTimer = new List<float>();
     private bool isCorutineOn;
 
     [Header("Time for Designers")]
@@ -48,22 +48,49 @@ public class DeliverySystem : MonoBehaviour
             {
                 deliveryItemNumber = deliveryItemList.IndexOf(deliveredItem._item);
                 deliveredItem = null;
-                deliveryItemList.RemoveAt(deliveryItemNumber);
-                deliverItemTimer.RemoveAt(deliveryItemNumber);
-                deliveryItemNumber = -1;
-                NumberOfPoins.Value += 1;
+                if (deliveryItemNumber != -1)
+                {
+                     deliveryItemList.RemoveAt(deliveryItemNumber);                          
+                     deliverItemTimer.RemoveAt(deliveryItemNumber);
+                     deliveryItemNumber = -1;
+                     NumberOfPoins.Value += 1;
+                }
             }
+        }
+
+        if (deliverItemTimer.Count >= 1)
+        {
+            deliverItemTimer[0] -= Time.deltaTime;
+        }
+        if (deliverItemTimer.Count >= 2)
+        {
+            deliverItemTimer[1] -= Time.deltaTime;
+        }
+        if (deliverItemTimer.Count >= 3)
+        {
+            deliverItemTimer[2] -= Time.deltaTime;
+        }
+        if (deliverItemTimer.Count >= 4)
+        {
+            deliverItemTimer[3] -= Time.deltaTime;
+        }
+        if (deliverItemTimer.Count >= 5)
+        {
+            deliverItemTimer[4] -= Time.deltaTime;
         }
         
-        for (int i = 0; i < deliverItemTimer.Count; i++)
-        {
-            deliverItemTimer[i] -= Time.deltaTime;
-            if (deliverItemTimer[i] < 0)
-            {
-                deliveryItemList.RemoveAt(i);
-                deliverItemTimer.RemoveAt(i);
-            }
-        }
+        
+        
+          for (int i = 0; i < deliverItemTimer.Count; i++)
+          {
+              if (deliverItemTimer[i] < 0)
+              {
+                  deliveryItemList.RemoveAt(i);
+                  deliverItemTimer.RemoveAt(i);
+              }
+          }
+      
+      
     }
     IEnumerator RandomDelivery()
     {
@@ -73,14 +100,14 @@ public class DeliverySystem : MonoBehaviour
         deliveryItemList.Add(newItem._item);
         deliverItemTimer.Add(newItem.time);
        //deliveryItemList.Add(GameObject.Instantiate(newItem._item));
-        StartCoroutine(DeleteDeliveryItem());
+       //StartCoroutine(DeleteDeliveryItem());
         isCorutineOn = false;
     }
 
-    IEnumerator DeleteDeliveryItem()
+   /* IEnumerator DeleteDeliveryItem()
     {
         yield return new WaitForSeconds(timeToDelivery);
         deliveryItemList.RemoveAt(0);
-    }
+    }*/
     
 }
