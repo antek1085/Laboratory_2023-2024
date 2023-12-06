@@ -12,35 +12,46 @@ public class DeliverySpace : MonoBehaviour
     [SerializeField] TextMeshProUGUI text;
 
     private GameObject item;
+
+    private bool isInTrigger;
     // Start is called before the first frame update
     void Start()
     {
         text.enabled = false;
+        isInTrigger = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isInTrigger == true)
+        {
+            if (Input.GetKey(KeyCode.R))
+            {
+                isInTrigger = false;
+                deliveredItemID = item.GetComponent<ItemID>();
+                item = item.gameObject;
+                StartCoroutine(Destroy());
+            }
+            
+        }
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Material")
         {
+            item = other.gameObject;
             text.enabled = true;
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Debug.Log("E");
-                deliveredItemID = other.GetComponent<ItemID>();
-                item = other.gameObject;
-                StartCoroutine(Destroy());
-            }
+            isInTrigger = true;
         }
     }
 
     void OnTriggerExit(Collider other)
     {
+        item = null;
         text.enabled = false;
+        isInTrigger = false;
     }
 
     IEnumerator Destroy()

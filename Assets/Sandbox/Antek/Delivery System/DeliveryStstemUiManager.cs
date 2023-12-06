@@ -9,29 +9,25 @@ using Slider = UnityEngine.UI.Slider;
 
 public class DeliveryStstemUiManager : MonoBehaviour
 {
+    [Header("Number on UI (Numbered like list from 0)")]
     [SerializeField] int numberOnUi;
 
-    [SerializeField] DeliverySystem time, sprite;
+    [SerializeField] DeliverySystem time;
 
     float timer;
     Sprite spriteDisplay;
 
    [SerializeField] GameObject slider;
    [SerializeField] Image image;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
 
-    // Update is called once per frame
-    void Update()
+   void Update()
     {
-        if (sprite.deliveryItemList.Count >= numberOnUi + 1)
+        if (time.deliveryItemList.Count >= numberOnUi + 1)
         {
             image.enabled = true;
             slider.SetActive(true);
             timer = time.deliverItemTimer[numberOnUi];
-            spriteDisplay = sprite.deliveryItemList[numberOnUi].sprite;
+            spriteDisplay = time.deliveryItemList[numberOnUi].sprite;
             
             slider.GetComponent<Slider>().value = timer;
             image.sprite = spriteDisplay;
@@ -40,7 +36,6 @@ public class DeliveryStstemUiManager : MonoBehaviour
         {
             image.enabled = false;
             slider.SetActive(false);
-
         }
     }
 }

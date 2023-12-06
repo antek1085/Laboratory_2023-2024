@@ -149,3 +149,5 @@ MonoBehaviour:
   soMaterials: {fileID: 0}
   iD: 0
   _item: {fileID: 11400000, guid: 627b5d847b8738d42bcca0ae074f5d93, type: 2}
+  time: 5
+  isTimeFlowing: 0

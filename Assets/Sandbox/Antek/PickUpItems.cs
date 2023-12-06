@@ -69,28 +69,6 @@ public class PickUpItems : MonoBehaviour
             CurrentObjectRigidbody = null;
         }
 
-
-
-
-        // private void OnTriggerStay(Collider other)
-    // { 
-    //     if (isHeld && Input.GetKey(KeyCode.E))
-    //     {
-    //              other.GetComponent<Rigidbody>().isKinematic = false;
-    //              other.GetComponent<CapsuleCollider>().isTrigger = false;
-    //              isHeld = false;
-    //              other.transform.parent = null;
-    //     }
-    //     if (other.tag == "Material" && Input.GetKey(KeyCode.E))
-    //     {
-    //         Debug.Log("ssss");
-    //         other.transform.parent = this.transform;
-    //         other.GetComponent<Rigidbody>().isKinematic = true;
-    //         other.GetComponent<CapsuleCollider>().isTrigger = true;
-    //         isHeld = true;
-    //     }
-
-       
     }
 
 

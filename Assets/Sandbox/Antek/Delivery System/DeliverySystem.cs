@@ -6,31 +6,33 @@ using UnityEngine.Serialization;
 
 public class DeliverySystem : MonoBehaviour
 {
+    [Header("List of items to deliver")]
     [SerializeField] private deliveryListDEV deliveryListDev; 
     private ItemID newItem;
-    [SerializeField] public List<Item> deliveryItemList = new List<Item>();
-    [SerializeField] public List<float> deliverItemTimer = new List<float>();
+    
+    [Header("Don't Touch")]
+    public List<Item> deliveryItemList = new List<Item>();
+    public List<float> deliverItemTimer = new List<float>();
     private bool isCorutineOn;
 
     [Header("Time for Designers")]
     [SerializeField] private float spawnTimeOfDelivery;
-    [SerializeField] private float timeToDelivery;
 
+    [Header("Place to Deliver")]
     [SerializeField] private DeliverySpace deliverySpace;
     private ItemID deliveredItem;
     
     private int listNumber;
 
     private int deliveryItemNumber;
-
+    [Header("Score")]
     [SerializeField] private SOFloat NumberOfPoins;
-    // Start is called before the first frame update
+    
     void Start()
     {
         isCorutineOn = false;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (isCorutineOn == false && deliveryItemList.Count <= 4)
@@ -41,57 +43,20 @@ public class DeliverySystem : MonoBehaviour
 
         if (deliverySpace.deliveredItemID != null)
         {
-            deliveredItem = deliverySpace.deliveredItemID;
-            deliverySpace.deliveredItemID = null;
-            
-            if (deliveredItem != null)
-            {
-                deliveryItemNumber = deliveryItemList.IndexOf(deliveredItem._item);
-                deliveredItem = null;
-                if (deliveryItemNumber != -1)
-                {
-                     deliveryItemList.RemoveAt(deliveryItemNumber);                          
-                     deliverItemTimer.RemoveAt(deliveryItemNumber);
-                     deliveryItemNumber = -1;
-                     NumberOfPoins.Value += 1;
-                }
-            }
-        }
-
-        if (deliverItemTimer.Count >= 1)
-        {
-            deliverItemTimer[0] -= Time.deltaTime;
-        }
-        if (deliverItemTimer.Count >= 2)
-        {
-            deliverItemTimer[1] -= Time.deltaTime;
-        }
-        if (deliverItemTimer.Count >= 3)
-        {
-            deliverItemTimer[2] -= Time.deltaTime;
-        }
-        if (deliverItemTimer.Count >= 4)
-        {
-            deliverItemTimer[3] -= Time.deltaTime;
-        }
-        if (deliverItemTimer.Count >= 5)
-        {
-            deliverItemTimer[4] -= Time.deltaTime;
+            ItemDeliveredCheck();
         }
         
         
-        
-          for (int i = 0; i < deliverItemTimer.Count; i++)
+          for (int i = 0; i < deliveryItemList.Count; i++)
           {
+              deliverItemTimer[i] -= Time.deltaTime;
               if (deliverItemTimer[i] < 0)
               {
-                  deliveryItemList.RemoveAt(i);
-                  deliverItemTimer.RemoveAt(i);
+                  StartCoroutine(DeleteDeliveryItem(i));
               }
           }
-      
-      
     }
+    
     IEnumerator RandomDelivery()
     {
         yield return new WaitForSeconds(spawnTimeOfDelivery);
@@ -99,15 +64,32 @@ public class DeliverySystem : MonoBehaviour
         newItem = deliveryListDev.itemList[listNumber];
         deliveryItemList.Add(newItem._item);
         deliverItemTimer.Add(newItem.time);
-       //deliveryItemList.Add(GameObject.Instantiate(newItem._item));
-       //StartCoroutine(DeleteDeliveryItem());
         isCorutineOn = false;
     }
 
-   /* IEnumerator DeleteDeliveryItem()
+    IEnumerator DeleteDeliveryItem(int i)
     {
-        yield return new WaitForSeconds(timeToDelivery);
-        deliveryItemList.RemoveAt(0);
-    }*/
-    
+        yield return new WaitForEndOfFrame();
+        deliveryItemList.RemoveAt(i);
+        deliverItemTimer.RemoveAt(i);
+    }
+
+    private void ItemDeliveredCheck()
+    {
+        deliveredItem = deliverySpace.deliveredItemID;
+        deliverySpace.deliveredItemID = null;
+            
+        if (deliveredItem != null)
+        {
+            deliveryItemNumber = deliveryItemList.IndexOf(deliveredItem._item);
+            deliveredItem = null;
+            if (deliveryItemNumber != -1)
+            {
+                deliveryItemList.RemoveAt(deliveryItemNumber);                          
+                deliverItemTimer.RemoveAt(deliveryItemNumber);
+                deliveryItemNumber = -1;
+                NumberOfPoins.Value += 1;
+            }
+        }
+    }
 }

@@ -842,7 +842,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Click E to deliver a item
+  m_text: Click R to deliver a item
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2168,7 +2168,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOnUi: 3
   time: {fileID: 661860418}
-  sprite: {fileID: 661860418}
   slider: {fileID: 1722807336}
   image: {fileID: 644750078}
 --- !u!114 &644750078
@@ -2241,7 +2240,7 @@ MonoBehaviour:
   deliveryListDev: {fileID: 11400000, guid: 6079f556acdb606478b265e36630704c, type: 2}
   deliveryItemList: []
   deliverItemTimer: []
-  spawnTimeOfDelivery: 1
+  spawnTimeOfDelivery: 3
   timeToDelivery: 50
   deliverySpace: {fileID: 1593883514}
   NumberOfPoins: {fileID: 11400000, guid: 92a76c3fd8ed2aa4bb1dd6cd2a756cd6, type: 2}
@@ -2897,7 +2896,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOnUi: 4
   time: {fileID: 661860418}
-  sprite: {fileID: 661860418}
   slider: {fileID: 1754083072}
   image: {fileID: 1034326448}
 --- !u!114 &1034326448
@@ -3741,7 +3739,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOnUi: 1
   time: {fileID: 661860418}
-  sprite: {fileID: 661860418}
   slider: {fileID: 734385728}
   image: {fileID: 1250882595}
 --- !u!114 &1250882595
@@ -4468,7 +4465,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOnUi: 2
   time: {fileID: 661860418}
-  sprite: {fileID: 661860418}
   slider: {fileID: 1316634732}
   image: {fileID: 1635939991}
 --- !u!114 &1635939991
@@ -4562,7 +4558,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOnUi: 0
   time: {fileID: 661860418}
-  sprite: {fileID: 661860418}
   slider: {fileID: 1044867798}
   image: {fileID: 1664022433}
 --- !u!114 &1664022433
@@ -6003,7 +5998,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7430179220428000085, guid: 34d10e25fbcc2cc49a7814b9540bb163, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: -9.92
       objectReference: {fileID: 0}
     - target: {fileID: 7430179220428000085, guid: 34d10e25fbcc2cc49a7814b9540bb163, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6011,23 +6006,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7430179220428000085, guid: 34d10e25fbcc2cc49a7814b9540bb163, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.04
+      value: 2.78
       objectReference: {fileID: 0}
     - target: {fileID: 7430179220428000085, guid: 34d10e25fbcc2cc49a7814b9540bb163, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.055754058
       objectReference: {fileID: 0}
     - target: {fileID: 7430179220428000085, guid: 34d10e25fbcc2cc49a7814b9540bb163, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7430179220428000085, guid: 34d10e25fbcc2cc49a7814b9540bb163, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.99844456
       objectReference: {fileID: 0}
     - target: {fileID: 7430179220428000085, guid: 34d10e25fbcc2cc49a7814b9540bb163, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7430179220428000085, guid: 34d10e25fbcc2cc49a7814b9540bb163, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6035,7 +6030,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7430179220428000085, guid: 34d10e25fbcc2cc49a7814b9540bb163, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 186.392
       objectReference: {fileID: 0}
     - target: {fileID: 7430179220428000085, guid: 34d10e25fbcc2cc49a7814b9540bb163, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
