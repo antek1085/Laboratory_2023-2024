@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Dung
   m_EditorClassIdentifier: 
   itemToSpawn: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 48eb256dfc868f0459472e7e5fe4048d, type: 3}

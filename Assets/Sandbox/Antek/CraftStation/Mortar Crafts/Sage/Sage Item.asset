@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Sage Item
   m_EditorClassIdentifier: 
   itemToSpawn: {fileID: 0}
+  sprite: {fileID: 21300000, guid: ad6aeda284a5dbe4584dc05c0a2f7d11, type: 3}
