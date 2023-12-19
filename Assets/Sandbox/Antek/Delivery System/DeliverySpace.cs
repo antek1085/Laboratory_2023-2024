@@ -14,14 +14,14 @@ public class DeliverySpace : MonoBehaviour
     private GameObject item;
 
     private bool isInTrigger;
-    // Start is called before the first frame update
+    
     void Start()
     {
         text.enabled = false;
         isInTrigger = false;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (isInTrigger == true)

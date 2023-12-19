@@ -5,7 +5,6 @@ using System.Numerics;
 using Unity.VisualScripting;
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
-using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
 public class Movement : MonoBehaviour
@@ -22,23 +21,18 @@ public class Movement : MonoBehaviour
     private Vector3 mouseposition;
 
     public float speed_Limit;
-
-    private float horizontal;
-    private float vertical;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
     }
 
     // Update is called once per frame
 
     void Update()
     {
-        PlayerRotation();
         if (Input.GetKey(KeyCode.LeftShift) && speed_Limit < 5 && m_Speed_cd_max == 0)
         {
             m_speed = m_Speed_Sprint;
@@ -71,15 +65,4 @@ public class Movement : MonoBehaviour
         _rigidbody.AddForce(p_Input * m_speed,ForceMode.VelocityChange);
     }
     
-
-    void PlayerRotation()
-    {
-        horizontal = -Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
-        Vector2 InputVector = new Vector2(horizontal, vertical);
-
-        if(InputVector == Vector2.zero)
-            return;
-        transform.rotation = Quaternion.Euler(0,Vector2.SignedAngle(Vector2.up, InputVector),0);
-    }
 }

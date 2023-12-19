@@ -4,5 +4,12 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Sandbox/Antek/Antek StartMenu.unity
+    guid: 48d9746f23563a84685934bbee474969
+  - enabled: 1
+    path: Assets/Sandbox/Antek/Antek Sandbox.unity
+    guid: 6d6c7602fa6ec7242ae60be0dae4f285
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

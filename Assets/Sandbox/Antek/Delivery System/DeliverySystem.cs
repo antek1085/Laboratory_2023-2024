@@ -72,6 +72,7 @@ public class DeliverySystem : MonoBehaviour
         yield return new WaitForEndOfFrame();
         deliveryItemList.RemoveAt(i);
         deliverItemTimer.RemoveAt(i);
+        StopCoroutine(DeleteDeliveryItem(i));
     }
 
     private void ItemDeliveredCheck()

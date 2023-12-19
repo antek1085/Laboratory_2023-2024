@@ -24,8 +24,7 @@ public class TabletController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        placeInList = Mathf.Clamp(placeInList, 0, RecipeList.Count -1);
-        Debug.Log(placeInList);
+        
         if (isPlayerInRange == true)
         {
             canvas.enabled = true;
@@ -39,6 +38,7 @@ public class TabletController : MonoBehaviour
                 placeInList += 1;
             }
             
+            placeInList = Mathf.Clamp(placeInList, 0, RecipeList.Count -1);
             image.sprite = RecipeList[placeInList];
         }
         else

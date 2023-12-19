@@ -6,7 +6,6 @@ using UnityEngine.Serialization;
 
 public class PickUpItems : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField] private LayerMask PickUpLayer;
     [SerializeField] private float PickUpRange;
     [SerializeField] private Transform Hand;

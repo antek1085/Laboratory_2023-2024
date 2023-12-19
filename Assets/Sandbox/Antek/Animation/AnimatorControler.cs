@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,20 +13,43 @@ public class AnimatorControler : MonoBehaviour
     public Animator animator;
 
     [SerializeField] private GameObject lookat;
-    
-    // Start is called before the first frame update
-    void Start()
+    private Camera mainCamera;
+    private Vector3 newRotation;
+
+    private void Start()
     {
+        mainCamera = Camera.main;
     }
 
-    // Update is called once per frame
     void Update()
     { 
         //transform.LookAt(lookat.transform);
         if (Input.GetAxis("Horizontal") != 0)
-        {
+        { 
             animator.GetBool(isWalking);
             animator.SetBool(isWalking, true);
+            
+            switch (Input.GetAxis("Horizontal"))
+            {
+                case > 0 :
+                    newRotation = mainCamera.transform.eulerAngles;
+                    newRotation.x = 0;
+                    newRotation.z = 0;
+                    newRotation.y = 180;
+                    transform.eulerAngles = newRotation;
+                    return;
+                case < 0:
+                    newRotation = mainCamera.transform.eulerAngles;
+                    newRotation.x = 0;
+                    newRotation.z = 0;
+                    transform.eulerAngles = newRotation;
+                    return;
+            }
+           
+            // newRotation = mainCamera.transform.eulerAngles;
+            // newRotation.x = 0;
+            // newRotation.z = 0;
+            // transform.eulerAngles = newRotation;
         }
         else
         {
@@ -33,7 +57,7 @@ public class AnimatorControler : MonoBehaviour
             animator.SetBool(isWalking, false);
         }
 
-        if (Input.GetAxis("Vertical") > 0 && Input.GetAxis("Horizontal") == 0)
+        if (Input.GetAxis("Vertical") < 0 && Input.GetAxis("Horizontal") == 0)
         {
             animator.GetBool(isWalkingFront);
             animator.SetBool(isWalkingFront, true);
@@ -43,7 +67,7 @@ public class AnimatorControler : MonoBehaviour
             animator.GetBool(isWalkingFront);
             animator.SetBool(isWalkingFront ,false);
         }
-        if(Input.GetAxis("Vertical") < 0 && Input.GetAxis("Horizontal") == 0)
+        if(Input.GetAxis("Vertical") > 0 && Input.GetAxis("Horizontal") == 0)
         {
             animator.GetBool(isWalkingBack);
             animator.SetBool(isWalkingBack, true);
