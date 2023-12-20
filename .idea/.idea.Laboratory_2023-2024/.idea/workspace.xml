@@ -6,17 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c9096d1f-a5a7-49a5-90e5-074bfea24c04" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/AnimatorControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/AnimatorControler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/WalkAniamtionSide.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/WalkAniamtionSide.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/WalkAnimationBack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/WalkAnimationBack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/WalkAnimationFront.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/WalkAnimationFront.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/Walking Animation.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/Walking Animation.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Antek Sandbox.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Antek Sandbox.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliverySpace.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliverySpace.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliverySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliverySystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Movement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/PickUpItems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/PickUpItems.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TabletController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TabletController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliveryStstemUiManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliveryStstemUiManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +158,8 @@
       <workItem from="1702576634718" duration="951000" />
       <workItem from="1702578250415" duration="949000" />
       <workItem from="1702754313683" duration="750000" />
-      <workItem from="1702994653860" duration="3235000" />
+      <workItem from="1702994653860" duration="8560000" />
+      <workItem from="1703005065864" duration="4000" />
     </task>
     <servers />
   </component>
