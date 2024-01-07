@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,18 +16,27 @@ public class MenuControlerScript : MonoBehaviour
     [SerializeField] float delay;
     [Header("MenuButtons")]
     [SerializeField] private GameObject menuButtons;
+    [SerializeField] private GameObject optionButtons;
+
+    [SerializeField] private Slider musicSlider;
    
         
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
+        optionButtons.SetActive(false);
         loadingScreen.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(delay);
+        if (delay < -1)
+        {
+            delay = 2;
+        }
     }
 
    public void StartButton()
@@ -50,13 +60,28 @@ public class MenuControlerScript : MonoBehaviour
             
             yield return null;
         }
-
         asyncLoad.allowSceneActivation = delay <= 0;
     }
-
-
+    
     public void ExitButton()
     {
         Application.Quit();
+    }
+
+    public void OptionButton()
+    {
+        optionButtons.SetActive(true);
+        menuButtons.SetActive(false);
+    }
+
+    public void BackButton()
+    {
+        optionButtons.SetActive(false);
+        menuButtons.SetActive(true);
+    }
+
+    public void MusicValue()
+    {
+        AudioListener.volume = musicSlider.value;
     }
 }

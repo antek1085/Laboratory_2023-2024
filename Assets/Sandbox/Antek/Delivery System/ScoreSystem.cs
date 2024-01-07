@@ -14,14 +14,17 @@ public class ScoreSystem : MonoBehaviour
 
     [SerializeField] private RoundTimer timeLeft;
 
+    [Header("End of level")]
     [SerializeField] private TextMeshProUGUI resetText;
-
-    private Scene thisScene;
-
     [SerializeField] private string scene;
+    [SerializeField] private TextMeshProUGUI endText;
+    private Scene thisScene;
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
+        endText.enabled = false;
+        numberOfPoints.Value = 0;
         resetText.enabled = false;
     }
 
@@ -30,19 +33,24 @@ public class ScoreSystem : MonoBehaviour
     {
         textNumberOfPoints.text = numberOfPoints.Value.ToString();
 
-        if (numberOfPoints.Value > numberToWin)
+        if (timeLeft.totalTime < 0)
         {
-            Debug.Log("Win");
-        }
-        else if (timeLeft.totalTime < 0)
-        {
+            if (numberOfPoints.Value > numberToWin)
+            { 
+                endText.enabled = true;
+                endText.text = "You Win";
+            }
+            else
+            {
+                endText.enabled = true;
+                endText.text = "You lose";
+            }
             Time.timeScale = 0;
             resetText.enabled = true;
             if (Input.GetKeyDown(KeyCode.R))
             {
                 SceneManager.LoadScene(scene);
             }
-            Debug.Log("Lose");
         }
     }
 }

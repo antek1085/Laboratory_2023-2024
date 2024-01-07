@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class ItemID : MonoBehaviour
 {
-    [SerializeField] SOMaterials soMaterials;
      public Item _item;
      public float time;
 }

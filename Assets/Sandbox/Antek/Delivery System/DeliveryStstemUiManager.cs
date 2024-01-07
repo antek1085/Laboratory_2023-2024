@@ -15,11 +15,12 @@ public class DeliveryStstemUiManager : MonoBehaviour
     [SerializeField] DeliverySystem time;
 
     float timer;
+    
     private Sprite spriteDisplay;
+    private Sprite spriteDisplayOld;
 
    [SerializeField] GameObject slider;
    [SerializeField] Image image;
-   private bool isValueChanged;
 
    void Update()
     {
@@ -29,21 +30,19 @@ public class DeliveryStstemUiManager : MonoBehaviour
             slider.SetActive(true);
             timer = time.deliverItemTimer[numberOnUi];
             spriteDisplay = time.deliveryItemList[numberOnUi].sprite;
-            
             slider.GetComponent<Slider>().value = timer;
             
-            // if (isValueChanged == false)
-            // {
-            //     isValueChanged = true;
-            //     slider.GetComponent<Slider>().maxValue = timer;
-            // }
+            if (spriteDisplay != spriteDisplayOld)
+            {
+                spriteDisplayOld = spriteDisplay;
+                slider.GetComponent<Slider>().maxValue = timer;
+             }
             
             image.sprite = spriteDisplay;
         }
         else
         {
-            isValueChanged = false;
-            image.enabled = false;
+            image.enabled = false;  
             slider.SetActive(false);
         }
     }
