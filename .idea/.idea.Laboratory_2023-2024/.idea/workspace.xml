@@ -6,18 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c9096d1f-a5a7-49a5-90e5-074bfea24c04" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MenuControlerScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MenuControlerScript.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/Walking Animation.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/Walking Animation.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Antek Sandbox.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Antek Sandbox.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Antek StartMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Antek StartMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/ItemID.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/ItemID.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliveryStstemUiManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliveryStstemUiManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/ScoreSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/ScoreSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpawningMaterials.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpawningMaterials.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TabletController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TabletController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,9 +55,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\Antek\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Antek\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Antek\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\PC\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -107,10 +96,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="26192">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="26192" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -171,6 +160,7 @@
       <workItem from="1703005065864" duration="4000" />
       <workItem from="1703150853767" duration="1140000" />
       <workItem from="1703168269660" duration="10036000" />
+      <workItem from="1704655563117" duration="2533000" />
     </task>
     <servers />
   </component>
