@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9096d1f-a5a7-49a5-90e5-074bfea24c04" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/projectSettingsUpdater.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/AnimatorControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/AnimatorControler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Antek Sandbox.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Antek Sandbox.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpawningMaterials.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpawningMaterials.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Thanks for demo/Antek EndingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Thanks for demo/Antek EndingScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,6 +165,7 @@
       <workItem from="1704838257537" duration="1006000" />
       <workItem from="1704923655066" duration="693000" />
       <workItem from="1705071087582" duration="672000" />
+      <workItem from="1705079756031" duration="619000" />
     </task>
     <servers />
   </component>

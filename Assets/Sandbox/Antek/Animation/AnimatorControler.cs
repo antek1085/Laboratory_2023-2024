@@ -28,6 +28,10 @@ public class AnimatorControler : MonoBehaviour
         { 
             animator.GetBool(isWalking);
             animator.SetBool(isWalking, true);
+            animator.GetBool(isWalkingFront);
+            animator.SetBool(isWalkingFront ,false);
+            animator.GetBool(isWalkingBack);
+            animator.SetBool(isWalkingBack ,false);
             
             switch (Input.GetAxis("Horizontal"))
             {
