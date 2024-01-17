@@ -2,13 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4115b137-8e6d-4221-ae05-a039ef6388f8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/AnimatorControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/AnimatorControler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/Walking Animation.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/Walking Animation.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/BliboardScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/BliboardScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Prefabs/Pills Maker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Prefabs/Pills Maker.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Prefabs/Tablet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Prefabs/Tablet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounityplugin.a" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounityplugin.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounitypluginL.a" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounitypluginL.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounitypluginsimulator.a" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounitypluginsimulator.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounitypluginsimulatorL.a" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libfmodstudiounitypluginsimulatorL.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libresonanceaudio.a" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libresonanceaudio.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libresonanceaudiosimulator.a" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/ios/lib/libresonanceaudiosimulator.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounityplugin.a" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounityplugin.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounitypluginL.a" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounitypluginL.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounitypluginsimulator.a" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounitypluginsimulator.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounitypluginsimulatorL.a" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/tvos/lib/libfmodstudiounitypluginsimulatorL.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm/fmod.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm/fmod.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm/fmodL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm/fmodL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm/fmodstudio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm/fmodstudio.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm/fmodstudioL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/arm/fmodstudioL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64/fmod.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64/fmod.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64/fmodL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64/fmodL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64/fmodstudio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64/fmodstudio.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64/fmodstudioL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x64/fmodstudioL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86/fmod.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86/fmod.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86/fmodL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86/fmodL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86/fmodstudio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86/fmodstudio.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86/fmodstudioL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/uwp/lib/x86/fmodstudioL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86/fmodstudio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86/fmodstudio.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86/fmodstudioL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86/fmodstudioL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86/resonanceaudio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86/resonanceaudio.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudio.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudioL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudioL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86_64/resonanceaudio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86_64/resonanceaudio.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +116,7 @@
       <workItem from="1705490285176" duration="4000" />
       <workItem from="1705492395305" duration="703000" />
       <workItem from="1705493340912" duration="917000" />
+      <workItem from="1705497295701" duration="11000" />
     </task>
     <servers />
   </component>

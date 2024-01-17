@@ -19,7 +19,7 @@ MonoBehaviour:
     Data3: -1299176785
     Data4: -1644270731
   Banks:
-  - {fileID: -6232927233699464841}
+  - {fileID: 4735091819236948225}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -27,7 +27,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-6232927233699464841
+--- !u!114 &-4750648389169614599
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,15 +37,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: "C:/Users/Miko\u0142aj/Desktop/FMOD-KRZYCHU/Build/Desktop/Master.bank"
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638410928040923905
+  Path: Assets/Plugins/FMOD/FMOD-KRZYCHU/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638410981726513884
   FileSizes:
   - Name: Desktop
-    Value: 4870240
+    Value: 1146
   Exists: 1
 --- !u!114 &-4573426141376237451
 MonoBehaviour:
@@ -66,7 +66,7 @@ MonoBehaviour:
     Data3: 665856667
     Data4: 500824808
   Banks:
-  - {fileID: -6232927233699464841}
+  - {fileID: 4735091819236948225}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -74,26 +74,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-3968549497989293272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: "C:/Users/Miko\u0142aj/Desktop/FMOD-KRZYCHU/Build/Desktop/Master.strings.bank"
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638410928040938769
-  FileSizes:
-  - Name: Desktop
-    Value: 1146
-  Exists: 1
 --- !u!114 &-1215031300450689332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,7 +93,7 @@ MonoBehaviour:
     Data3: 674020270
     Data4: 1969132976
   Banks:
-  - {fileID: -6232927233699464841}
+  - {fileID: 4735091819236948225}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -140,7 +120,7 @@ MonoBehaviour:
     Data3: -1419501157
     Data4: -2036181970
   Banks:
-  - {fileID: -6232927233699464841}
+  - {fileID: 4735091819236948225}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -161,8 +141,8 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -3968549497989293272}
-  - {fileID: -6232927233699464841}
+  - {fileID: -4750648389169614599}
+  - {fileID: 4735091819236948225}
   EditorEvents:
   - {fileID: -258092242127657848}
   - {fileID: 335605735711409829}
@@ -175,10 +155,10 @@ MonoBehaviour:
   - {fileID: 8826960057353590137}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -6232927233699464841}
+  - {fileID: 4735091819236948225}
   StringsBanks:
-  - {fileID: -3968549497989293272}
-  cacheTime: 638410928040938769
+  - {fileID: -4750648389169614599}
+  cacheTime: 638410981726513884
   cacheVersion: 131616
 --- !u!114 &335605735711409829
 MonoBehaviour:
@@ -199,7 +179,7 @@ MonoBehaviour:
     Data3: 284494778
     Data4: 701979387
   Banks:
-  - {fileID: -6232927233699464841}
+  - {fileID: 4735091819236948225}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -226,7 +206,7 @@ MonoBehaviour:
     Data3: 935565991
     Data4: 1566214806
   Banks:
-  - {fileID: -6232927233699464841}
+  - {fileID: 4735091819236948225}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -253,7 +233,7 @@ MonoBehaviour:
     Data3: 1211020421
     Data4: -1291788798
   Banks:
-  - {fileID: -6232927233699464841}
+  - {fileID: 4735091819236948225}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -280,7 +260,7 @@ MonoBehaviour:
     Data3: 1649382075
     Data4: -33544813
   Banks:
-  - {fileID: -6232927233699464841}
+  - {fileID: 4735091819236948225}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -288,6 +268,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &4735091819236948225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Plugins/FMOD/FMOD-KRZYCHU/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638410981726508883
+  FileSizes:
+  - Name: Desktop
+    Value: 4870240
+  Exists: 1
 --- !u!114 &8826960057353590137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,7 +307,7 @@ MonoBehaviour:
     Data3: 1221028226
     Data4: 98995522
   Banks:
-  - {fileID: -6232927233699464841}
+  - {fileID: 4735091819236948225}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

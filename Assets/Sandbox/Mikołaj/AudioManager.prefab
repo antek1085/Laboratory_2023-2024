@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8369048595808100105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 82107638696361200}
+  - component: {fileID: 1120046227845879091}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &82107638696361200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8369048595808100105}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1120046227845879091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8369048595808100105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bf4c20fd967f3742b160b4341c069e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FootstepEvent:
+    Guid:
+      Data1: 1923293552
+      Data2: 1340264200
+      Data3: 284494778
+      Data4: 701979387
+    Path: event:/Footsteps
+  MusicEvent:
+    Guid:
+      Data1: 212938508
+      Data2: 1197751662
+      Data3: -1419501157
+      Data4: -2036181970
+    Path: event:/Music
+  PickUpEvent:
+    Guid:
+      Data1: 1451819229
+      Data2: 1141125712
+      Data3: 665856667
+      Data4: 500824808
+    Path: event:/PickUp
+  PlaceDownEvent:
+    Guid:
+      Data1: 1292530627
+      Data2: 1296565445
+      Data3: 1211020421
+      Data4: -1291788798
+    Path: event:/PlaceDown
+  LabstationEvent:
+    Guid:
+      Data1: 226785159
+      Data2: 1305233222
+      Data3: 935565991
+      Data4: 1566214806
+    Path: event:/LabstationSingle
+  MortarEvent:
+    Guid:
+      Data1: 923462138
+      Data2: 1099067989
+      Data3: 1221028226
+      Data4: 98995522
+    Path: event:/MortarSingle
+  PillcutterEvent:
+    Guid:
+      Data1: -635434099
+      Data2: 1093172003
+      Data3: 1649382075
+      Data4: -33544813
+    Path: event:/PillcutterSingle
+  rate: 0.3
+  player: {fileID: 0}
+  controller: {fileID: 0}
+  FootstepRate: 10
