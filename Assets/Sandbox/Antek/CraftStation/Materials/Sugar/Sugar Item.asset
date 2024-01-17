@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47f706124a40183459ec7f3df84f193e, type: 3}
   m_Name: Sugar Item
   m_EditorClassIdentifier: 
-  itemToSpawn: {fileID: 0}
+  itemToSpawn: {fileID: 8882689574015005992, guid: ba014754b0034d040820b2a918fce907, type: 3}
   sprite: {fileID: 21300000, guid: a251ffeb75c93c749b3c5260e4103ab3, type: 3}

@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47f706124a40183459ec7f3df84f193e, type: 3}
+  m_Name: Vaseline Item
+  m_EditorClassIdentifier: 
+  itemToSpawn: {fileID: 7920385685303446375, guid: 1ef28de1817a2dc4a8937b57fd3d1a80, type: 3}
+  sprite: {fileID: 21300000, guid: 01e4709b2cd92bb4282e784da7a47e9a, type: 3}
