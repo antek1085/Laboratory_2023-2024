@@ -104,6 +104,7 @@ public class PillsCraftingStation : MonoBehaviour
     {
         Debug.Log("Sadwitch");
         firstMaterial = null; secondMaterial = null;
+        Audio.Play("PillcutterEvent"); //MJ - Nieprzetestowane
         yield return new WaitForSeconds(5);
         Instantiate(recipeList.itemList[i].Result.itemToSpawn, itemSpawn.transform.position,itemSpawn.transform.rotation);
         isCrafting = false;
@@ -113,6 +114,7 @@ public class PillsCraftingStation : MonoBehaviour
     IEnumerator DungSpawn()
     {
         firstMaterial = null; secondMaterial = null;
+        Audio.Play("PillcutterEvent"); //MJ - Nieprzetestowane
         yield return new WaitForSeconds(5);
         Instantiate(dung, itemSpawn.transform.position,itemSpawn.transform.rotation);
         isCrafting = false;
