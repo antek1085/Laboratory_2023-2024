@@ -88,6 +88,7 @@ public class MortarCraftingStation : MonoBehaviour
     IEnumerator ItemCraft(int i)
     {
         firstMaterial = null;
+        Audio.Play("MortarEvent"); //MJ - Nieprzetestowane
         yield return new WaitForSeconds(5);
         Instantiate(recipeList.itemList[i].Result.itemToSpawn, itemSpawn.transform.position,itemSpawn.transform.rotation);
         isCrafting = false;
@@ -97,6 +98,7 @@ public class MortarCraftingStation : MonoBehaviour
     IEnumerator DungSpawn()
     {
         firstMaterial = null;
+        Audio.Play("MortarEvent"); //MJ - Nieprzetestowane
         yield return new WaitForSeconds(5);
         Instantiate(dung, itemSpawn.transform.position,itemSpawn.transform.rotation);
         isCrafting = false;

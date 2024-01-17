@@ -79,6 +79,7 @@ public class CookingCraftingStation : MonoBehaviour
             firstMaterial = null;
             secondMaterial = null;
             thirdMaterial = null;
+            Audio.Play("LabstationEvent"); //MJ - Nieprzetestowane
             yield return new WaitForSeconds(5);
             Instantiate(recipeList.itemList[i].Result.itemToSpawn, itemSpawn.transform.position, itemSpawn.transform.rotation);
             isCrafting = false;
@@ -90,6 +91,7 @@ public class CookingCraftingStation : MonoBehaviour
             firstMaterial = null;
             secondMaterial = null;
             thirdMaterial = null;
+            Audio.Play("LabstationEvent"); //MJ - Nieprzetestowane
             yield return new WaitForSeconds(5);
             Instantiate(dung, itemSpawn.transform.position, itemSpawn.transform.rotation);
             isCrafting = false;

@@ -39,6 +39,7 @@ public class PickUpItems : MonoBehaviour
             
                             CurrentObjectRigidbody.isKinematic = true;
                             isInHand = true;
+                            Audio.Play("PickUpEvent"); //MJ - Nieprzetestowane
                            // CurrentObjectCollider.enabled = false;
                            return;
                         }
@@ -52,7 +53,8 @@ public class PickUpItems : MonoBehaviour
                         CurrentObjectRigidbody = null;
                         CurrentObjectCollider = null;
                         isInHand = false;
-                    }
+                        Audio.Play("PlaceDownEvent"); //MJ - Nieprzetestowane
+            }
                     
         }
         

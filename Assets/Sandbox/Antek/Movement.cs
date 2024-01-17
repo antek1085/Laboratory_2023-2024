@@ -21,7 +21,10 @@ public class Movement : MonoBehaviour
     private Vector3 mouseposition;
 
     public float speed_Limit;
-    
+
+    public float CurrentSpeed 
+    { get { return (_rigidbody.velocity.magnitude); } }
+
 
     // Start is called before the first frame update
     void Start()
