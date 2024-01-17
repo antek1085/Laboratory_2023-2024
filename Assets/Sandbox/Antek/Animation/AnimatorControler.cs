@@ -6,6 +6,7 @@ using UnityEngine;
 public class AnimatorControler : MonoBehaviour
 {
     private readonly int isWalking = Animator.StringToHash("IsWalking");
+    private readonly int isWalkingRight = Animator.StringToHash("IsWalkingRight");
     private readonly int isWalkingBack = Animator.StringToHash("IsWalkingBack");
     private readonly int isWalkingFront = Animator.StringToHash("IsWalkingFront");
     
@@ -23,7 +24,7 @@ public class AnimatorControler : MonoBehaviour
 
     void Update()
     { 
-        //transform.LookAt(lookat.transform);
+        
         if (Input.GetAxis("Horizontal") != 0)
         { 
             animator.GetBool(isWalking);
@@ -32,19 +33,23 @@ public class AnimatorControler : MonoBehaviour
             animator.SetBool(isWalkingFront ,false);
             animator.GetBool(isWalkingBack);
             animator.SetBool(isWalkingBack ,false);
-            
+            newRotation.z = 0;
             switch (Input.GetAxis("Horizontal"))
             {
                 case > 0 :
+                    animator.GetBool(isWalkingRight);
+                    animator.SetBool(isWalkingRight, true);
                     newRotation = mainCamera.transform.eulerAngles;
-                    newRotation.x = 0;
-                    newRotation.z = 0;
+                    newRotation.x = 90;
+                    newRotation.z = 0;  
                     newRotation.y = 180;
+                   //this.GetComponent<BliboardScript>().enabled = false;
                     transform.eulerAngles = newRotation;
                     return;
                 case < 0:
+                    animator.GetBool(isWalking);
+                    animator.SetBool(isWalking, true);
                     newRotation = mainCamera.transform.eulerAngles;
-                    newRotation.x = 0;
                     newRotation.z = 0;
                     transform.eulerAngles = newRotation;
                     return;
@@ -57,14 +62,20 @@ public class AnimatorControler : MonoBehaviour
         }
         else
         {
+            //this.GetComponent<BliboardScript>().enabled = true;
             animator.GetBool(isWalking);
             animator.SetBool(isWalking, false);
+            animator.GetBool(isWalkingRight);
+            animator.SetBool(isWalkingRight, false);
         }
 
         if (Input.GetAxis("Vertical") < 0 && Input.GetAxis("Horizontal") == 0)
         {
+            newRotation.x = 90;
+            newRotation.z = 0;  
             animator.GetBool(isWalkingFront);
             animator.SetBool(isWalkingFront, true);
+            transform.eulerAngles = newRotation;
         }
         else
         {
@@ -73,8 +84,11 @@ public class AnimatorControler : MonoBehaviour
         }
         if(Input.GetAxis("Vertical") > 0 && Input.GetAxis("Horizontal") == 0)
         {
+            newRotation.x = 90;
+            newRotation.z = 0;  
             animator.GetBool(isWalkingBack);
             animator.SetBool(isWalkingBack, true);
+            transform.eulerAngles = newRotation;
         }
         else
         {

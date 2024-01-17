@@ -1,57 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9096d1f-a5a7-49a5-90e5-074bfea24c04" name="Changes" comment="">
+    <list default="true" id="4115b137-8e6d-4221-ae05-a039ef6388f8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/AnimatorControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/AnimatorControler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Antek Sandbox.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Antek Sandbox.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/Walking Animation.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/Walking Animation.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/BliboardScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/BliboardScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Prefabs/Pills Maker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Prefabs/Pills Maker.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Prefabs/Tablet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Prefabs/Tablet.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Sandbox/Antek/BliboardScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliverySpace.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/ScoreSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sandbox/Antek/PlayerRotation.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sandbox/Antek/SlideBarControler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sandbox/Antek/Thanks for demo/DemoButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Slider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3e2118a0a67041869c87922a11f4a02f1a1c00/f1/32ce56cf/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
-}</component>
-  <component name="ProjectId" id="2XcXUdvGrFpbyWTdtuM3fhzwA4N" />
+  <component name="ProjectId" id="2b33vraZzHwnUmSt0znbCdTjuKD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
     &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.4491363&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -65,24 +45,16 @@
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2023.1.5f1\Editor\Unity.exe" />
-      <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Laboratory_2023-2024 -debugCodeOptimization" />
-      <option name="WORKING_DIRECTORY" value="C:\Laboratory_2023-2024" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2023.1.5f1\Editor\Unity.exe" />
-      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Laboratory_2023-2024 -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
-      <option name="WORKING_DIRECTORY" value="C:\Laboratory_2023-2024" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath F:\Laboratory_2023-2024 -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="F:\Laboratory_2023-2024" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2023.1.5f1\Editor\Unity.exe" />
-      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Laboratory_2023-2024 -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
-      <option name="WORKING_DIRECTORY" value="C:\Laboratory_2023-2024" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath F:\Laboratory_2023-2024 -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="F:\Laboratory_2023-2024" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
@@ -111,68 +83,21 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c9096d1f-a5a7-49a5-90e5-074bfea24c04" name="Changes" comment="" />
-      <created>1698929360097</created>
+      <changelist id="4115b137-8e6d-4221-ae05-a039ef6388f8" name="Changes" comment="" />
+      <created>1705430170181</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1698929360097</updated>
-      <workItem from="1698929363558" duration="10236000" />
-      <workItem from="1699355375487" duration="1593000" />
-      <workItem from="1699543270688" duration="3505000" />
-      <workItem from="1699642610481" duration="8994000" />
-      <workItem from="1699722553264" duration="7040000" />
-      <workItem from="1699973900647" duration="10799000" />
-      <workItem from="1699992169203" duration="5926000" />
-      <workItem from="1700034858357" duration="3395000" />
-      <workItem from="1700099879652" duration="763000" />
-      <workItem from="1700142995029" duration="4042000" />
-      <workItem from="1700166256405" duration="858000" />
-      <workItem from="1700227026008" duration="3986000" />
-      <workItem from="1700242831910" duration="4609000" />
-      <workItem from="1700315954793" duration="3196000" />
-      <workItem from="1700328763973" duration="1902000" />
-      <workItem from="1700354547047" duration="3607000" />
-      <workItem from="1700405785304" duration="2416000" />
-      <workItem from="1700701278413" duration="248000" />
-      <workItem from="1700734939695" duration="3463000" />
-      <workItem from="1700924274034" duration="11025000" />
-      <workItem from="1700942671730" duration="640000" />
-      <workItem from="1701168991314" duration="348000" />
-      <workItem from="1701184188015" duration="10013000" />
-      <workItem from="1701355558385" duration="5883000" />
-      <workItem from="1701453050711" duration="756000" />
-      <workItem from="1701632514082" duration="5141000" />
-      <workItem from="1701701121075" duration="2308000" />
-      <workItem from="1701705573524" duration="1588000" />
-      <workItem from="1701709255860" duration="821000" />
-      <workItem from="1701772893144" duration="3600000" />
-      <workItem from="1701785589238" duration="12039000" />
-      <workItem from="1701966683816" duration="1195000" />
-      <workItem from="1701987506862" duration="700000" />
-      <workItem from="1702390027169" duration="4819000" />
-      <workItem from="1702560400869" duration="49000" />
-      <workItem from="1702560468717" duration="4504000" />
-      <workItem from="1702566620325" duration="181000" />
-      <workItem from="1702575372695" duration="703000" />
-      <workItem from="1702576634718" duration="951000" />
-      <workItem from="1702578250415" duration="949000" />
-      <workItem from="1702754313683" duration="750000" />
-      <workItem from="1702994653860" duration="8560000" />
-      <workItem from="1703005065864" duration="4000" />
-      <workItem from="1703150853767" duration="1140000" />
-      <workItem from="1703168269660" duration="10036000" />
-      <workItem from="1704655563117" duration="2533000" />
-      <workItem from="1704838257537" duration="1006000" />
-      <workItem from="1704923655066" duration="693000" />
-      <workItem from="1705071087582" duration="672000" />
-      <workItem from="1705079756031" duration="619000" />
+      <updated>1705430170181</updated>
+      <workItem from="1705430172672" duration="3146000" />
+      <workItem from="1705490285176" duration="4000" />
+      <workItem from="1705492395305" duration="703000" />
+      <workItem from="1705493340912" duration="917000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">

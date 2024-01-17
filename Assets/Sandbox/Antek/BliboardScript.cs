@@ -16,7 +16,7 @@ public class BliboardScript : MonoBehaviour
     {
         Vector3 newRotation = mainCamera.transform.eulerAngles;
         newRotation.x = 30;
-        newRotation.z = 0;
+        newRotation.z = 0;  
         transform.eulerAngles = newRotation;
     }
 }
