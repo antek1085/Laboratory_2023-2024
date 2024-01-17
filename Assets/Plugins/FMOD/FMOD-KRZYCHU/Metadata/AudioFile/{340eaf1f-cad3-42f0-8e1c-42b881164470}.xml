@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{340eaf1f-cad3-42f0-8e1c-42b881164470}">
+		<property name="assetPath">
+			<value>ObjectInteraction/BubblingLoop.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>5.2506122448979591</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3a41c2f6-364e-48b5-8031-049fac76c4a6}</destination>
+		</relationship>
+	</object>
+</objects>
