@@ -40,18 +40,19 @@ public class AnimatorControler : MonoBehaviour
                     animator.GetBool(isWalkingRight);
                     animator.SetBool(isWalkingRight, true);
                     newRotation = mainCamera.transform.eulerAngles;
-                    newRotation.x = 90;
-                    newRotation.z = 0;  
-                    newRotation.y = 180;
-                   //this.GetComponent<BliboardScript>().enabled = false;
-                    transform.eulerAngles = newRotation;
+                    newRotation.x = -90;
+                    newRotation.z = 180;  
+                    newRotation.y = 0;
+                    transform.rotation = Quaternion.Euler(newRotation.x, newRotation.y ,newRotation.z);
                     return;
                 case < 0:
                     animator.GetBool(isWalking);
                     animator.SetBool(isWalking, true);
                     newRotation = mainCamera.transform.eulerAngles;
-                    newRotation.z = 0;
-                    transform.eulerAngles = newRotation;
+                    newRotation.x = 90;
+                    newRotation.z = 0;  
+                    newRotation.y = 0;
+                    transform.rotation = Quaternion.Euler(newRotation.x,newRotation.y,newRotation.z);
                     return;
             }
            
@@ -75,7 +76,7 @@ public class AnimatorControler : MonoBehaviour
             newRotation.z = 0;  
             animator.GetBool(isWalkingFront);
             animator.SetBool(isWalkingFront, true);
-            transform.eulerAngles = newRotation;
+            transform.rotation = Quaternion.Euler(newRotation.x, 0 ,newRotation.z);
         }
         else
         {
@@ -88,7 +89,7 @@ public class AnimatorControler : MonoBehaviour
             newRotation.z = 0;  
             animator.GetBool(isWalkingBack);
             animator.SetBool(isWalkingBack, true);
-            transform.eulerAngles = newRotation;
+            transform.rotation = Quaternion.Euler(newRotation.x, 0 ,newRotation.z);
         }
         else
         {

@@ -31,7 +31,7 @@ public class ScoreSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textNumberOfPoints.text = numberOfPoints.Value.ToString();
+        textNumberOfPoints.text = numberOfPoints.Value.ToString() + "/10";
 
         if (timeLeft.totalTime < 0)
         {

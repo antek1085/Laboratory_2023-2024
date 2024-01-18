@@ -13,6 +13,7 @@ public class PickUpItems : MonoBehaviour
 
     private Rigidbody CurrentObjectRigidbody;
     private Collider CurrentObjectCollider;
+    [SerializeField] private SOSprite spriteOnUi;
     
 
     // Update is called once per frame
@@ -36,6 +37,8 @@ public class PickUpItems : MonoBehaviour
                         {
                             CurrentObjectRigidbody = hitInfo.rigidbody;
                             CurrentObjectCollider = hitInfo.collider;
+                            spriteOnUi.sprite =  hitInfo.transform.GetComponent<SpriteRenderer>().sprite;
+                            hitInfo.transform.GetComponent<SpriteRenderer>().enabled = false;
             
                             CurrentObjectRigidbody.isKinematic = true;
                             isInHand = true;
@@ -53,6 +56,8 @@ public class PickUpItems : MonoBehaviour
                         CurrentObjectRigidbody = null;
                         CurrentObjectCollider = null;
                         isInHand = false;
+                        hitInfo.transform.GetComponent<SpriteRenderer>().enabled = true;
+                        spriteOnUi.sprite = null;
                         Audio.Play("PlaceDownEvent"); //MJ - Nieprzetestowane
             }
                     
