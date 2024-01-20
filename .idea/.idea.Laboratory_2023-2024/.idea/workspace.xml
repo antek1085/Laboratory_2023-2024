@@ -5,42 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4115b137-8e6d-4221-ae05-a039ef6388f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/HeldItemControllerUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/HeldItemControllerUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/HeldItem.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/HeldItem.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/SO Variables/SO Sprite.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/SO Variables/SO Sprite.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sandbox/Prefabs/EventSystem.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sandbox/Prefabs/EventSystem.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/AnimatorControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/AnimatorControler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Antek Sandbox.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Antek Sandbox.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/BliboardScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/BliboardScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Cooking Station/Balm/Balm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Cooking Station/Balm/Balm.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Cooking Station/Cought Syrup/Cought syrup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Cooking Station/Cought Syrup/Cought syrup.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Materials/Dung/Dung.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Materials/Dung/Dung.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Materials/Sugar/Sugar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Materials/Sugar/Sugar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Materials/Vaseline/vaseline.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Materials/Vaseline/vaseline.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Materials/Water/Water.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Materials/Water/Water.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Mortar Crafts/Nettle/Nettle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Mortar Crafts/Nettle/Nettle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Mortar Crafts/Sage/Sage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Mortar Crafts/Sage/Sage.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Mortar Crafts/Thistle/Thistle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Mortar Crafts/Thistle/Thistle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Pills Maker/DigestivePill/Digestive Pills.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Pills Maker/DigestivePill/Digestive Pills.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/ScoreSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/ScoreSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/Walking Animation.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Animation/Walking Animation.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Cooking Station/CookingCraftingStation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Cooking Station/CookingCraftingStation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Mortar Crafts/MortarCraftingStation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Mortar Crafts/MortarCraftingStation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Pills Maker/PillsCraftingStation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Pills Maker/PillsCraftingStation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/PickUpItems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/PickUpItems.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/TabletController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/TabletController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/UI/button.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/UI/button.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/UI/end.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/UI/end.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/UI/menu.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/UI/menu.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Weronika Sandbox 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Weronika Sandbox 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Prefabs/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Prefabs/Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Weronika/Walls/low T inverted.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Weronika/Walls/low T inverted.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Weronika/Walls/low T.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Weronika/Walls/low T.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Weronika/Walls/low side left closed .png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Weronika/Walls/low side left closed .png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Weronika/Walls/low side right closed.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Weronika/Walls/low side right closed.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Weronika/Walls/low side-T open left.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Weronika/Walls/low side-T open left.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Weronika/Walls/low side-T open right.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Weronika/Walls/low side-T open right.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Weronika/Walls/low wall center.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Weronika/Walls/low wall center.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Weronika/Walls/low wall left.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Weronika/Walls/low wall left.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Weronika/Walls/low wall right.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Weronika/Walls/low wall right.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Prefabs/Cooking Station.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Prefabs/Cooking Station.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Prefabs/Mortar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Prefabs/Mortar.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Prefabs/Pills Maker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Prefabs/Pills Maker.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/Permanent_Marker/PermanentMarker-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/Permanent_Marker/PermanentMarker-Regular.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,16 +29,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/HeldItemControllerUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Sandbox/Antek/SO Variables/SO Sprite.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2b33vraZzHwnUmSt0znbCdTjuKD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -79,9 +58,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\Antek\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Antek\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Antek\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\PC\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -145,6 +124,7 @@
       <workItem from="1705493340912" duration="917000" />
       <workItem from="1705497295701" duration="11000" />
       <workItem from="1705586903433" duration="3539000" />
+      <workItem from="1705777476107" duration="1929000" />
     </task>
     <servers />
   </component>

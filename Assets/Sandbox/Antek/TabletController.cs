@@ -16,9 +16,15 @@ public class TabletController : MonoBehaviour
 
     private bool isPlayerInRange;
     
+    [SerializeField] Sprite highLightItem;
+    private Sprite normalItem;
+    private SpriteRenderer spriteRenderer;
+    
     // Start is called before the first frame update
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        normalItem = spriteRenderer.sprite;
     }
 
     // Update is called once per frame
@@ -50,7 +56,8 @@ public class TabletController : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
-        { 
+        {
+            spriteRenderer.sprite = highLightItem;
             isPlayerInRange = true;
         }
         
@@ -59,7 +66,8 @@ public class TabletController : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")
-        { 
+        {
+            spriteRenderer.sprite = normalItem;
             isPlayerInRange = false; 
         }
     }

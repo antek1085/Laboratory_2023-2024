@@ -71,6 +71,7 @@ public class PickUpItems : MonoBehaviour
 
         if (CurrentObjectRigidbody == null)
         {
+            spriteOnUi.sprite = null;
             isInHand = false;
             CurrentObjectRigidbody = null;
         }

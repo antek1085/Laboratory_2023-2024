@@ -20,19 +20,25 @@ public class PillsCraftingStation : MonoBehaviour
     private float distance;
     private bool isCrafting = false;
 
+    [SerializeField] Sprite highLightItem;
+    private Sprite normalItem;
+    private SpriteRenderer spriteRenderer;
+
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        normalItem = spriteRenderer.sprite;
     }
     
     void Update()
     {
         distance = Vector3.Distance(playerTransform.position, transform.position);
        
-        if (firstMaterial != null && secondMaterial != null && distance < 2)
+        if (firstMaterial != null && secondMaterial != null && distance < 6)
         {
             playerInputText.enabled = true;
             playerInputText.text = "Click Space to start crafting";
-            if (Input.GetKeyDown(KeyCode.Space) && distance < 2)
+            if (Input.GetKeyDown(KeyCode.Space) && distance < 6)
             {
                 isCrafting = true;
                 playerInputText.enabled = false;
@@ -58,7 +64,7 @@ public class PillsCraftingStation : MonoBehaviour
               }  
             }
         }
-        else if (secondMaterial != null && distance > 2)
+        else if (secondMaterial != null && distance > 6)
         {
             playerInputText.enabled = false;
         }
@@ -68,17 +74,19 @@ public class PillsCraftingStation : MonoBehaviour
     {
         if (other.tag == "Material" && isCrafting == false && secondMaterial == null)
         { 
-            if (distance < 2)
+            if (distance < 6)
             {
                 playerInputText.enabled = true;
                 playerInputText.text = "Click R to insert the material";
+                spriteRenderer.sprite = highLightItem;
             }
             else
             {
                 playerInputText.enabled = false;
             }
-            if(Input.GetKeyUp(KeyCode.R) && distance < 2)
+            if(Input.GetKeyUp(KeyCode.R) && distance < 6)
             {
+                Debug.Log("1");
                 if (firstMaterial != null)
               {
                   secondMaterial = other.GetComponent<ItemID>()._item;
@@ -96,6 +104,7 @@ public class PillsCraftingStation : MonoBehaviour
     {
         if (other.tag == "Material")
         {
+            spriteRenderer.sprite = normalItem;
             playerInputText.enabled = false;
         }
     }

@@ -61,7 +61,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.26, y: 0, z: 6.9}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 0.69, y: 0.69, z: 0.69}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3548811383009956396}
@@ -107,7 +107,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.02, y: 13.67, z: 4.48}
+  m_Size: {x: 5.47, y: 13.67, z: 10.1}
   m_Center: {x: 0, y: -2.85, z: 0}
 --- !u!114 &4174524633736489910
 MonoBehaviour:
@@ -126,6 +126,7 @@ MonoBehaviour:
   dung: {fileID: 8437310474438761681, guid: 19dc25248458ddd4087d27c35f76b5f3, type: 3}
   recipeList: {fileID: 11400000, guid: 2e9b4142b09d82741828a54e866278b9, type: 2}
   playerTransform: {fileID: 0}
+  highLightItem: {fileID: 21300000, guid: 28ae26c6acaf4ea488d384f44e5d01a5, type: 3}
 --- !u!212 &6111373754491665330
 SpriteRenderer:
   m_ObjectHideFlags: 0

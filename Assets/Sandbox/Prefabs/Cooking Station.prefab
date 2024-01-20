@@ -177,3 +177,4 @@ MonoBehaviour:
   dung: {fileID: 8437310474438761681, guid: 19dc25248458ddd4087d27c35f76b5f3, type: 3}
   recipeList: {fileID: 11400000, guid: 931999e9faba9f643917e989e82b7aaf, type: 2}
   playerTransform: {fileID: 0}
+  highLightItem: {fileID: 21300000, guid: da52d2721f2365147812299f42036b4e, type: 3}
