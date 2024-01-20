@@ -22,9 +22,15 @@ public class CookingCraftingStation : MonoBehaviour
     [SerializeField] Transform playerTransform;
     private float distance;
     private bool isCrafting = false;
+    
+    [SerializeField] Sprite highLightItem;
+    private Sprite normalItem;
+    private SpriteRenderer spriteRenderer;
 
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        normalItem = spriteRenderer.sprite;
     }
 
     // Update is called once per frame
@@ -35,7 +41,7 @@ public class CookingCraftingStation : MonoBehaviour
         {
             playerInputText.enabled = true;
             playerInputText.text = "Click Space to start crafting";
-            if (Input.GetKeyUp(KeyCode.Space) && distance < 2)
+            if (Input.GetKeyUp(KeyCode.Space) && distance < 6)
             {
                 isCrafting = true;
                 playerInputText.enabled = false;
@@ -65,7 +71,7 @@ public class CookingCraftingStation : MonoBehaviour
             }
             
         }
-        else if (secondMaterial != null && distance > 2)
+        else if (secondMaterial != null && distance > 6)
         {
             playerInputText.enabled = false;
         }
@@ -102,8 +108,9 @@ public class CookingCraftingStation : MonoBehaviour
     {
         if (other.tag == "Material" && isCrafting == false & thirdMaterial == null)
         { 
-            if (distance < 2)
+            if (distance < 6)
             {
+                spriteRenderer.sprite = highLightItem;
                 playerInputText.enabled = true;
                 playerInputText.text = "Click R to insert the material";
             }
@@ -111,7 +118,7 @@ public class CookingCraftingStation : MonoBehaviour
             {
                 playerInputText.enabled = false;
             }
-            if (Input.GetKey(KeyCode.R) && distance < 2)
+            if (Input.GetKey(KeyCode.R) && distance < 6)
             {
                 if (firstMaterial != null && secondMaterial != null)
                 {
@@ -135,6 +142,7 @@ public class CookingCraftingStation : MonoBehaviour
     {
         if (other.tag == "Material")
         {
+            spriteRenderer.sprite = normalItem;
             playerInputText.enabled = false;
         }
     }
