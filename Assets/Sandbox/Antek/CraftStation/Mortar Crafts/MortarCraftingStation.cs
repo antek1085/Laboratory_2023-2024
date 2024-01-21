@@ -35,7 +35,7 @@ public class MortarCraftingStation : MonoBehaviour
         {
             playerInputText.enabled = true;
             playerInputText.text = "Click Space to start crafting";
-            if (Input.GetKeyUp(KeyCode.Space) && distance < 5)
+            if (Input.GetKey(KeyCode.Space) && distance < 5)
             {
                 isCrafting = true;
                 playerInputText.enabled = false;

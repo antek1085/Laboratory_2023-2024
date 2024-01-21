@@ -41,7 +41,7 @@ public class CookingCraftingStation : MonoBehaviour
         {
             playerInputText.enabled = true;
             playerInputText.text = "Click Space to start crafting";
-            if (Input.GetKeyUp(KeyCode.Space) && distance < 6)
+            if (Input.GetKey(KeyCode.Space) && distance < 6)
             {
                 isCrafting = true;
                 playerInputText.enabled = false;

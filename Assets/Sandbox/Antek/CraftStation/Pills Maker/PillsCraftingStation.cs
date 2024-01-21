@@ -38,7 +38,7 @@ public class PillsCraftingStation : MonoBehaviour
         {
             playerInputText.enabled = true;
             playerInputText.text = "Click Space to start crafting";
-            if (Input.GetKeyDown(KeyCode.Space) && distance < 6)
+            if (Input.GetKey(KeyCode.Space) && distance < 6)
             {
                 isCrafting = true;
                 playerInputText.enabled = false;
@@ -84,7 +84,7 @@ public class PillsCraftingStation : MonoBehaviour
             {
                 playerInputText.enabled = false;
             }
-            if(Input.GetKeyUp(KeyCode.R) && distance < 6)
+            if(Input.GetKey(KeyCode.R) && distance < 6)
             {
                 Debug.Log("1");
                 if (firstMaterial != null)
