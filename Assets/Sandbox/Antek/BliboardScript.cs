@@ -15,7 +15,7 @@ public class BliboardScript : MonoBehaviour
     void Update()
     {
         Vector3 newRotation = mainCamera.transform.eulerAngles;
-        newRotation.x = 30;
+        newRotation.x = 90;
         newRotation.z = 0;  
         transform.rotation = Quaternion.Euler(newRotation.x, 0,newRotation.z);
     }
