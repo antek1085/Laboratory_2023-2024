@@ -39,7 +39,7 @@ public class TabletController : MonoBehaviour
                 placeInList -= 1;
             }
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.R))
             {
                 placeInList += 1;
             }

@@ -6,6 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="4115b137-8e6d-4221-ae05-a039ef6388f8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/HighLight_Items/matrix_int.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/HighLight_Items/matrix_int.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/HighLight_Items/mortar_int.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/HighLight_Items/mortar_int.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/HighLight_Items/tablet_int.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/HighLight_Items/tablet_int.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/HighLight_Items/torch_int.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/HighLight_Items/torch_int.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/HighLight_Items/trash_int.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/HighLight_Items/trash_int.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/TabletController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/TabletController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/TrashCan/TrashCan.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/TrashCan/TrashCan.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Weronika Sandbox 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Weronika Sandbox 1.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +125,8 @@
       <workItem from="1705880246326" duration="570000" />
       <workItem from="1705928646685" duration="597000" />
       <workItem from="1705930637475" duration="857000" />
+      <workItem from="1705949896792" duration="46000" />
+      <workItem from="1705949957147" duration="12000" />
     </task>
     <servers />
   </component>
