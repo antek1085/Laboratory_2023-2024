@@ -106,9 +106,6 @@
 		<property name="pitch">
 			<value>-0.5</value>
 		</property>
-		<property name="looping">
-			<value>true</value>
-		</property>
 		<relationship name="audioFile">
 			<destination>{340eaf1f-cad3-42f0-8e1c-42b881164470}</destination>
 		</relationship>
