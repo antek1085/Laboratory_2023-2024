@@ -1042,7 +1042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d36c8f5e4add9447ad87f1a38d8cad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: Antek Sandbox
+  levelToLoad: Weronika Sandbox 1
   loadingScreen: {fileID: 645927932}
   slider: {fileID: 1977223282}
   delay: 2
