@@ -16,20 +16,26 @@ public class MortarCraftingStation : MonoBehaviour
     [SerializeField] Transform playerTransform;
     private float distance;
     private bool isCrafting = false;
+    
+    [SerializeField] Sprite highLightItem;
+    private Sprite normalItem;
+    private SpriteRenderer spriteRenderer;
 
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        normalItem = spriteRenderer.sprite;
     }
     
     void Update()
     {
         distance = Vector3.Distance(playerTransform.position, transform.position);
        
-        if (firstMaterial != null && distance < 2)
+        if (firstMaterial != null && distance < 5)
         {
             playerInputText.enabled = true;
             playerInputText.text = "Click Space to start crafting";
-            if (Input.GetKeyUp(KeyCode.Space) && distance < 2)
+            if (Input.GetKey(KeyCode.Space) && distance < 5)
             {
                 isCrafting = true;
                 playerInputText.enabled = false;
@@ -49,7 +55,7 @@ public class MortarCraftingStation : MonoBehaviour
               }  
             }
         }
-        else if (firstMaterial != null && distance > 2)
+        else if (firstMaterial != null && distance > 5)
         {
             playerInputText.enabled = false;
         }
@@ -59,7 +65,7 @@ public class MortarCraftingStation : MonoBehaviour
     {
         if (other.tag == "Material" && isCrafting == false && firstMaterial == null)
         {
-            if (distance < 2)
+            if (distance < 5)
             {
                  playerInputText.enabled = true;
                  playerInputText.text = "Click R to insert the material";
@@ -69,25 +75,36 @@ public class MortarCraftingStation : MonoBehaviour
                 playerInputText.enabled = false;
             }
            
-            if (Input.GetKey(KeyCode.R) && distance < 2)
+            if (Input.GetKey(KeyCode.R) && distance < 5)
             {
                 firstMaterial = other.GetComponent<ItemID>()._item;
                 playerInputText.enabled = false;
                 Destroy(other.gameObject);
             }
         }
+
+        if (other.tag == "Player")
+        {
+            spriteRenderer.sprite = highLightItem;
+        }
     }
     void OnTriggerExit(Collider other)
     {
         if (other.tag == "Material")
         {
+            spriteRenderer.sprite = normalItem;
             playerInputText.enabled = false;
+        }
+        else
+        {
+            spriteRenderer.sprite = normalItem;
         }
     }
 
     IEnumerator ItemCraft(int i)
     {
         firstMaterial = null;
+        Audio.Play("MortarEvent"); //MJ - Nieprzetestowane
         yield return new WaitForSeconds(5);
         Instantiate(recipeList.itemList[i].Result.itemToSpawn, itemSpawn.transform.position,itemSpawn.transform.rotation);
         isCrafting = false;
@@ -97,6 +114,7 @@ public class MortarCraftingStation : MonoBehaviour
     IEnumerator DungSpawn()
     {
         firstMaterial = null;
+        Audio.Play("MortarEvent"); //MJ - Nieprzetestowane
         yield return new WaitForSeconds(5);
         Instantiate(dung, itemSpawn.transform.position,itemSpawn.transform.rotation);
         isCrafting = false;

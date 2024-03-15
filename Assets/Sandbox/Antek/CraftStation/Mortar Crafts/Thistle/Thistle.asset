@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47f706124a40183459ec7f3df84f193e, type: 3}
   m_Name: Thistle
   m_EditorClassIdentifier: 
-  itemToSpawn: {fileID: 0}
+  itemToSpawn: {fileID: 2239250699973963403, guid: 30c5d152b8b349447a88681d26bd0fdc, type: 3}
+  sprite: {fileID: 21300000, guid: 4672db44a52a75e4d9da2a6123ae767a, type: 3}

@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Digestive Pills Item
   m_EditorClassIdentifier: 
   itemToSpawn: {fileID: 6449609256073094675, guid: d5c4d86bf9a928843bc68b07d8741ac6, type: 3}
+  sprite: {fileID: 21300000, guid: 83dae3079a81f714284f2d50c23a69fe, type: 3}

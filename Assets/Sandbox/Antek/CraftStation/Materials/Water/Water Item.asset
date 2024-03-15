@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Water Item
   m_EditorClassIdentifier: 
   itemToSpawn: {fileID: 0}
+  sprite: {fileID: 21300000, guid: cb6d3d065c06ab041b792ff4b505150e, type: 3}

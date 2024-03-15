@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Mashed Nettle Item
   m_EditorClassIdentifier: 
   itemToSpawn: {fileID: 7243491364769181047, guid: daa189f9d4d74f8499480bbfad577b37, type: 3}
+  sprite: {fileID: 21300000, guid: 86230135692cf4443bd4c4ebc292cd67, type: 3}

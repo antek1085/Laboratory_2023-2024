@@ -12,10 +12,15 @@ public class TrashCan : MonoBehaviour
     [SerializeField] Transform playerTransform;
     private float distance;
     
+    [SerializeField] Sprite highLightItem;
+    private Sprite normalItem;
+    private SpriteRenderer spriteRenderer;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        normalItem = spriteRenderer.sprite;
     }
 
     // Update is called once per frame
@@ -28,8 +33,9 @@ public class TrashCan : MonoBehaviour
     {
         if (other.tag == "Material")
         {
-            if (distance < 2)
+            if (distance < 5)
             {
+                spriteRenderer.sprite = highLightItem;
                 playerInputText.enabled = true;
                 playerInputText.text = "Click R to trash the material";
             }
@@ -38,7 +44,7 @@ public class TrashCan : MonoBehaviour
                 playerInputText.enabled = false;
             }
             
-            if (Input.GetKey(KeyCode.R) && distance < 2)
+            if (Input.GetKey(KeyCode.R) && distance < 5)
             {
                 playerInputText.enabled = false;
                 Destroy(other.gameObject);
@@ -50,6 +56,7 @@ public class TrashCan : MonoBehaviour
     {
         if (other.tag == "Material")
         {
+            spriteRenderer.sprite = normalItem;
             playerInputText.enabled = false;
         }
     }

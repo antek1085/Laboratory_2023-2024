@@ -5,4 +5,5 @@ using UnityEngine;
 public class Item : ScriptableObject
 {
     public GameObject itemToSpawn;
+    public Sprite sprite;
 }

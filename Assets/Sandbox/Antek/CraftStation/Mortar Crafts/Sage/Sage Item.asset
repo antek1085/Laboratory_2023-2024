@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47f706124a40183459ec7f3df84f193e, type: 3}
   m_Name: Sage Item
   m_EditorClassIdentifier: 
-  itemToSpawn: {fileID: 0}
+  itemToSpawn: {fileID: 1905624299119778016, guid: 5533ff8e7e91cc640ab93f4549f6afcd, type: 3}
+  sprite: {fileID: 21300000, guid: ad6aeda284a5dbe4584dc05c0a2f7d11, type: 3}

@@ -10,13 +10,8 @@ public class RoundTimer : MonoBehaviour
     [SerializeField] TextMeshProUGUI timer;
 
     [SerializeField] bool isGamePaused;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
+    
     void Update()
     {
         totalTime -= Time.deltaTime;

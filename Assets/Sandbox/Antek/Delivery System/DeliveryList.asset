@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: DeliveryList
   m_EditorClassIdentifier: 
   itemList:
-  - {fileID: 7171422265538322224, guid: ba014754b0034d040820b2a918fce907, type: 3}
-  - {fileID: 3730474012574176522, guid: 99092d98f9ed9404cbabb95e2a154c45, type: 3}
-  - {fileID: 4764088788164300394, guid: daa189f9d4d74f8499480bbfad577b37, type: 3}
+  - {fileID: 6536849697685909997, guid: 69e46eeefc7abdc4ea73aa0b79285915, type: 3}
+  - {fileID: 8486279699730875837, guid: d000f941624f22945bcee6aaf9edb0e0, type: 3}
+  - {fileID: 6830688093909506953, guid: d5c4d86bf9a928843bc68b07d8741ac6, type: 3}
+  - {fileID: 6830688093909506953, guid: d5c4d86bf9a928843bc68b07d8741ac6, type: 3}

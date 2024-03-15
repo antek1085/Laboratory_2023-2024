@@ -6,7 +6,6 @@ using UnityEngine.Serialization;
 
 public class PickUpItems : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField] private LayerMask PickUpLayer;
     [SerializeField] private float PickUpRange;
     [SerializeField] private Transform Hand;
@@ -14,6 +13,7 @@ public class PickUpItems : MonoBehaviour
 
     private Rigidbody CurrentObjectRigidbody;
     private Collider CurrentObjectCollider;
+    [SerializeField] private SOSprite spriteOnUi;
     
 
     // Update is called once per frame
@@ -37,9 +37,12 @@ public class PickUpItems : MonoBehaviour
                         {
                             CurrentObjectRigidbody = hitInfo.rigidbody;
                             CurrentObjectCollider = hitInfo.collider;
+                            spriteOnUi.sprite =  hitInfo.transform.GetComponent<SpriteRenderer>().sprite;
+                            hitInfo.transform.GetComponent<SpriteRenderer>().enabled = false;
             
                             CurrentObjectRigidbody.isKinematic = true;
                             isInHand = true;
+                            Audio.Play("PickUpEvent"); //MJ - Nieprzetestowane
                            // CurrentObjectCollider.enabled = false;
                            return;
                         }
@@ -53,7 +56,10 @@ public class PickUpItems : MonoBehaviour
                         CurrentObjectRigidbody = null;
                         CurrentObjectCollider = null;
                         isInHand = false;
-                    }
+                        hitInfo.transform.GetComponent<SpriteRenderer>().enabled = true;
+                        spriteOnUi.sprite = null;
+                        Audio.Play("PlaceDownEvent"); //MJ - Nieprzetestowane
+            }
                     
         }
         
@@ -65,32 +71,11 @@ public class PickUpItems : MonoBehaviour
 
         if (CurrentObjectRigidbody == null)
         {
+            spriteOnUi.sprite = null;
             isInHand = false;
             CurrentObjectRigidbody = null;
         }
 
-
-
-
-        // private void OnTriggerStay(Collider other)
-    // { 
-    //     if (isHeld && Input.GetKey(KeyCode.E))
-    //     {
-    //              other.GetComponent<Rigidbody>().isKinematic = false;
-    //              other.GetComponent<CapsuleCollider>().isTrigger = false;
-    //              isHeld = false;
-    //              other.transform.parent = null;
-    //     }
-    //     if (other.tag == "Material" && Input.GetKey(KeyCode.E))
-    //     {
-    //         Debug.Log("ssss");
-    //         other.transform.parent = this.transform;
-    //         other.GetComponent<Rigidbody>().isKinematic = true;
-    //         other.GetComponent<CapsuleCollider>().isTrigger = true;
-    //         isHeld = true;
-    //     }
-
-       
     }
 
 
