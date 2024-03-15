@@ -25,15 +25,12 @@ public class Movement : MonoBehaviour
     public float CurrentSpeed 
     { get { return (_rigidbody.velocity.magnitude); } }
 
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
     }
-
-    // Update is called once per frame
-
+    
     void Update()
     {
         if (Input.GetKey(KeyCode.LeftShift) && speed_Limit < 5 && m_Speed_cd_max == 0)

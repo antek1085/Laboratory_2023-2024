@@ -12,7 +12,6 @@ public class TabletController : MonoBehaviour
 
     [SerializeField] private List<Sprite> RecipeList = new List<Sprite>();
     private int placeInList = 0;
-   // private int numberOfThingsInList;
 
     private bool isPlayerInRange;
     
@@ -20,14 +19,12 @@ public class TabletController : MonoBehaviour
     private Sprite normalItem;
     private SpriteRenderer spriteRenderer;
     
-    // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         normalItem = spriteRenderer.sprite;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         

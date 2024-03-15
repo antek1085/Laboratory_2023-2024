@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _item: {fileID: 11400000, guid: 51e02da0071340043b0d3a0c78d6635f, type: 2}
-  time: 5
+  time: 50
 --- !u!54 &2338337875846987797
 Rigidbody:
   m_ObjectHideFlags: 0

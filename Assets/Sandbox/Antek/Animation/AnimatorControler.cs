@@ -12,8 +12,7 @@ public class AnimatorControler : MonoBehaviour
     
 
     public Animator animator;
-
-    [SerializeField] private GameObject lookat;
+    
     private Camera mainCamera;
     private Vector3 newRotation;
 
@@ -55,15 +54,9 @@ public class AnimatorControler : MonoBehaviour
                     transform.rotation = Quaternion.Euler(newRotation.x,newRotation.y,newRotation.z);
                     return;
             }
-           
-            // newRotation = mainCamera.transform.eulerAngles;
-            // newRotation.x = 0;
-            // newRotation.z = 0;
-            // transform.eulerAngles = newRotation;
         }
         else
         {
-            //this.GetComponent<BliboardScript>().enabled = true;
             animator.GetBool(isWalking);
             animator.SetBool(isWalking, false);
             animator.GetBool(isWalkingRight);

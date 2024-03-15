@@ -6,19 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="4115b137-8e6d-4221-ae05-a039ef6388f8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/HighLight_Items/matrix_int.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/HighLight_Items/matrix_int.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/HighLight_Items/mortar_int.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/HighLight_Items/mortar_int.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/HighLight_Items/tablet_int.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/HighLight_Items/tablet_int.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/HighLight_Items/torch_int.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/HighLight_Items/torch_int.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/HighLight_Items/trash_int.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/HighLight_Items/trash_int.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/TabletController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/TabletController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/TrashCan/TrashCan.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/TrashCan/TrashCan.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudio.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudio.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Cooking Station/Balm/Balm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Cooking Station/Balm/Balm.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Cooking Station/CookingCraftingStation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Cooking Station/CookingCraftingStation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Cooking Station/Cought Syrup/Cought syrup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Cooking Station/Cought Syrup/Cought syrup.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Mortar Crafts/MortarCraftingStation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Mortar Crafts/MortarCraftingStation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Pills Maker/DigestivePill/Digestive Pills.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Pills Maker/DigestivePill/Digestive Pills.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Pills Maker/PillsCraftingStation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Pills Maker/PillsCraftingStation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliveryList.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliveryList.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/ScoreSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/ScoreSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Weronika Sandbox 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Weronika Sandbox 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,13 +55,21 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\PC\\AppData\\Local\\Symbols\\src&quot;
+      &quot;C:\\Users\\Antek\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Antek\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Antek\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Lab\Projekt Studia 2023_2024 Apteka.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Antek\Desktop\Lab" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2023.1.5f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath F:\Laboratory_2023-2024 -debugCodeOptimization" />
@@ -127,6 +135,11 @@
       <workItem from="1705930637475" duration="857000" />
       <workItem from="1705949896792" duration="46000" />
       <workItem from="1705949957147" duration="12000" />
+      <workItem from="1706018735248" duration="528000" />
+      <workItem from="1706318542636" duration="676000" />
+      <workItem from="1706320284619" duration="398000" />
+      <workItem from="1706320839249" duration="5447000" />
+      <workItem from="1706356228629" duration="618000" />
     </task>
     <servers />
   </component>

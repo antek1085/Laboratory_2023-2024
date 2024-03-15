@@ -109,8 +109,7 @@ public class CookingCraftingStation : MonoBehaviour
         if (other.tag == "Material" && isCrafting == false & thirdMaterial == null)
         { 
             if (distance < 6)
-            {
-                spriteRenderer.sprite = highLightItem;
+            { 
                 playerInputText.enabled = true;
                 playerInputText.text = "Click R to insert the material";
             }
@@ -135,7 +134,10 @@ public class CookingCraftingStation : MonoBehaviour
                 playerInputText.enabled = false;
                 Destroy(other.gameObject);
             }
-            
+        }
+        if (other.tag == "Player")
+        {
+            spriteRenderer.sprite = highLightItem;
         }
     }
     void OnTriggerExit(Collider other)
@@ -144,6 +146,10 @@ public class CookingCraftingStation : MonoBehaviour
         {
             spriteRenderer.sprite = normalItem;
             playerInputText.enabled = false;
+        }
+        else
+        {
+            spriteRenderer.sprite = normalItem;
         }
     }
 }

@@ -78,7 +78,6 @@ public class PillsCraftingStation : MonoBehaviour
             {
                 playerInputText.enabled = true;
                 playerInputText.text = "Click R to insert the material";
-                spriteRenderer.sprite = highLightItem;
             }
             else
             {
@@ -99,6 +98,10 @@ public class PillsCraftingStation : MonoBehaviour
               Destroy(other.gameObject);
             }
         }
+        if (other.tag == "Player")
+        {
+            spriteRenderer.sprite = highLightItem;
+        }
     }
     void OnTriggerExit(Collider other)
     {
@@ -106,6 +109,10 @@ public class PillsCraftingStation : MonoBehaviour
         {
             spriteRenderer.sprite = normalItem;
             playerInputText.enabled = false;
+        }
+        else
+        {
+            spriteRenderer.sprite = normalItem;
         }
     }
 

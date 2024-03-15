@@ -31,7 +31,7 @@ public class ScoreSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textNumberOfPoints.text = numberOfPoints.Value.ToString() + "/10";
+        textNumberOfPoints.text = numberOfPoints.Value.ToString() + "/4";
 
         if (timeLeft.totalTime < 0)
         {
@@ -45,6 +45,17 @@ public class ScoreSystem : MonoBehaviour
                 endText.enabled = true;
                 endText.text = "You lose";
             }
+            Time.timeScale = 0;
+            resetText.enabled = true;
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(scene);
+            }
+        }
+        else if (numberOfPoints.Value == numberToWin)
+        {
+            endText.enabled = true;
+            endText.text = "You Win";
             Time.timeScale = 0;
             resetText.enabled = true;
             if (Input.GetKeyDown(KeyCode.R))
