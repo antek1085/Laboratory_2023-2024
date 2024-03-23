@@ -7,4 +7,5 @@ public class ItemID : MonoBehaviour
 {
      public Item _item;
      public float time;
+     public int moneyValue;
 }
