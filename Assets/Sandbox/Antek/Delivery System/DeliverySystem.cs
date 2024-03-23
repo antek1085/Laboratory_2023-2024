@@ -26,7 +26,9 @@ public class DeliverySystem : MonoBehaviour
 
     private int deliveryItemNumber;
     [Header("Score")]
-    [SerializeField] private SOFloat NumberOfPoins;
+    [SerializeField] private SOFloat playerMoney;
+
+    private int itemValue; 
     
     void Start()
     {
@@ -83,13 +85,14 @@ public class DeliverySystem : MonoBehaviour
         if (deliveredItem != null)
         {
             deliveryItemNumber = deliveryItemList.IndexOf(deliveredItem._item);
+            itemValue = deliveredItem.GetComponent<ItemID>().moneyValue;
             deliveredItem = null;
             if (deliveryItemNumber != -1)
             {
                 deliveryItemList.RemoveAt(deliveryItemNumber);                          
                 deliverItemTimer.RemoveAt(deliveryItemNumber);
                 deliveryItemNumber = -1;
-                NumberOfPoins.Value += 1;
+                playerMoney.Value += itemValue;
             }
         }
     }
