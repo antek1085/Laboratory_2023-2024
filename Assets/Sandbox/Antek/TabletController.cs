@@ -8,19 +8,18 @@ using Image = UnityEngine.UI.Image;
 public class TabletController : MonoBehaviour
 {
     [SerializeField] Canvas canvas;
-    [SerializeField] private Image image;
-
-    [SerializeField] private List<Sprite> RecipeList = new List<Sprite>();
-    private int placeInList = 0;
 
     private bool isPlayerInRange;
     
     [SerializeField] Sprite highLightItem;
     private Sprite normalItem;
     private SpriteRenderer spriteRenderer;
+    private bool isGamePaused;
     
     void Start()
     {
+        isGamePaused = false;
+        canvas.enabled = false;
         spriteRenderer = GetComponent<SpriteRenderer>();
         normalItem = spriteRenderer.sprite;
     }
@@ -30,23 +29,18 @@ public class TabletController : MonoBehaviour
         
         if (isPlayerInRange == true)
         {
-            canvas.enabled = true;
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.R) && isGamePaused == false) 
             {
-                placeInList -= 1;
+                canvas.enabled = true;
+                Time.timeScale = 0;
+                isGamePaused = true;
             }
-
-            if (Input.GetKeyDown(KeyCode.R))
+            else if (Input.GetKeyDown(KeyCode.R) && isGamePaused == true)
             {
-                placeInList += 1;
+                isGamePaused = false;
+                Time.timeScale = 1;
+                canvas.enabled = false;
             }
-            
-            placeInList = Mathf.Clamp(placeInList, 0, RecipeList.Count -1);
-            image.sprite = RecipeList[placeInList];
-        }
-        else
-        {
-            canvas.enabled = false;
         }
     }
 
