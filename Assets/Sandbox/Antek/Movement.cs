@@ -21,6 +21,7 @@ public class Movement : MonoBehaviour
     private Vector3 mouseposition;
 
     public float speed_Limit;
+    [SerializeField] GameObject pickUpZone;
 
     public float CurrentSpeed 
     { get { return (_rigidbody.velocity.magnitude); } }
@@ -52,10 +53,21 @@ public class Movement : MonoBehaviour
                 m_Speed_cd_max -= Time.deltaTime;
                 m_Speed_cd_max = Mathf.Max(0, m_Speed_cd_max);
             }
-
         }
-
         moveSpeed.Value = speed_Limit;
+
+         if (Input.GetAxis("Horizontal") > 0)
+         {
+             pickUpZone.transform.localPosition = new Vector3(-1, 0, 1.44f);
+         }
+         else if (Input.GetAxis("Horizontal") < 0)
+         {
+             pickUpZone.transform.localPosition = new Vector3(1, 0, 1.44f);
+         }
+         else
+         {
+             pickUpZone.transform.localPosition = new Vector3(0, 0, 1.44f);
+         }
     }
 
     void FixedUpdate()
