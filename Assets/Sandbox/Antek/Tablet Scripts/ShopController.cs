@@ -5,11 +5,19 @@ using UnityEngine;
 public class ShopController : MonoBehaviour
 {
     int whatTab;
+    [SerializeField] SOFloat money;
+    
     [Header("Main Buttons")]
     [SerializeField] GameObject bedroomButton;
     [SerializeField] GameObject kitchenButton;
     [SerializeField] GameObject bathroomButton;
     [SerializeField] GameObject workingStationButton;
+
+    [Header("Bedroom Tab")]
+
+    [SerializeField] GameObject renovateButton;
+    [SerializeField] GameObject renovateContent;
+    [SerializeField] float renovateCost;
 
 
     public void BedroomButton()
@@ -21,6 +29,16 @@ public class ShopController : MonoBehaviour
             kitchenButton.SetActive(false);
             bathroomButton.SetActive(false);
             workingStationButton.SetActive(false);
+        }
+    }
+
+    public void Renovate()
+    {
+        if (money.Value >= renovateCost)
+        {
+            money.Value -= renovateCost;
+            renovateButton.SetActive(false);
+            renovateContent.SetActive(true);
         }
     }
     public void KitchenButton()

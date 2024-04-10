@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4115b137-8e6d-4221-ae05-a039ef6388f8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Movement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/PickUpItems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/PickUpItems.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/TabletController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/TabletController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Tablet Scripts/ShopController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Tablet Scripts/ShopController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Weronika Sandbox 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Weronika Sandbox 1.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,6 +135,7 @@
       <workItem from="1711996611005" duration="3549000" />
       <workItem from="1712161790558" duration="4303000" />
       <workItem from="1712237819072" duration="1815000" />
+      <workItem from="1712782452518" duration="3494000" />
     </task>
     <servers />
   </component>
