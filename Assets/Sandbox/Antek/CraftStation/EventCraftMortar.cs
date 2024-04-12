@@ -12,23 +12,23 @@ public class EventCraftMortar : MonoBehaviour
       current = this;
    }
 
-   public event Action onMiniGameEnd;
+   public event Action<int> onMiniGameEnd;
 
-   public void StartCraft()
+   public void MiniGameEnd(int id)
    {
       if (onMiniGameEnd != null)
       {
-         onMiniGameEnd();
+         onMiniGameEnd(id);
       }
    }
 
-   public event Action onMiniGameStart;
+   public event Action<int> onMiniGameStart;
 
-   public void MiniGameStart()
+   public void MiniGameStart(int id)
    {
       if (onMiniGameStart != null)
       {
-         onMiniGameStart();
+         onMiniGameStart(id);
       }
    }
 }

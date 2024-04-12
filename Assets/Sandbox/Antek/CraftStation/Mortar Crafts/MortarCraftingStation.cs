@@ -21,6 +21,8 @@ public class MortarCraftingStation : MonoBehaviour
     private Sprite normalItem;
     private SpriteRenderer spriteRenderer;
 
+    [SerializeField] private int miniGameId;
+
     void Start()
     {
         EventCraftMortar.current.onMiniGameEnd += onMiniGameEnd;
@@ -38,7 +40,7 @@ public class MortarCraftingStation : MonoBehaviour
             playerInputText.text = "Click Space to start crafting";
             if (Input.GetKey(KeyCode.Space) && distance < 5)
             {
-                EventCraftMortar.current.MiniGameStart();
+                EventCraftMortar.current.MiniGameStart(miniGameId);
                 isCrafting = true;
                 playerInputText.enabled = false;
               // for (int i = 0; i < recipeList.itemList.Count; i++)
@@ -123,21 +125,24 @@ public class MortarCraftingStation : MonoBehaviour
         StopAllCoroutines();
     }
 
-    private void onMiniGameEnd()
+    private void onMiniGameEnd(int miniGameId)
     {
-        for (int i = 0; i < recipeList.itemList.Count; i++)
+        if (miniGameId == this.miniGameId)
         {
-            firstItem = recipeList.itemList[i].FirstItem;
-            if (firstMaterial == firstItem)
-            { 
-                StartCoroutine(ItemCraft(i)); 
-                break;
+            for (int i = 0; i < recipeList.itemList.Count; i++)
+            {
+                firstItem = recipeList.itemList[i].FirstItem;
+                if (firstMaterial == firstItem)
+                { 
+                    StartCoroutine(ItemCraft(i)); 
+                    break;
+                }
             }
-        }
               
-        if (firstMaterial != null)
-        {
-            StartCoroutine(DungSpawn());
+            if (firstMaterial != null)
+            {
+                StartCoroutine(DungSpawn());
+            }   
         }
     }
 
