@@ -13,12 +13,11 @@ public class ShopController : MonoBehaviour
     [SerializeField] GameObject bathroomButton;
     [SerializeField] GameObject workingStationButton;
 
-    [Header("Bedroom Tab")]
+    [Header("Bedroom Tab (Renovate)")]
 
     [SerializeField] GameObject renovateButton;
     [SerializeField] GameObject renovateContent;
     [SerializeField] float renovateCost;
-
 
     public void BedroomButton()
     {
