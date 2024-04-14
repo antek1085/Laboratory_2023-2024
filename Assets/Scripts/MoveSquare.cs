@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveSquare : MonoBehaviour
 {
-    public float speed = 3.0f;
+    public float speed = 10.0f;
     private Vector3 startPosition;
 
     private void Start()
@@ -19,7 +19,7 @@ public class MoveSquare : MonoBehaviour
     }
     void Update()
     {
-        transform.Translate(Vector3.left * speed * Time.deltaTime);
+        transform.Translate(Vector3.up * speed * Time.deltaTime);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

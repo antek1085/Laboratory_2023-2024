@@ -23,9 +23,13 @@ public class PillsCraftingStation : MonoBehaviour
     [SerializeField] Sprite highLightItem;
     private Sprite normalItem;
     private SpriteRenderer spriteRenderer;
+    
+    [SerializeField] private int miniGameId;
+
 
     void Start()
     {
+        EventCraftMortar.current.onMiniGameEnd += OnMiniGameEnd;
         spriteRenderer = GetComponent<SpriteRenderer>();
         normalItem = spriteRenderer.sprite;
     }
@@ -42,26 +46,7 @@ public class PillsCraftingStation : MonoBehaviour
             {
                 isCrafting = true;
                 playerInputText.enabled = false;
-              for (int i = 0; i < recipeList.itemList.Count; i++)
-              {
-                  Debug.Log("Loop");
-                  firstItem = recipeList.itemList[i].FirstItem;
-                  secondItem = recipeList.itemList[i].SeconItem;
-                  if (firstMaterial == firstItem && secondMaterial == secondItem)
-                  {
-                      StartCoroutine(ItemCraft(i));
-                      break;
-                  }
-                  if (secondMaterial == firstItem && firstMaterial == secondItem)
-                  {
-                      StartCoroutine(ItemCraft(i));
-                      break;
-                  } 
-              }
-              if (firstMaterial != null && secondMaterial != null)
-              {
-                  StartCoroutine(DungSpawn());
-              }  
+                EventCraftMortar.current.MiniGameStart(miniGameId);
             }
         }
         else if (secondMaterial != null && distance > 6)
@@ -135,5 +120,33 @@ public class PillsCraftingStation : MonoBehaviour
         Instantiate(dung, itemSpawn.transform.position,itemSpawn.transform.rotation);
         isCrafting = false;
         StopAllCoroutines();
+    }
+
+
+    void OnMiniGameEnd(int miniGameId)
+    {
+        if (miniGameId == this.miniGameId)
+        {
+            for (int i = 0; i < recipeList.itemList.Count; i++)
+            {
+                Debug.Log("Loop");
+                firstItem = recipeList.itemList[i].FirstItem;
+                secondItem = recipeList.itemList[i].SeconItem;
+                if (firstMaterial == firstItem && secondMaterial == secondItem)
+                {
+                    StartCoroutine(ItemCraft(i));
+                    break;
+                }
+                if (secondMaterial == firstItem && firstMaterial == secondItem)
+                {
+                    StartCoroutine(ItemCraft(i));
+                    break;
+                } 
+            }
+            if (firstMaterial != null && secondMaterial != null)
+            {
+                StartCoroutine(DungSpawn());
+            }  
+        }
     }
 }

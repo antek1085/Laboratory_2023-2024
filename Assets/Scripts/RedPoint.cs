@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,15 +12,11 @@ public class RedPoint : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision) => OnEnter(collision);
     void OnCollisionExit2D(Collision2D collision) => OnExit(collision);
 
-    [SerializeField] private int miniGameId;
-
-    private void Awake()
-    {
-        //Dodać liste 
-    }
+    [SerializeField] int miniGameId;
 
     private void Start()
     {
+        
         fieldCount = fields.Length;
 
         for(int i = 0; i < (fieldCount-1); i++)

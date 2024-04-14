@@ -25,7 +25,7 @@ public class MortarCraftingStation : MonoBehaviour
 
     void Start()
     {
-        EventCraftMortar.current.onMiniGameEnd += onMiniGameEnd;
+        EventCraftMortar.current.onMiniGameEnd += OnMiniGameEnd;
         spriteRenderer = GetComponent<SpriteRenderer>();
         normalItem = spriteRenderer.sprite;
     }
@@ -43,20 +43,6 @@ public class MortarCraftingStation : MonoBehaviour
                 EventCraftMortar.current.MiniGameStart(miniGameId);
                 isCrafting = true;
                 playerInputText.enabled = false;
-              // for (int i = 0; i < recipeList.itemList.Count; i++)
-              // {
-              //     firstItem = recipeList.itemList[i].FirstItem;
-              //     if (firstMaterial == firstItem)
-              //     { 
-              //         StartCoroutine(ItemCraft(i)); 
-              //         break;
-              //     }
-              // }
-              //
-              // if (firstMaterial != null)
-              // {
-              //       StartCoroutine(DungSpawn());
-              // }  
             }
         }
         else if (firstMaterial != null && distance > 5)
@@ -125,7 +111,7 @@ public class MortarCraftingStation : MonoBehaviour
         StopAllCoroutines();
     }
 
-    private void onMiniGameEnd(int miniGameId)
+    private void OnMiniGameEnd(int miniGameId)
     {
         if (miniGameId == this.miniGameId)
         {
@@ -148,6 +134,6 @@ public class MortarCraftingStation : MonoBehaviour
 
     private void OnDestroy()
     {
-        EventCraftMortar.current.onMiniGameEnd -= onMiniGameEnd;
+        EventCraftMortar.current.onMiniGameEnd -= OnMiniGameEnd;
     }
 }

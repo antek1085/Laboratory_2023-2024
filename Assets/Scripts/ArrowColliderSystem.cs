@@ -11,6 +11,8 @@ public class ArrowColliderSystem : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision) => OnEnter(collision);
     void OnCollisionExit2D(Collision2D collision) => OnExit(collision);
 
+    [SerializeField] int miniGameId;
+
     void OnEnter(Collision2D collision)
     {
         hit = collision;
@@ -31,22 +33,20 @@ public class ArrowColliderSystem : MonoBehaviour
     {
         if (hit != null)
         {
-            hit = null;
-            Debug.Log("Succesfully Hit");
+            hit = null; 
             score += 1;
             UIManager.instance.AddPoint();
             if(score >= 10)
             {
-                //Application.Quit();
-                UnityEditor.EditorApplication.isPlaying = false;
+               EventCraftMortar.current.MiniGameEnd(miniGameId);
             }
         }
         else
         {
-            UIManager.instance.RemovePoint();
             if (score > 0)
             {
                 score -= 1;
+                UIManager.instance.RemovePoint();
             }
         }
     }

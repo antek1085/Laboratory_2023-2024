@@ -6,6 +6,7 @@ public class Countdown : MonoBehaviour
 {
     public float countdownTime = 5f;
     private bool countingDown = false;
+    [SerializeField] int miniGameId;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -24,11 +25,11 @@ public class Countdown : MonoBehaviour
     {
         while (countdownTime > 0 && countingDown)
         {
-            Debug.Log("Time left: " + countdownTime.ToString("F1") + " seconds");
+             Debug.Log("Time left: " + countdownTime.ToString("F1") + " seconds");
             yield return new WaitForSeconds(1f);
             countdownTime -= 1f;
         }
-        Debug.Log("Countdown finished");
+        EventCraftMortar.current.MiniGameEnd(miniGameId);
     }
 
     
