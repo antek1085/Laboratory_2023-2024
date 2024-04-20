@@ -17,6 +17,8 @@ public class ShopController : MonoBehaviour
 
     [SerializeField] GameObject renovateButton;
     [SerializeField] GameObject renovateContent;
+    [SerializeField] SpriteRenderer bedroom;
+    [SerializeField] Sprite cleanBedroom;
     [SerializeField] float renovateCost;
 
     public void BedroomButton()
@@ -38,6 +40,7 @@ public class ShopController : MonoBehaviour
             money.Value -= renovateCost;
             renovateButton.SetActive(false);
             renovateContent.SetActive(true);
+            bedroom.sprite = cleanBedroom;
         }
     }
     public void KitchenButton()

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,23 +13,32 @@ public class ShopItemRenovate : MonoBehaviour
     private Transform textChild;
     private TextMeshProUGUI text;
     [SerializeField] Sprite spriteItem;
-    [SerializeField] Sprite itemToChange;
+    [SerializeField] SpriteRenderer itemToChange;
+
+    bool isItemBought;
 
     private void Start()
     {
         textChild = this.gameObject.transform.GetChild(0);
-        Debug.Log(textChild.name);
         text = textChild.GetComponent<TextMeshProUGUI>();
         text.text = price.ToString();
+        isItemBought = false;
     }
 
     public void BuyItem()
     {
-        if (money.Value >= price)
+        if (money.Value >= price && isItemBought == false)
         {
             money.Value -= price;
-            itemToChange = spriteItem;
-            this.gameObject.GetComponent<Button>().interactable = false;
+            itemToChange.sprite = spriteItem;
+            //this.gameObject.GetComponent<Button>().interactable = false;
+            isItemBought = true;
+            text.text = null;
+        }
+        if (isItemBought == true)
+        {
+            itemToChange.sprite = spriteItem;
         }
     }
+    
 }
