@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8796855063401919773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PillsPickUp
+  m_EditorClassIdentifier: 
+  Path: event:/PillsPickUp
+  Guid:
+    Data1: -1823462067
+    Data2: 1085764611
+    Data3: -866187386
+    Data4: -1473760025
+  Banks:
+  - {fileID: 2723616725109959064}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6939746393736602585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SyropPickUp
+  m_EditorClassIdentifier: 
+  Path: event:/SyropPickUp
+  Guid:
+    Data1: -1158962850
+    Data2: 1132627127
+    Data3: 1594459275
+    Data4: 635944451
+  Banks:
+  - {fileID: 2723616725109959064}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3060367972375660479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,12 +241,17 @@ MonoBehaviour:
   - {fileID: -1667141327759965383}
   - {fileID: -2687896253945498944}
   - {fileID: -1647384319039158658}
+  - {fileID: 2401920796745792957}
+  - {fileID: 5225197252976580087}
+  - {fileID: 1953194610688570453}
+  - {fileID: -8796855063401919773}
+  - {fileID: -6939746393736602585}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2723616725109959064}
   StringsBanks:
   - {fileID: 6526203574673285501}
-  cacheTime: 638461211684529455
+  cacheTime: 638494202099640250
   cacheVersion: 131616
 --- !u!114 &302074045029880858
 MonoBehaviour:
@@ -221,6 +280,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1953194610688570453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FailPlop
+  m_EditorClassIdentifier: 
+  Path: event:/FailPlop
+  Guid:
+    Data1: 384052248
+    Data2: 1203465937
+    Data3: 1784702911
+    Data4: -703603903
+  Banks:
+  - {fileID: 2723616725109959064}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2401920796745792957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BalsamPickUp
+  m_EditorClassIdentifier: 
+  Path: event:/BalsamPickUp
+  Guid:
+    Data1: -468608764
+    Data2: 1216359180
+    Data3: 667376788
+    Data4: -1076393978
+  Banks:
+  - {fileID: 2723616725109959064}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2723616725109959064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,10 +349,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/FMOD-KRZYCHU/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638461211684519423
+  lastModified: 638494202099620417
   FileSizes:
   - Name: Desktop
-    Value: 4987904
+    Value: 10016640
   Exists: 1
 --- !u!114 &3299820704346304600
 MonoBehaviour:
@@ -294,7 +407,34 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 317675
+  Length: 0
+--- !u!114 &5225197252976580087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SucessPlop
+  m_EditorClassIdentifier: 
+  Path: event:/SucessPlop
+  Guid:
+    Data1: 118186263
+    Data2: 1273414871
+    Data3: -2065146210
+    Data4: 2113993451
+  Banks:
+  - {fileID: 2723616725109959064}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6526203574673285501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,8 +450,8 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/FMOD-KRZYCHU/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638461211684529455
+  lastModified: 638494202099640250
   FileSizes:
   - Name: Desktop
-    Value: 1146
+    Value: 1384
   Exists: 1

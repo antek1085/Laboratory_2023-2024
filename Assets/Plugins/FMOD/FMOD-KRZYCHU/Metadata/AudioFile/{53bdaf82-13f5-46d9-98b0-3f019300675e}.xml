@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{53bdaf82-13f5-46d9-98b0-3f019300675e}">
+		<property name="assetPath">
+			<value>PickUp/Balsam_Pickup.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.33066666666666666</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3a41c2f6-364e-48b5-8031-049fac76c4a6}</destination>
+		</relationship>
+	</object>
+</objects>

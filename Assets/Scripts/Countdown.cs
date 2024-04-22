@@ -12,6 +12,7 @@ public class Countdown : MonoBehaviour
     {
         countingDown = true;
         Debug.Log("Countdown started");
+        Audio.Play("SucessEvent");
         StartCoroutine(StartCountdown());
     }
 
@@ -19,6 +20,7 @@ public class Countdown : MonoBehaviour
     {
         countingDown = false;
         StopAllCoroutines();
+        Audio.Play("FailEvent");
         Debug.Log("Countdown stopped");
     }
     private IEnumerator StartCountdown()

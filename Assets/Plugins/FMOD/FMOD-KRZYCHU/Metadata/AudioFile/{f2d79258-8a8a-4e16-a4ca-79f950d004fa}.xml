@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{f2d79258-8a8a-4e16-a4ca-79f950d004fa}">
+		<property name="assetPath">
+			<value>Music/Nothing Stops Detroit.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>348.96877083333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3a41c2f6-364e-48b5-8031-049fac76c4a6}</destination>
+		</relationship>
+	</object>
+</objects>

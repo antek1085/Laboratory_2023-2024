@@ -48,6 +48,7 @@ public class RedPoint : MonoBehaviour
             Destroy(hit.gameObject);
             hit = null;
             fieldCount -= 1;
+            Audio.Play("SucessEvent");
 
             if (fieldCount <= 0)
             {

@@ -5819,6 +5819,46 @@ PrefabInstance:
       propertyPath: FootstepRate
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: FailEvent.Path
+      value: event:/FailPlop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: SucessEvent.Path
+      value: event:/SucessPlop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: FailEvent.Guid.Data1
+      value: 384052248
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: FailEvent.Guid.Data2
+      value: 1203465937
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: FailEvent.Guid.Data3
+      value: 1784702911
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: FailEvent.Guid.Data4
+      value: -703603903
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: SucessEvent.Guid.Data1
+      value: 118186263
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: SucessEvent.Guid.Data2
+      value: 1273414871
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: SucessEvent.Guid.Data3
+      value: -2065146210
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: SucessEvent.Guid.Data4
+      value: 2113993451
+      objectReference: {fileID: 0}
     - target: {fileID: 8369048595808100105, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
       propertyPath: m_Name
       value: AudioManager

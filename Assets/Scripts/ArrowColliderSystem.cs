@@ -36,7 +36,8 @@ public class ArrowColliderSystem : MonoBehaviour
             hit = null; 
             score += 1;
             UIManager.instance.AddPoint();
-            if(score >= 10)
+            Audio.Play("SucessEvent");
+            if (score >= 10)
             {
                EventCraftMortar.current.MiniGameEnd(miniGameId);
             }
@@ -47,6 +48,7 @@ public class ArrowColliderSystem : MonoBehaviour
             {
                 score -= 1;
                 UIManager.instance.RemovePoint();
+                Audio.Play("FailEvent");
             }
         }
     }
