@@ -26,8 +26,6 @@ public class AnimationPlantControler : MonoBehaviour
     private void Awake()
     {
        _animator = GetComponent<Animator>();
-       _boxCollider = this.GetComponent<BoxCollider>();
-       _boxCollider.isTrigger = false;
     }
 
     void Update()
@@ -46,12 +44,11 @@ public class AnimationPlantControler : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && timer > thirdPhaseTimer)
         {
-            Instantiate(itemToSpawn, this.transform);
+            Instantiate(itemToSpawn, new Vector3(0,0,0), Quaternion.Euler(0,0,0));
             timer = 0;
             _animator.SetBool(thirdPhase, false);
-            _boxCollider.isTrigger = false;
         }
     }
 
@@ -60,6 +57,8 @@ public class AnimationPlantControler : MonoBehaviour
         switch (timerInt)
         {
             case < 5:
+                _animator.GetBool(thirdPhase);
+                _animator.SetBool(thirdPhase, false);
                 _animator.GetBool(firstPhase);
                 _animator.SetBool(firstPhase, true);
                 break;
@@ -72,7 +71,6 @@ public class AnimationPlantControler : MonoBehaviour
                 _animator.SetBool(secondPhase, false);
                 _animator.GetBool(thirdPhase);
                 _animator.SetBool(thirdPhase, true);
-                _boxCollider.isTrigger = true;
                 break;
         }
     }
