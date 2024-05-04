@@ -24,7 +24,7 @@ public class PickUpItems : MonoBehaviour
             Ray PickUpRay = new Ray(transform.position, transform.forward);
            
                     
-                    if(Physics.SphereCast(PickUpRay,0.5f, out RaycastHit hitInfo,PickUpRange,PickUpLayer))
+                    if(Physics.SphereCast(PickUpRay,0.7f, out RaycastHit hitInfo,PickUpRange,PickUpLayer))
                     {
                         if (CurrentObjectRigidbody && isInHand == false) 
                         {

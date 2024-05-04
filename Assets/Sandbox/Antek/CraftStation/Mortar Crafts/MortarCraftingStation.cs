@@ -21,8 +21,11 @@ public class MortarCraftingStation : MonoBehaviour
     private Sprite normalItem;
     private SpriteRenderer spriteRenderer;
 
+    [SerializeField] private int miniGameId;
+
     void Start()
     {
+        EventCraftMortar.current.onMiniGameEnd += OnMiniGameEnd;
         spriteRenderer = GetComponent<SpriteRenderer>();
         normalItem = spriteRenderer.sprite;
     }
@@ -37,22 +40,9 @@ public class MortarCraftingStation : MonoBehaviour
             playerInputText.text = "Click Space to start crafting";
             if (Input.GetKey(KeyCode.Space) && distance < 5)
             {
+                EventCraftMortar.current.MiniGameStart(miniGameId);
                 isCrafting = true;
                 playerInputText.enabled = false;
-              for (int i = 0; i < recipeList.itemList.Count; i++)
-              {
-                  firstItem = recipeList.itemList[i].FirstItem;
-                  if (firstMaterial == firstItem)
-                  { 
-                      StartCoroutine(ItemCraft(i)); 
-                      break;
-                  }
-              }
-              
-              if (firstMaterial != null)
-              {
-                    StartCoroutine(DungSpawn());
-              }  
             }
         }
         else if (firstMaterial != null && distance > 5)
@@ -119,5 +109,31 @@ public class MortarCraftingStation : MonoBehaviour
         Instantiate(dung, itemSpawn.transform.position,itemSpawn.transform.rotation);
         isCrafting = false;
         StopAllCoroutines();
+    }
+
+    private void OnMiniGameEnd(int miniGameId)
+    {
+        if (miniGameId == this.miniGameId)
+        {
+            for (int i = 0; i < recipeList.itemList.Count; i++)
+            {
+                firstItem = recipeList.itemList[i].FirstItem;
+                if (firstMaterial == firstItem)
+                { 
+                    StartCoroutine(ItemCraft(i)); 
+                    break;
+                }
+            }
+              
+            if (firstMaterial != null)
+            {
+                StartCoroutine(DungSpawn());
+            }   
+        }
+    }
+
+    private void OnDestroy()
+    {
+        EventCraftMortar.current.onMiniGameEnd -= OnMiniGameEnd;
     }
 }

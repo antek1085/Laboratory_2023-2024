@@ -24,7 +24,7 @@ public class ScoreSystem : MonoBehaviour
     {
         Time.timeScale = 1;
         endText.enabled = false;
-        numberOfPoints.Value = 0;
+        //numberOfPoints.Value = 0;
         resetText.enabled = false;
     }
 
@@ -33,35 +33,35 @@ public class ScoreSystem : MonoBehaviour
     {
         textNumberOfPoints.text = numberOfPoints.Value.ToString() + "/4";
 
-        if (timeLeft.totalTime < 0)
-        {
-            if (numberOfPoints.Value > numberToWin)
-            { 
-                endText.enabled = true;
-                endText.text = "You Win";
-            }
-            else
-            {
-                endText.enabled = true;
-                endText.text = "You lose";
-            }
-            Time.timeScale = 0;
-            resetText.enabled = true;
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                SceneManager.LoadScene(scene);
-            }
-        }
-        else if (numberOfPoints.Value == numberToWin)
-        {
-            endText.enabled = true;
-            endText.text = "You Win";
-            Time.timeScale = 0;
-            resetText.enabled = true;
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                SceneManager.LoadScene(scene);
-            }
-        }
-    }
+    //     if (timeLeft.totalTime < 0)
+    //     {
+    //         if (numberOfPoints.Value > numberToWin)
+    //         { 
+    //             endText.enabled = true;
+    //             endText.text = "You Win";
+    //         }
+    //         else
+    //         {
+    //             endText.enabled = true;
+    //             endText.text = "You lose";
+    //         }
+    //         Time.timeScale = 0;
+    //         resetText.enabled = true;
+    //         if (Input.GetKeyDown(KeyCode.R))
+    //         {
+    //             SceneManager.LoadScene(scene);
+    //         }
+    //     }
+    //     else if (numberOfPoints.Value == numberToWin)
+    //     {
+    //         endText.enabled = true;
+    //         endText.text = "You Win";
+    //         Time.timeScale = 0;
+    //         resetText.enabled = true;
+    //         if (Input.GetKeyDown(KeyCode.R))
+    //         {
+    //             SceneManager.LoadScene(scene);
+    //         }
+    //     }
+     }
 }

@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4115b137-8e6d-4221-ae05-a039ef6388f8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnimationPlantControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimationPlantControler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/ItemID.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/ItemID.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliverySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliverySystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/Sprite Flower/sza/sza_1_0.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/Sprite Flower/sza/sza_1_0.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Weronika Sandbox 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Weronika Sandbox 1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +17,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32aa1a112152478c9615faa98d49f9673e00/60/a5d9e5d0/NativeInputSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3e2118a0a67041869c87922a11f4a02f1a1c00/47/e33147a0/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3e2118a0a67041869c87922a11f4a02f1a1c00/f1/32ce56cf/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RenovateButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Sandbox/Antek/SO Variables/SO Sprite.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -34,10 +37,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "Discover.Launch.Via.Unity": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "XThreadsFramesViewSplitterKey": "0.26094276",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -47,9 +52,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\PC\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\Antek\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Antek\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\Antek\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -133,6 +138,17 @@
       <workItem from="1706320839249" duration="5447000" />
       <workItem from="1706356228629" duration="618000" />
       <workItem from="1710700521704" duration="2685000" />
+      <workItem from="1711222941647" duration="3244000" />
+      <workItem from="1711996611005" duration="3549000" />
+      <workItem from="1712161790558" duration="4303000" />
+      <workItem from="1712237819072" duration="1815000" />
+      <workItem from="1712782452518" duration="3494000" />
+      <workItem from="1712935425172" duration="4466000" />
+      <workItem from="1713120380019" duration="2513000" />
+      <workItem from="1713434406644" duration="9420000" />
+      <workItem from="1713449100674" duration="3498000" />
+      <workItem from="1713623959482" duration="5958000" />
+      <workItem from="1713800208992" duration="1736000" />
     </task>
     <servers />
   </component>
@@ -143,5 +159,17 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Pills Maker/PillsCraftingStation.cs</url>
+          <line>126</line>
+          <properties documentPath="F:\Laboratory_2023-2024\Assets\Sandbox\Antek\CraftStation\Pills Maker\PillsCraftingStation.cs" initialLine="126" containingFunctionPresentation="method 'OnMiniGameEnd'" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

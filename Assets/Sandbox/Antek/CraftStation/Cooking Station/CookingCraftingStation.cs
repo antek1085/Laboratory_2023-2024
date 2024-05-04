@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -27,8 +28,11 @@ public class CookingCraftingStation : MonoBehaviour
     private Sprite normalItem;
     private SpriteRenderer spriteRenderer;
 
+    [SerializeField] int miniGameId;
+
     void Start()
     {
+        EventCraftMortar.current.onMiniGameEnd += OnMiniGameEnd;
         spriteRenderer = GetComponent<SpriteRenderer>();
         normalItem = spriteRenderer.sprite;
     }
@@ -45,29 +49,30 @@ public class CookingCraftingStation : MonoBehaviour
             {
                 isCrafting = true;
                 playerInputText.enabled = false;
-                for (int i = 0; i < recipeList.itemList.Count; i++) 
-                {
-                    Debug.Log("Loop");
-                    firstItem = recipeList.itemList[i].FirstItem;
-                    secondItem = recipeList.itemList[i].SecondItem;
-                    thirdItem = recipeList.itemList[i].ThirdItem;
-                    if (firstMaterial == firstItem || firstMaterial == secondItem || firstMaterial == thirdItem)
-                    { 
-                        if (secondMaterial == firstItem || secondMaterial == secondItem || secondMaterial == thirdItem)
-                        {
-                            if (thirdMaterial == firstItem || thirdMaterial == secondItem || thirdMaterial == thirdItem)
-                            { 
-                                StartCoroutine(ItemCraft(i)); 
-                                break;
-                            }
-                        }
-                    }
-                }
-                            
-                if (firstMaterial != null && secondMaterial != null && thirdMaterial != null)
-                { 
-                    StartCoroutine(DungSpawn());
-                }
+                EventCraftMortar.current.MiniGameStart(miniGameId);
+                // for (int i = 0; i < recipeList.itemList.Count; i++) 
+                // {
+                //     Debug.Log("Loop");
+                //     firstItem = recipeList.itemList[i].FirstItem;
+                //     secondItem = recipeList.itemList[i].SecondItem;
+                //     thirdItem = recipeList.itemList[i].ThirdItem;
+                //     if (firstMaterial == firstItem || firstMaterial == secondItem || firstMaterial == thirdItem)
+                //     { 
+                //         if (secondMaterial == firstItem || secondMaterial == secondItem || secondMaterial == thirdItem)
+                //         {
+                //             if (thirdMaterial == firstItem || thirdMaterial == secondItem || thirdMaterial == thirdItem)
+                //             { 
+                //                 StartCoroutine(ItemCraft(i)); 
+                //                 break;
+                //             }
+                //         }
+                //     }
+                // }
+                //             
+                // if (firstMaterial != null && secondMaterial != null && thirdMaterial != null)
+                // { 
+                //     StartCoroutine(DungSpawn());
+                // }
             }
             
         }
@@ -78,10 +83,9 @@ public class CookingCraftingStation : MonoBehaviour
         
         
         
-        
-        
-        IEnumerator ItemCraft(int i)
-        {
+    }
+    IEnumerator ItemCraft(int i)
+    {
             firstMaterial = null;
             secondMaterial = null;
             thirdMaterial = null;
@@ -90,9 +94,9 @@ public class CookingCraftingStation : MonoBehaviour
             Instantiate(recipeList.itemList[i].Result.itemToSpawn, itemSpawn.transform.position, itemSpawn.transform.rotation);
             isCrafting = false;
             StopAllCoroutines();
-        }
+    }
 
-        IEnumerator DungSpawn()
+    IEnumerator DungSpawn()
         {
             firstMaterial = null;
             secondMaterial = null;
@@ -103,7 +107,6 @@ public class CookingCraftingStation : MonoBehaviour
             isCrafting = false;
             StopAllCoroutines();
         }
-    }
     void OnTriggerStay(Collider other)
     {
         if (other.tag == "Material" && isCrafting == false & thirdMaterial == null)
@@ -151,5 +154,40 @@ public class CookingCraftingStation : MonoBehaviour
         {
             spriteRenderer.sprite = normalItem;
         }
+    }
+
+    void OnMiniGameEnd(int miniGameId)
+    {
+        if (miniGameId == this.miniGameId)
+        {
+            for (int i = 0; i < recipeList.itemList.Count; i++) 
+            {
+                Debug.Log("Loop");
+                firstItem = recipeList.itemList[i].FirstItem;
+                secondItem = recipeList.itemList[i].SecondItem;
+                thirdItem = recipeList.itemList[i].ThirdItem;
+                if (firstMaterial == firstItem || firstMaterial == secondItem || firstMaterial == thirdItem)
+                { 
+                    if (secondMaterial == firstItem || secondMaterial == secondItem || secondMaterial == thirdItem)
+                    {
+                        if (thirdMaterial == firstItem || thirdMaterial == secondItem || thirdMaterial == thirdItem)
+                        { 
+                            StartCoroutine(ItemCraft(i)); 
+                            break;
+                        }
+                    }
+                }
+            }
+                            
+            if (firstMaterial != null && secondMaterial != null && thirdMaterial != null)
+            { 
+                StartCoroutine(DungSpawn());
+            }
+        }
+    }
+
+    void OnDestroy()
+    {
+        EventCraftMortar.current.onMiniGameEnd -= OnMiniGameEnd;
     }
 }

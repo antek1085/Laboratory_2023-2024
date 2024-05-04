@@ -25,6 +25,12 @@ public class Audio
             case "PillcutterEvent":
                 manager.PlayPillcutter();
                 break;
+            case "SucessEvent":
+                manager.PlaySucess();
+                break;
+            case "FailEvent":
+                manager.PlayFail();
+                break;
         }
     }
 }
@@ -37,6 +43,8 @@ public class AudioManager : MonoBehaviour //Kod przypisuje siê do pustego obiekt
     [SerializeField] EventReference LabstationEvent;
     [SerializeField] EventReference MortarEvent;
     [SerializeField] EventReference PillcutterEvent;
+    [SerializeField] EventReference SucessEvent;
+    [SerializeField] EventReference FailEvent;
     [SerializeField] float rate; //Czêstotliwoœæ grania dŸwiêku
     [SerializeField] GameObject player; //Obiekt pe³ni¹cy rolê gracza
     [SerializeField] Movement controller; //kod odpowiadaj¹cy za poruszanie siê gracza
@@ -76,6 +84,16 @@ public class AudioManager : MonoBehaviour //Kod przypisuje siê do pustego obiekt
     public void PlayFootstep()
     {
         RuntimeManager.PlayOneShotAttached(FootstepEvent, player);
+    }
+
+    public void PlaySucess()
+    {
+        RuntimeManager.PlayOneShotAttached(SucessEvent, player);
+    }
+
+    public void PlayFail()
+    {
+        RuntimeManager.PlayOneShotAttached(FailEvent, player);
     }
 
     private void Start()
