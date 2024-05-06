@@ -14587,7 +14587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2706449677899268500, guid: a445c9bb9f65ad5429b2d0946b8624ef, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -33.000122
+      value: -33
       objectReference: {fileID: 0}
     - target: {fileID: 2706449677899268500, guid: a445c9bb9f65ad5429b2d0946b8624ef, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -14759,7 +14759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6249115370265237061, guid: a445c9bb9f65ad5429b2d0946b8624ef, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 40.999878
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 7174941189826243162, guid: a445c9bb9f65ad5429b2d0946b8624ef, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -21105,6 +21105,10 @@ PrefabInstance:
       propertyPath: bedroom
       value: 
       objectReference: {fileID: 634896684}
+    - target: {fileID: 3046281169618633265, guid: 03a4be3556a591647a98590c2f0781ab, type: 3}
+      propertyPath: workingStationButton
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3139927865877732212, guid: 03a4be3556a591647a98590c2f0781ab, type: 3}
       propertyPath: itemToChange
       value: 
