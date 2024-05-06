@@ -83,9 +83,9 @@ public class DeliverySystem : MonoBehaviour
         {
             IEnumerable<itemSymptoms> resoult = deliveryItemList[0].symptoms.Intersect(deliveredItem.symptoms);
 
-           procentValue = deliveryItemList[0].symptoms.Count() / resoult.Count() * 100;
+            procentValue = deliveryItemList[0].symptoms.Count() / resoult.Count() * 100;
 
-           //deliveryItemNumber = deliveryItemList.IndexOf(deliveredItem._item);
+            //deliveryItemNumber = deliveryItemList.IndexOf(deliveredItem._item);
             itemValue = deliveredItem.GetComponent<ItemID>().moneyValue;
             itemValue *= procentValue;
             deliveredItem = null;
