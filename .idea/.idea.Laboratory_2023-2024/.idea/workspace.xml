@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4115b137-8e6d-4221-ae05-a039ef6388f8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/AnimationPlantControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimationPlantControler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Laboratory_2023-2024/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/Sprite Flower/sza/sza_1_0.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/SpriteTests/Sprite Flower/sza/sza_1_0.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Weronika Sandbox 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Weronika Sandbox 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/ItemID.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/ItemID.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Pills Maker/DigestivePill/Digestive Pills.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/CraftStation/Pills Maker/DigestivePill/Digestive Pills.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliverySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliverySystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,7 +17,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/32aa1a112152478c9615faa98d49f9673e00/60/a5d9e5d0/NativeInputSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3e2118a0a67041869c87922a11f4a02f1a1c00/47/e33147a0/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3e2118a0a67041869c87922a11f4a02f1a1c00/f1/32ce56cf/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
@@ -149,6 +154,11 @@
       <workItem from="1713449100674" duration="3498000" />
       <workItem from="1713623959482" duration="5958000" />
       <workItem from="1713800208992" duration="1736000" />
+      <workItem from="1714836510928" duration="9436000" />
+      <workItem from="1714926853283" duration="51000" />
+      <workItem from="1714927048501" duration="15000" />
+      <workItem from="1714927088855" duration="7412000" />
+      <workItem from="1715008529006" duration="3019000" />
     </task>
     <servers />
   </component>
@@ -171,5 +181,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/Assets/Sandbox/Antek/Delivery System/DeliverySystem.cs" line="80">
+        <watch expression="resoult" language="C#" />
+      </inline-watch>
+    </watches-manager>
   </component>
 </project>
