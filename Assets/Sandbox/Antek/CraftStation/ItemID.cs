@@ -11,11 +11,11 @@ public class ItemID : MonoBehaviour
      public itemCategory mainItemCategory;
      public List<itemSymptoms> symptoms = new List<itemSymptoms>();
    //  public Dictionary<itemSymptoms, Sprite> symptoms = new Dictionary<itemSymptoms, Sprite>();
-     private List<Sprite> SpritesSymptoms = new List<Sprite>();
-     private List<Sprite> allSpritesSymptoms = new List<Sprite>();
+     public List<Sprite> SpritesSymptoms = new List<Sprite>();
+     [SerializeField] List<Sprite> allSpritesSymptoms = new List<Sprite>();
      public int moneyValue;
 
-      void Start()
+      void Awake()
      {
           for (int i = 0; i < symptoms.Count -1; i++)
           {
@@ -53,8 +53,6 @@ public class ItemID : MonoBehaviour
                          break;
                }
           }
-          
-          
      }
 }
 
