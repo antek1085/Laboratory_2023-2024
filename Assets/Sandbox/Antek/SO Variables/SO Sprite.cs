@@ -4,5 +4,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Sprite",menuName = "SO Scripts/Sprite")]
 public class SOSprite : ScriptableObject
 {
+   
    public Sprite sprite;
 }

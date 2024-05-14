@@ -4,5 +4,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Materials",menuName = "SO Scripts/So Materials")]
 public class SOMaterials : ScriptableObject
 {
+    
     public float iD;
 }

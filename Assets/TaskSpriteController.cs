@@ -12,6 +12,7 @@ public class TaskSpriteController : MonoBehaviour
 
     void Start()
     {
+        
         for (int i = 0; i < spriteLits.Count -1; i++)
         {
             for (int j = 0; j < spriteLits.Count -1; j++)
