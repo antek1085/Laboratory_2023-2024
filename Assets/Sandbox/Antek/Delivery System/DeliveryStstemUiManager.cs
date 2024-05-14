@@ -19,26 +19,31 @@ public class DeliveryStstemUiManager : MonoBehaviour
     private Sprite spriteDisplay;
     private Sprite spriteDisplayOld;
 
-  // [SerializeField] GameObject slider;
+   [SerializeField] GameObject slider;
    [SerializeField] Image image;
 
    void Update()
     {
-         if (time.deliveryItemList.Count >= numberOnUi + 1)
-         {
-             image.enabled = true;
-             spriteDisplay = time.deliveryItemList[numberOnUi]._item.sprite;
-
-             if (spriteDisplay != spriteDisplayOld)
-             {
-                 spriteDisplayOld = spriteDisplay;
+        if (time.deliveryItemList.Count >= numberOnUi + 1)
+        {
+            image.enabled = true;
+            slider.SetActive(true);
+            timer = time.deliverItemTimer[numberOnUi];
+            spriteDisplay = time.deliveryItemList[numberOnUi].sprite;
+            slider.GetComponent<Slider>().value = timer;
+            
+            if (spriteDisplay != spriteDisplayOld)
+            {
+                spriteDisplayOld = spriteDisplay;
+                slider.GetComponent<Slider>().maxValue = timer;
              }
-             
-             image.sprite = spriteDisplay;
-         }
-         else
-         {
-             image.enabled = false;
-         }
+            
+            image.sprite = spriteDisplay;
+        }
+        else
+        {
+            image.enabled = false;  
+            slider.SetActive(false);
+        }
     }
 }

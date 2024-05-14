@@ -31,6 +31,24 @@ public class Audio
             case "FailEvent":
                 manager.PlayFail();
                 break;
+            case "PlantHarvestEvent":
+                manager.PlayPlantHarvest();
+                break;
+            case "ClickUIEvent":
+                manager.PlayClickUI();
+                break;
+            case "PillsPickUpEvent":
+                manager.PlayPillsPickUp();
+                break;
+            case "SyropPickUpEvent":
+                manager.PlaySyropPickUp();
+                break;
+            case "BalsamPickUpEvent":
+                manager.PlayBalsamPickUp();
+                break;
+            case "BellRingEvent":
+                manager.PlayBellRing();
+                break;
         }
     }
 }
@@ -45,6 +63,12 @@ public class AudioManager : MonoBehaviour //Kod przypisuje siê do pustego obiekt
     [SerializeField] EventReference PillcutterEvent;
     [SerializeField] EventReference SucessEvent;
     [SerializeField] EventReference FailEvent;
+    [SerializeField] EventReference PlantHarvestEvent;
+    [SerializeField] EventReference ClickUIEvent;
+    [SerializeField] EventReference PillsPickUpEvent;
+    [SerializeField] EventReference SyropPickUpEvent;
+    [SerializeField] EventReference BalsamPickUpEvent;
+    [SerializeField] EventReference BellRingEvent;
     [SerializeField] float rate; //Czêstotliwoœæ grania dŸwiêku
     [SerializeField] GameObject player; //Obiekt pe³ni¹cy rolê gracza
     [SerializeField] Movement controller; //kod odpowiadaj¹cy za poruszanie siê gracza
@@ -94,6 +118,36 @@ public class AudioManager : MonoBehaviour //Kod przypisuje siê do pustego obiekt
     public void PlayFail()
     {
         RuntimeManager.PlayOneShotAttached(FailEvent, player);
+    }
+
+    public void PlayPlantHarvest()
+    {
+        RuntimeManager.PlayOneShot(PlantHarvestEvent);
+    }
+
+    public void PlayClickUI()
+    {
+        RuntimeManager.PlayOneShotAttached(ClickUIEvent, player);
+    }
+
+    public void PlayPillsPickUp()
+    {
+        RuntimeManager.PlayOneShotAttached(PillsPickUpEvent, player);
+    }
+
+    public void PlaySyropPickUp()
+    {
+        RuntimeManager.PlayOneShotAttached(SyropPickUpEvent, player);
+    }
+
+    public void PlayBalsamPickUp()
+    {
+        RuntimeManager.PlayOneShotAttached(BalsamPickUpEvent, player);
+    }
+
+    public void PlayBellRing()
+    {
+        RuntimeManager.PlayOneShotAttached(BellRingEvent, player);
     }
 
     private void Start()

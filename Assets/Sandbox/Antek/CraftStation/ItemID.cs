@@ -1,9 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
-using Debug = UnityEngine.Debug;
 
 public class ItemID : MonoBehaviour
 {
@@ -56,24 +54,3 @@ public class ItemID : MonoBehaviour
           }
      }
 }
-
-     public enum itemCategory
-     { 
-          materials, 
-          syrup,
-          pills,
-          ointment
-     }
-     public enum itemSymptoms
-     {
-          nothing ,
-          cought ,
-          pain,
-          insomnia,
-          fever,
-          cuts,
-          indigestion,
-          cold,
-          impotence,
-          
-     }

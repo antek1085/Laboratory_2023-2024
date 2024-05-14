@@ -57,7 +57,7 @@ public class DeliverySpace : MonoBehaviour
     IEnumerator Destroy()
     {
         text.enabled = false;
-        yield return new WaitForSecondsRealtime(2);
+        yield return new WaitForEndOfFrame();
         Destroy(item);
         StopCoroutine(Destroy());
     }
