@@ -71,7 +71,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _item: {fileID: 11400000, guid: 3209a3b8847120840af1c68b69a7e7aa, type: 2}
-  time: 50
+  mainItemCategory: 0
+  symptoms: 01000000020000000300000004000000
+  moneyValue: 0
 --- !u!54 &5052788264695176913
 Rigidbody:
   m_ObjectHideFlags: 0

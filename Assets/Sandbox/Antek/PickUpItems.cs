@@ -34,28 +34,15 @@ public class PickUpItems : MonoBehaviour
                         }
                          
                         if(isInHand == false)
-                        { 
+                        {
                             CurrentObjectRigidbody = hitInfo.rigidbody;
                             CurrentObjectCollider = hitInfo.collider;
                             spriteOnUi.sprite =  hitInfo.transform.GetComponent<SpriteRenderer>().sprite;
                             hitInfo.transform.GetComponent<SpriteRenderer>().enabled = false;
+            
                             CurrentObjectRigidbody.isKinematic = true;
                             isInHand = true;
-                            switch(spriteOnUi.sprite.texture.name)
-                            {
-                                case "Pills":
-                                    Audio.Play("PillsPickUpEvent");
-                                    break;
-                                case "syrop":
-                                    Audio.Play("SyropPickUpEvent");
-                                    break;
-                                case "Balm":
-                                    Audio.Play("BalsamPickUpEvent");
-                                    break;
-                                default:
-                                    Audio.Play("PickUpEvent");
-                                break;
-                    }
+                            Audio.Play("PickUpEvent"); //MJ - Nieprzetestowane
                            // CurrentObjectCollider.enabled = false;
                            return;
                         }

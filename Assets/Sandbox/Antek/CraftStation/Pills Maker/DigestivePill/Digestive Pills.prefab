@@ -72,7 +72,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _item: {fileID: 11400000, guid: c89e67749e033b24d9c56633e862dc51, type: 2}
-  time: 50
+  mainItemCategory: 0
+  symptoms: 0700000002000000
+  moneyValue: 0
 --- !u!212 &4595033786614792064
 SpriteRenderer:
   m_ObjectHideFlags: 0

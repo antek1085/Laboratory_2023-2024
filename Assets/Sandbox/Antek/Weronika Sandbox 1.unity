@@ -2788,14 +2788,6 @@ PrefabInstance:
       value: event:/SucessPlop
       objectReference: {fileID: 0}
     - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: ClickUIEvent.Path
-      value: event:/ClickUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: BellRingEvent.Path
-      value: event:/BellRing
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
       propertyPath: FailEvent.Guid.Data1
       value: 384052248
       objectReference: {fileID: 0}
@@ -2812,22 +2804,6 @@ PrefabInstance:
       value: -703603903
       objectReference: {fileID: 0}
     - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: PillsPickUpEvent.Path
-      value: event:/PillsPickUp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: SyropPickUpEvent.Path
-      value: event:/SyropPickUp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: BalsamPickUpEvent.Path
-      value: event:/BalsamPickUp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: PlantHarvestEvent.Path
-      value: event:/PlantHarvest
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
       propertyPath: SucessEvent.Guid.Data1
       value: 118186263
       objectReference: {fileID: 0}
@@ -2842,102 +2818,6 @@ PrefabInstance:
     - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
       propertyPath: SucessEvent.Guid.Data4
       value: 2113993451
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: ClickUIEvent.Guid.Data1
-      value: 221461324
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: ClickUIEvent.Guid.Data2
-      value: 1296610563
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: ClickUIEvent.Guid.Data3
-      value: -1598385778
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: ClickUIEvent.Guid.Data4
-      value: 792399465
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: BellRingEvent.Guid.Data1
-      value: -258395626
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: BellRingEvent.Guid.Data2
-      value: 1113148124
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: BellRingEvent.Guid.Data3
-      value: -430596729
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: BellRingEvent.Guid.Data4
-      value: -1072032574
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: PillsPickUpEvent.Guid.Data1
-      value: -1823462067
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: PillsPickUpEvent.Guid.Data2
-      value: 1085764611
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: PillsPickUpEvent.Guid.Data3
-      value: -866187386
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: PillsPickUpEvent.Guid.Data4
-      value: -1473760025
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: SyropPickUpEvent.Guid.Data1
-      value: -1158962850
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: SyropPickUpEvent.Guid.Data2
-      value: 1132627127
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: SyropPickUpEvent.Guid.Data3
-      value: 1594459275
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: SyropPickUpEvent.Guid.Data4
-      value: 635944451
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: BalsamPickUpEvent.Guid.Data1
-      value: -468608764
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: BalsamPickUpEvent.Guid.Data2
-      value: 1216359180
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: BalsamPickUpEvent.Guid.Data3
-      value: 667376788
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: BalsamPickUpEvent.Guid.Data4
-      value: -1076393978
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: PlantHarvestEvent.Guid.Data1
-      value: -1448078764
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: PlantHarvestEvent.Guid.Data2
-      value: 1168303749
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: PlantHarvestEvent.Guid.Data3
-      value: -539068021
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
-      propertyPath: PlantHarvestEvent.Guid.Data4
-      value: -1397047477
       objectReference: {fileID: 0}
     - target: {fileID: 8369048595808100105, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
       propertyPath: m_Name
@@ -8616,47 +8496,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5964524829545023033, guid: 64aaccaa1bec1c249b4c82d9f9c1c66a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1790400170}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64aaccaa1bec1c249b4c82d9f9c1c66a, type: 3}
---- !u!1 &1790400169 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5964524829545023033, guid: 64aaccaa1bec1c249b4c82d9f9c1c66a, type: 3}
-  m_PrefabInstance: {fileID: 1790400168}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1790400170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1790400169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -1667685989
-      Data2: 1283194252
-      Data3: 674020270
-      Data4: 1969132976
-    Path: event:/LabstationLoop
-  Event: 
-  PlayEvent: 5
-  StopEvent: 6
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &1791065875
 GameObject:
   m_ObjectHideFlags: 0

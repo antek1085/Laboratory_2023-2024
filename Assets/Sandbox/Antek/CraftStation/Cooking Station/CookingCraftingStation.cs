@@ -92,7 +92,6 @@ public class CookingCraftingStation : MonoBehaviour
             Audio.Play("LabstationEvent"); //MJ - Nieprzetestowane
             yield return new WaitForSeconds(5);
             Instantiate(recipeList.itemList[i].Result.itemToSpawn, itemSpawn.transform.position, itemSpawn.transform.rotation);
-            Audio.Play("BellRingEvent");
             isCrafting = false;
             StopAllCoroutines();
     }
@@ -105,7 +104,6 @@ public class CookingCraftingStation : MonoBehaviour
             Audio.Play("LabstationEvent"); //MJ - Nieprzetestowane
             yield return new WaitForSeconds(5);
             Instantiate(dung, itemSpawn.transform.position, itemSpawn.transform.rotation);
-            Audio.Play("BellRingEvent");
             isCrafting = false;
             StopAllCoroutines();
         }

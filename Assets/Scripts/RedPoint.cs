@@ -6,9 +6,8 @@ public class RedPoint : MonoBehaviour
 {
     public GameObject[] fields;
     private int fieldCount = 0;
-    private List<GameObject> leaves = null;
+
     private Collision2D hit = null;
-    private int selected = -1;
 
     void OnCollisionEnter2D(Collision2D collision) => OnEnter(collision);
     void OnCollisionExit2D(Collision2D collision) => OnExit(collision);
@@ -17,15 +16,12 @@ public class RedPoint : MonoBehaviour
 
     private void Start()
     {
-        leaves = new List<GameObject>();
         
-        fieldCount = 0;
-        leaves.AddRange(fields);
-        selected = Random.Range(0, fields.Length - 1);
+        fieldCount = fields.Length;
 
-        for (int i = 0; i < fields.Length; i++)
+        for(int i = 0; i < (fieldCount-1); i++)
         {
-            if (i != selected) fields[i].SetActive(false);
+            fields[i].SetActive(false);
         }
     }
 
@@ -49,20 +45,18 @@ public class RedPoint : MonoBehaviour
     {
         if (hit != null)
         {
-            leaves.RemoveAt(selected);
             Destroy(hit.gameObject);
             hit = null;
-            fieldCount += 1;
+            fieldCount -= 1;
             Audio.Play("SucessEvent");
 
-            if (fieldCount >= 4)
+            if (fieldCount <= 0)
             {
                 EventCraftMortar.current.MiniGameEnd(miniGameId);
             }
             else
             {
-                selected = Random.Range(0, fields.Length - 1);
-                leaves[selected].SetActive(true);
+                fields[fieldCount - 1].SetActive(true);
             }
         }
     }

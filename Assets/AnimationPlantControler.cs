@@ -46,7 +46,6 @@ public class AnimationPlantControler : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && timer > thirdPhaseTimer)
         {
-            Audio.Play("PlantHarvestEvent"); //Z jakiejœ przyczyny dŸwiêk siê nie odgrywa - spróbujê problem przeanalizowaæ
             Instantiate(itemToSpawn, new Vector3(0,0,0), Quaternion.Euler(0,0,0));
             timer = 0;
             _animator.SetBool(thirdPhase, false);
