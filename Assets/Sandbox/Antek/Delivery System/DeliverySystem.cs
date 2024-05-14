@@ -32,6 +32,8 @@ public class DeliverySystem : MonoBehaviour
 
     int procentValue;
     
+    
+    
     void Start()
     {
         isCorutineOn = false;

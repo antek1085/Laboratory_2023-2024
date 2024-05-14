@@ -12,6 +12,7 @@ public class ItemID : MonoBehaviour
      public List<itemSymptoms> symptoms = new List<itemSymptoms>();
    //  public Dictionary<itemSymptoms, Sprite> symptoms = new Dictionary<itemSymptoms, Sprite>();
      public List<Sprite> SpritesSymptoms = new List<Sprite>();
+    
      [SerializeField] List<Sprite> allSpritesSymptoms = new List<Sprite>();
      public int moneyValue;
 
