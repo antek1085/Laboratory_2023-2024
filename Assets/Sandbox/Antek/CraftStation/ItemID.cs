@@ -18,10 +18,12 @@ public class ItemID : MonoBehaviour
 
       void Awake()
      {
+          Debug.Log(name);
           for (int i = 0; i < symptoms.Count -1; i++)
           {
                switch (symptoms[i])
                {
+                    
                     case itemSymptoms.nothing:
                          SpritesSymptoms.Add(allSpritesSymptoms[0]);
                          break;

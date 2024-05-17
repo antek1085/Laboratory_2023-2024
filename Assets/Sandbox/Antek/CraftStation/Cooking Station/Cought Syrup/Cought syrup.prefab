@@ -73,6 +73,17 @@ MonoBehaviour:
   _item: {fileID: 11400000, guid: 3209a3b8847120840af1c68b69a7e7aa, type: 2}
   mainItemCategory: 0
   symptoms: 01000000020000000300000004000000
+  SpritesSymptoms:
+  - {fileID: 21300000, guid: 46e055f98ff7cb54680fc7f3465f9923, type: 3}
+  - {fileID: 21300000, guid: bd4c2b7e46e22cc4fb92f7797e82b19c, type: 3}
+  - {fileID: 21300000, guid: 43bf3054627b8f94d8f22524371970d5, type: 3}
+  - {fileID: 21300000, guid: 1b914b2196080cd4ba97878d3d857b35, type: 3}
+  allSpritesSymptoms:
+  - {fileID: 21300000, guid: 46e055f98ff7cb54680fc7f3465f9923, type: 3}
+  - {fileID: 21300000, guid: bd4c2b7e46e22cc4fb92f7797e82b19c, type: 3}
+  - {fileID: 21300000, guid: 43bf3054627b8f94d8f22524371970d5, type: 3}
+  - {fileID: 21300000, guid: 1b914b2196080cd4ba97878d3d857b35, type: 3}
+  - {fileID: 462188089, guid: 1d3b29f07f874ad45a2975f7a3c2fd9e, type: 3}
   moneyValue: 0
 --- !u!54 &5052788264695176913
 Rigidbody:

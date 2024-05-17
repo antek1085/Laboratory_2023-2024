@@ -1,4 +1,4 @@
-using System;
+ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,7 +20,7 @@ public class TabletController : MonoBehaviour
     [SerializeField] Canvas canvas;
     int whatTab;
 
-    private bool isPlayerInRange;
+    public bool isPlayerInRange;
     
     [SerializeField] Sprite highLightItem;
     private Sprite normalItem;
