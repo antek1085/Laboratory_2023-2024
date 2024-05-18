@@ -16,6 +16,8 @@ public class ItemID : MonoBehaviour
      [SerializeField] List<Sprite> allSpritesSymptoms = new List<Sprite>();
      public int moneyValue;
 
+     public string lore;
+
       void Awake()
      {
           Debug.Log(name);

@@ -15,21 +15,23 @@ public class ClockUI : MonoBehaviour
     private string hoursString;
     private string minuteString;
     [SerializeField] TextMeshProUGUI timeText;
-    
-
+    public bool isTimeFlowing;
     
     void Start()
     {
-        
+        isTimeFlowing = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        day += Time.deltaTime / realSeconddsPerIngameDay;
-        dayNormalized = day % 1f;
-        clockHandTransform.eulerAngles = new Vector3(0, 0, -dayNormalized * rotationDegreesPerDay);
-
+        if (isTimeFlowing == true)
+        {
+            day += Time.deltaTime / realSeconddsPerIngameDay;
+            dayNormalized = day % 1f;
+            clockHandTransform.eulerAngles = new Vector3(0, 0, -dayNormalized * rotationDegreesPerDay);
+        }
+        
         hoursString = Mathf.Floor(dayNormalized * 24).ToString("00");
         minuteString = Mathf.Floor(((dayNormalized * 24) % 1f) * 60).ToString("00");
         timeText.text = hoursString + ":" + minuteString;

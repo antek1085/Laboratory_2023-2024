@@ -26,7 +26,8 @@ public class TabletController : MonoBehaviour
     private Sprite normalItem;
     private SpriteRenderer spriteRenderer;
     private bool isGamePaused;
-    
+
+    public ClockUI isTimeFlowing;
     void Start()
     {
         isGamePaused = false;
@@ -40,14 +41,16 @@ public class TabletController : MonoBehaviour
         
         if (isPlayerInRange == true)
         {
-            if (Input.GetKeyDown(KeyCode.R) && isGamePaused == false) 
+            if (Input.GetKeyDown(KeyCode.R) && isGamePaused == false)
             {
+                isTimeFlowing.isTimeFlowing = false;
                 canvas.enabled = true;
                 Time.timeScale = 0;
                 isGamePaused = true;
             }
             else if (Input.GetKeyDown(KeyCode.R) && isGamePaused == true)
             {
+                isTimeFlowing.isTimeFlowing = true;
                 isGamePaused = false;
                 Time.timeScale = 1;
                 canvas.enabled = false;

@@ -14,10 +14,11 @@ public class TaskSpriteController : MonoBehaviour
     {
         for (int i = 0; i < deliveryItemList.deliveryItemList.Count; i++)
         {
-            Debug.Log(i +"i");
+            gameObjectsList[i].price.text = deliveryItemList.deliveryItemList[i].moneyValue.ToString();
+            gameObjectsList[i].lore.text = deliveryItemList.deliveryItemList[i].lore;
+            
             for (int j = 0; j < deliveryItemList.deliveryItemList[i].SpritesSymptoms.Count ; j++)
             {
-                Debug.Log(i +"j");
                 gameObjectsList[i].TasksSpritesSymptoms[j].sprite = deliveryItemList.deliveryItemList[i].SpritesSymptoms[j];
             }
         }
@@ -29,10 +30,11 @@ public class TaskSpriteController : MonoBehaviour
         {
             for (int i = 0; i < deliveryItemList.deliveryItemList.Count; i++)
             {
-                Debug.Log(i +"i");
+                gameObjectsList[i].price.text = deliveryItemList.deliveryItemList[i].moneyValue.ToString();
+                gameObjectsList[i].lore.text = deliveryItemList.deliveryItemList[i].lore;
+                
                 for (int j = 0; j < deliveryItemList.deliveryItemList[i].SpritesSymptoms.Count ; j++)
                 {
-                    Debug.Log(i +"j");
                     gameObjectsList[i].TasksSpritesSymptoms[j].sprite = deliveryItemList.deliveryItemList[i].SpritesSymptoms[j];
                 }
             }

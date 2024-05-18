@@ -4642,6 +4642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clockHandTransform: {fileID: 1685646350}
   timeText: {fileID: 645828119}
+  isTimeFlowing: 0
 --- !u!1 &787573599
 GameObject:
   m_ObjectHideFlags: 0
@@ -7370,6 +7371,50 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.83, y: 4.21, z: 0.20000005}
   m_Center: {x: 0, y: 0.14, z: 0}
+--- !u!114 &1585002713 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 529659296714968816, guid: 03a4be3556a591647a98590c2f0781ab, type: 3}
+  m_PrefabInstance: {fileID: 1907345044}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1585002714 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7487527715600506359, guid: 03a4be3556a591647a98590c2f0781ab, type: 3}
+  m_PrefabInstance: {fileID: 1907345044}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1585002715 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 649862674031382522, guid: 03a4be3556a591647a98590c2f0781ab, type: 3}
+  m_PrefabInstance: {fileID: 1907345044}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1585002716 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8317866641634982971, guid: 03a4be3556a591647a98590c2f0781ab, type: 3}
+  m_PrefabInstance: {fileID: 1907345044}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1586540140
 GameObject:
   m_ObjectHideFlags: 0
@@ -10125,6 +10170,10 @@ PrefabInstance:
       propertyPath: room
       value: 
       objectReference: {fileID: 2095285137}
+    - target: {fileID: 2999740067939829277, guid: 03a4be3556a591647a98590c2f0781ab, type: 3}
+      propertyPath: isTimeFlowing
+      value: 
+      objectReference: {fileID: 772307453}
     - target: {fileID: 3046281169618633265, guid: 03a4be3556a591647a98590c2f0781ab, type: 3}
       propertyPath: bedroom
       value: 
@@ -10451,6 +10500,8 @@ MonoBehaviour:
   - {fileID: 1907345052}
   - {fileID: 1907345050}
   - {fileID: 1907345048}
+  price: {fileID: 1585002716}
+  lore: {fileID: 1585002715}
 --- !u!114 &1929900236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10468,6 +10519,8 @@ MonoBehaviour:
   - {fileID: 1857977940}
   - {fileID: 2121721677}
   - {fileID: 1857156607}
+  price: {fileID: 1585002714}
+  lore: {fileID: 1585002713}
 --- !u!1 &1965755421
 GameObject:
   m_ObjectHideFlags: 0
