@@ -5,7 +5,7 @@
 			<value>MortarSingle</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{b888ba4c-320d-4b7f-89bf-10309e4420c3}</destination>
@@ -72,6 +72,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{ce7ca509-ef9c-4a67-8dcb-7eaa8c168b4f}">
+		<property name="volume">
+			<value>-4</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{5159c419-6da9-4aff-8c31-981bd2dfd4dc}</destination>
 		</relationship>
@@ -84,7 +87,7 @@
 	</object>
 	<object class="MultiSound" id="{b3cf8ad2-92bc-4475-a00c-b0d390369d84}">
 		<relationship name="sounds">
-			<destination>{7d9aa686-dd4c-418b-97f9-dd39ec4bdc8e}</destination>
+			<destination>{01e9927e-f800-46eb-a6e3-260b4d0591c7}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{457a55ce-ef4e-4fc2-90b5-6121fd585f30}">
@@ -99,12 +102,12 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{116be6cb-9740-489c-8bc7-fdccfcbe81c7}" />
-	<object class="SingleSound" id="{7d9aa686-dd4c-418b-97f9-dd39ec4bdc8e}">
-		<property name="volume">
-			<value>4</value>
+	<object class="SingleSound" id="{01e9927e-f800-46eb-a6e3-260b4d0591c7}">
+		<property name="pitch">
+			<value>1</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{90c495d4-80ee-4aaa-9ab8-7117c06d0afa}</destination>
+			<destination>{0588c05f-0383-435c-9b8c-236c5cae7250}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{1e39caf5-052f-4702-84fb-83c9537c5040}" />
