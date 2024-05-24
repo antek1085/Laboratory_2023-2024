@@ -35,5 +35,11 @@ public class ClockUI : MonoBehaviour
         hoursString = Mathf.Floor(dayNormalized * 24).ToString("00");
         minuteString = Mathf.Floor(((dayNormalized * 24) % 1f) * 60).ToString("00");
         timeText.text = hoursString + ":" + minuteString;
+
+        if (dayNormalized >= 1)
+        {
+            isTimeFlowing = false;
+
+        }
     }
 }

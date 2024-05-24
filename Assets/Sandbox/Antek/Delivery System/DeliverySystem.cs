@@ -28,7 +28,7 @@ public class DeliverySystem : MonoBehaviour
     [Header("Score")]
     [SerializeField] private SOFloat playerMoney;
 
-    private int itemValue;
+    private float itemValue;
 
     int procentValue;
     
@@ -86,17 +86,13 @@ public class DeliverySystem : MonoBehaviour
             IEnumerable<itemSymptoms> resoult = deliveryItemList[0].symptoms.Intersect(deliveredItem.symptoms);
 
             procentValue = deliveryItemList[0].symptoms.Count() / resoult.Count() * 100;
-
-            //deliveryItemNumber = deliveryItemList.IndexOf(deliveredItem._item);
+            
             itemValue = deliveredItem.GetComponent<ItemID>().moneyValue;
             itemValue *= procentValue;
             deliveredItem = null;
-            if (deliveryItemNumber != -1)
-            {
-                deliveryItemList.RemoveAt(deliveryItemNumber);
-                deliveryItemNumber = -1;
-                playerMoney.Value += itemValue;
-            }
+            deliveryItemList.RemoveAt(0);
+            deliveryItemNumber = -1;
+            EventSystemTimeScore.current.MoneyAdded(itemValue);
         }
     }
 }
