@@ -120,13 +120,13 @@
 			<value>8</value>
 		</property>
 		<property name="frequencyA">
-			<value>116.379707</value>
+			<value>573.771301</value>
 		</property>
 		<property name="qualityA">
 			<value>0.100000001</value>
 		</property>
 		<property name="gainA">
-			<value>-7.24137878</value>
+			<value>-2.5</value>
 		</property>
 	</object>
 	<object class="SingleSound" id="{bb78f7db-bede-4711-810d-8bb5bc1afb4d}">
