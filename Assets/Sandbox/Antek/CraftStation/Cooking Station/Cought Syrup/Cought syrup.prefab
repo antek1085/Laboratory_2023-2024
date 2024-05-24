@@ -84,7 +84,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 43bf3054627b8f94d8f22524371970d5, type: 3}
   - {fileID: 21300000, guid: 1b914b2196080cd4ba97878d3d857b35, type: 3}
   - {fileID: 462188089, guid: 1d3b29f07f874ad45a2975f7a3c2fd9e, type: 3}
-  moneyValue: 0
+  moneyValue: 25
+  lore: SYROpSYROPSYROPSYROPSYROPSYROP
 --- !u!54 &5052788264695176913
 Rigidbody:
   m_ObjectHideFlags: 0

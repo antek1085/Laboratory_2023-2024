@@ -41,7 +41,7 @@ public class DeliverySystem : MonoBehaviour
     
     void Update()
     {
-        if (isCorutineOn == false && deliveryItemList.Count <= 4)
+        if (isCorutineOn == false && deliveryItemList.Count < 2)
         {
             isCorutineOn = true;
             StartCoroutine(RandomDelivery());

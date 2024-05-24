@@ -20,7 +20,7 @@ public class ItemID : MonoBehaviour
 
       void Awake()
      {
-          Debug.Log(name);
+          /*Debug.Log(name);
           for (int i = 0; i < symptoms.Count -1; i++)
           {
                switch (symptoms[i])
@@ -58,6 +58,7 @@ public class ItemID : MonoBehaviour
                          break;
                }
           }
+          */
      }
 }
 
