@@ -254,7 +254,7 @@ MonoBehaviour:
   - {fileID: 5275148237670031325}
   StringsBanks:
   - {fileID: 4167685565152659522}
-  cacheTime: 638518374442145543
+  cacheTime: 638521668993471256
   cacheVersion: 131616
 --- !u!114 &2205455754375626304
 MonoBehaviour:
@@ -433,7 +433,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/FMOD-KRZYCHU/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638518374442145543
+  lastModified: 638521668993471256
   FileSizes:
   - Name: Desktop
     Value: 1524
@@ -480,7 +480,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/FMOD-KRZYCHU/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638518374442135619
+  lastModified: 638521668993450389
   FileSizes:
   - Name: Desktop
     Value: 9928992
