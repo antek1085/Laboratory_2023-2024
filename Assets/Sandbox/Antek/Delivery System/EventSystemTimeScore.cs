@@ -31,4 +31,24 @@ public class EventSystemTimeScore : MonoBehaviour
             onTimeEnd(isTimeEnded);
         }
     }
+
+    public event Action<bool> onTimeStart;
+
+    public void TimeStart(bool isTimeStart)
+    {
+        if (onTimeStart != null)
+        {
+            onTimeStart(isTimeStart);
+        }
+    }
+
+    public event Action<int> onGoingSleep;
+
+    public void GoingSleep(int dayPassed)
+    {
+        if (onGoingSleep != null)
+        {
+            onGoingSleep(dayPassed);
+        }
+    }
 }

@@ -107,4 +107,9 @@ public class TabletController : MonoBehaviour
             shopButton.SetActive(true);
         }
     }
+
+    public void StartDay()
+    {
+        EventSystemTimeScore.current.TimeStart(true);
+    }
 }

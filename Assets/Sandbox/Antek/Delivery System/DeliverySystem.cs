@@ -31,17 +31,20 @@ public class DeliverySystem : MonoBehaviour
     private float itemValue;
 
     int procentValue;
+    bool isThereTime;
     
     
     
     void Start()
     {
+        EventSystemTimeScore.current.onTimeEnd += OnTimeEnd;
+        EventSystemTimeScore.current.onTimeStart += OnTimeStart;
         isCorutineOn = false;
     }
     
     void Update()
     {
-        if (isCorutineOn == false && deliveryItemList.Count < 2)
+        if (isCorutineOn == false && deliveryItemList.Count < 2 && isThereTime == true)
         {
             isCorutineOn = true;
             StartCoroutine(RandomDelivery());
@@ -94,5 +97,17 @@ public class DeliverySystem : MonoBehaviour
             deliveryItemNumber = -1;
             EventSystemTimeScore.current.MoneyAdded(itemValue);
         }
+    }
+
+    void OnTimeStart(bool time)
+    {
+        isThereTime = time;
+        deliveryItemList.Clear();
+    }
+
+    void OnTimeEnd(bool time)
+    {
+        isThereTime = time;
+        deliveryItemList.Clear();
     }
 }

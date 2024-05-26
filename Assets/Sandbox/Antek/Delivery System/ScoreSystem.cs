@@ -11,19 +11,24 @@ public class ScoreSystem : MonoBehaviour
     [SerializeField] private TextMeshProUGUI rentText;
     [SerializeField] private float rentToPay;
     private float multiplier = 1.5f;
-    
+    private int dayCount;
+
+    [SerializeField] private int rentPayDay;
+
 
     [Header("End of level")]
     [SerializeField] private TextMeshProUGUI resetText;
     [SerializeField] private string scene;
     [SerializeField] private TextMeshProUGUI endText;
     private Scene thisScene;
+    [SerializeField] SOFloat SOmoney;
 
 
     private void Start()
     {
         EventSystemTimeScore.current.onMoneyAdded += OnMoneyAdded;
-        rentToPay *= multiplier;
+        EventSystemTimeScore.current.onGoingSleep += OnGoingSleep;
+        //rentToPay *= multiplier;
     }
 
 
@@ -32,8 +37,19 @@ public class ScoreSystem : MonoBehaviour
         numberOfMoney += money;
     }
 
+    void OnGoingSleep(int dayPassed)
+    {
+        dayCount += dayPassed;
+        if (dayCount % rentPayDay == 0)
+        {
+            //pays rent
+        }
+    }
+
     private void Update()
     {
+        SOmoney.Value = numberOfMoney;
         rentText.text = "Rent:" + numberOfMoney + " / " + rentToPay;
     }
+    
 }

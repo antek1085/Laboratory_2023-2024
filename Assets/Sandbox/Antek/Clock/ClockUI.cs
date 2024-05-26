@@ -39,6 +39,7 @@ public class ClockUI : MonoBehaviour
         if (dayNormalized >= 1)
         {
             isTimeFlowing = false;
+            EventSystemTimeScore.current.TimeEnd(false);
 
         }
     }
