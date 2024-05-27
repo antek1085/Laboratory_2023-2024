@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5052788264695176913}
   - component: {fileID: 8784493844974850654}
   m_Layer: 6
-  m_Name: Cought syrup
+  m_Name: Indigestion Syrup
   m_TagString: Material
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,22 +72,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _item: {fileID: 11400000, guid: 3209a3b8847120840af1c68b69a7e7aa, type: 2}
   mainItemCategory: 0
-  symptoms: 01000000
+  symptoms: 06000000
   SpritesSymptoms:
-  - {fileID: 21300000, guid: 70f33f2c79a4f0846a85636646d27c9f, type: 3}
+  - {fileID: 21300000, guid: 3a852fa719f15c64ab78b4b2270b0b04, type: 3}
   allSpritesSymptoms:
   - {fileID: 21300000, guid: 46e055f98ff7cb54680fc7f3465f9923, type: 3}
   - {fileID: 21300000, guid: bd4c2b7e46e22cc4fb92f7797e82b19c, type: 3}
   - {fileID: 21300000, guid: 43bf3054627b8f94d8f22524371970d5, type: 3}
   - {fileID: 21300000, guid: 1b914b2196080cd4ba97878d3d857b35, type: 3}
   - {fileID: 462188089, guid: 1d3b29f07f874ad45a2975f7a3c2fd9e, type: 3}
-  moneyValue: 55
-  lore: 'Subject: Urgent! I Need Help with a Cough.  Dear Doctor,  My name is Hannah
-    Covenoug. For the past few weeks, I''ve been suffering from a terrible cough
-    that doesn''t give me any peace, day or night. My neighbors say that your father
-    had an extraordinary remedy for such a problem. Is it possible that you could
-    prepare something for me to help me get rid of this troublesome cough? I would
-    be very grateful for any assistance.  Yours sincerely, Hannah Covenough. '
+  moneyValue: 60
+  lore: 'Subject: Seeking Relief for Chronic Indigestion  Dear Doctor,  I am writing
+    to seek assistance with a persistent issue I''ve been experiencing. My name is
+    Emily Jones, and I have been suffering from chronic indigestion for several weeks
+    now. Despite making dietary changes and trying over-the-counter remedies, the
+    discomfort persists, making it difficult for me to enjoy meals or go about my
+    daily activities. I have heard about your expertise in providing remedies for
+    digestive issues and was wondering if you could recommend a suitable syrup or
+    tablet to help alleviate my symptoms. Any guidance you could offer would be greatly
+    appreciated.  Warm regards, Emily Jones '
 --- !u!54 &5052788264695176913
 Rigidbody:
   m_ObjectHideFlags: 0

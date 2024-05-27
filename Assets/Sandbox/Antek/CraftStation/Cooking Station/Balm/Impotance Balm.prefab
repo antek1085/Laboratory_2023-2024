@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3210830801740295105
+--- !u!1 &3031819129872793892
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1113362395973839014}
-  - component: {fileID: 4606533839338072807}
-  - component: {fileID: 6536849697685909997}
-  - component: {fileID: 5052788264695176913}
-  - component: {fileID: 8784493844974850654}
+  - component: {fileID: 2225134466258816375}
+  - component: {fileID: 3039965456298587271}
+  - component: {fileID: 8486279699730875837}
+  - component: {fileID: 2338337875846987797}
+  - component: {fileID: -2740659864766856051}
   m_Layer: 6
-  m_Name: Cought syrup
+  m_Name: Impotance Balm
   m_TagString: Material
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1113362395973839014
+--- !u!4 &2225134466258816375
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3210830801740295105}
+  m_GameObject: {fileID: 3031819129872793892}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.3161125, y: 8.396648, z: -6.4546275}
+  m_LocalPosition: {x: 0.74197257, y: -0.60099983, z: 3.3046377}
   m_LocalScale: {x: 0.86, y: 0.86, z: 0.86}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &4606533839338072807
+--- !u!136 &3039965456298587271
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3210830801740295105}
+  m_GameObject: {fileID: 3031819129872793892}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -58,43 +58,40 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6536849697685909997
+--- !u!114 &8486279699730875837
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3210830801740295105}
+  m_GameObject: {fileID: 3031819129872793892}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47b44fe2eea9f8e43962dad011868965, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _item: {fileID: 11400000, guid: 3209a3b8847120840af1c68b69a7e7aa, type: 2}
+  _item: {fileID: 11400000, guid: 51e02da0071340043b0d3a0c78d6635f, type: 2}
   mainItemCategory: 0
-  symptoms: 01000000
+  symptoms: 08000000
   SpritesSymptoms:
-  - {fileID: 21300000, guid: 70f33f2c79a4f0846a85636646d27c9f, type: 3}
-  allSpritesSymptoms:
-  - {fileID: 21300000, guid: 46e055f98ff7cb54680fc7f3465f9923, type: 3}
-  - {fileID: 21300000, guid: bd4c2b7e46e22cc4fb92f7797e82b19c, type: 3}
-  - {fileID: 21300000, guid: 43bf3054627b8f94d8f22524371970d5, type: 3}
-  - {fileID: 21300000, guid: 1b914b2196080cd4ba97878d3d857b35, type: 3}
-  - {fileID: 462188089, guid: 1d3b29f07f874ad45a2975f7a3c2fd9e, type: 3}
-  moneyValue: 55
-  lore: 'Subject: Urgent! I Need Help with a Cough.  Dear Doctor,  My name is Hannah
-    Covenoug. For the past few weeks, I''ve been suffering from a terrible cough
-    that doesn''t give me any peace, day or night. My neighbors say that your father
-    had an extraordinary remedy for such a problem. Is it possible that you could
-    prepare something for me to help me get rid of this troublesome cough? I would
-    be very grateful for any assistance.  Yours sincerely, Hannah Covenough. '
---- !u!54 &5052788264695176913
+  - {fileID: 21300000, guid: f0a36b72497d6af4190a5643233e908f, type: 3}
+  allSpritesSymptoms: []
+  moneyValue: 50
+  lore: 'Subject: Seeking Assistance for Erectile Dysfunction  Dear Doctor,  I''m
+    writing to you about a sensitive matter that I''ve been struggling with. My name
+    is Daniel Taylor, and I''ve been dealing with erectile dysfunction for some time
+    now. It''s been a difficult journey, and I''m eager to find a solution that works
+    for me. I''ve heard about your expertise in providing remedies for such issues
+    and was hoping you could recommend a treatment plan that involves both ointments
+    and tablets. Your guidance and understanding would mean a lot to me as I navigate
+    through this challenging time.  Warm regards, Daniel Taylor '
+--- !u!54 &2338337875846987797
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3210830801740295105}
+  m_GameObject: {fileID: 3031819129872793892}
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
@@ -115,13 +112,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!212 &8784493844974850654
+--- !u!212 &-2740659864766856051
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3210830801740295105}
+  m_GameObject: {fileID: 3031819129872793892}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -156,7 +153,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d8ea5ba811543744c9beb1bd1602a366, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86faf486877b24d469a3d1ca80800c19, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
