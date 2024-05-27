@@ -29,4 +29,10 @@ public class UIManager : MonoBehaviour
         score -= 1;
         scoreText.text = "Score: " + score.ToString();
     }
+
+    public void ResetPoint()
+    {
+        score = 0;
+        scoreText.text = "Score: " + score.ToString();
+    }
 }

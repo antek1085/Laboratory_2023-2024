@@ -17,8 +17,13 @@ public class RedPoint : MonoBehaviour
 
     private void Start()
     {
+        Reset();
+    }
+
+    private void Reset()
+    {
         leaves = new List<GameObject>();
-        
+
         fieldCount = 0;
         leaves.AddRange(fields);
         selected = Random.Range(0, fields.Length - 1);
@@ -27,8 +32,10 @@ public class RedPoint : MonoBehaviour
         {
             if (i != selected) fields[i].SetActive(false);
         }
-    }
 
+        fields[selected].SetActive(true);
+    }
+   
     void OnEnter(Collision2D collision)
     {
         hit = collision;
@@ -50,7 +57,8 @@ public class RedPoint : MonoBehaviour
         if (hit != null)
         {
             leaves.RemoveAt(selected);
-            Destroy(hit.gameObject);
+            hit.gameObject.SetActive(false);
+            //Destroy(hit.gameObject);
             hit = null;
             fieldCount += 1;
             Audio.Play("SucessEvent");
@@ -58,6 +66,7 @@ public class RedPoint : MonoBehaviour
             if (fieldCount >= 4)
             {
                 EventCraftMortar.current.MiniGameEnd(miniGameId);
+                Reset();
             }
             else
             {

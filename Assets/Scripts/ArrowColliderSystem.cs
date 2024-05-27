@@ -40,6 +40,9 @@ public class ArrowColliderSystem : MonoBehaviour
             if (score >= 10)
             {
                EventCraftMortar.current.MiniGameEnd(miniGameId);
+               score = 0;
+               UIManager.instance.ResetPoint();
+
             }
         }
         else
