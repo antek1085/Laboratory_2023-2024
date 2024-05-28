@@ -40,7 +40,6 @@ public class ClockUI : MonoBehaviour
         {
             isTimeFlowing = false;
             EventSystemTimeScore.current.TimeEnd(false);
-
         }
     }
 }

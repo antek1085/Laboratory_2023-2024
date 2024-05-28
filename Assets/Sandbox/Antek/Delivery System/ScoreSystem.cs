@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class ScoreSystem : MonoBehaviour
 {
     [SerializeField] private float numberOfMoney;
+    [SerializeField] private float numberOfMoneyEarnedToday;
     [SerializeField] private TextMeshProUGUI rentText;
     [SerializeField] private float rentToPay;
     private float multiplier = 1.5f;
@@ -35,14 +36,23 @@ public class ScoreSystem : MonoBehaviour
     void OnMoneyAdded (float money)
     {
         numberOfMoney += money;
+        numberOfMoneyEarnedToday += money;
     }
 
     void OnGoingSleep(int dayPassed)
     {
         dayCount += dayPassed;
+        EventSystemTimeScore.current.EndDay(numberOfMoneyEarnedToday, rentToPay, rentPayDay);
         if (dayCount % rentPayDay == 0)
         {
-            //pays rent
+            if (rentToPay > numberOfMoney)
+            {
+                EventSystemTimeScore.current.PayRent(false);
+            }
+            else
+            {
+                EventSystemTimeScore.current.PayRent(true);
+            }
         }
     }
 

@@ -15,7 +15,10 @@ public class TabletController : MonoBehaviour
 
     [Header("Shop Button")]
     [SerializeField] GameObject shopButton;
-    
+
+    [Header("Start Day Button")]
+    [SerializeField] GameObject startButton;
+     
     
     [SerializeField] Canvas canvas;
     int whatTab;
@@ -30,6 +33,7 @@ public class TabletController : MonoBehaviour
     public ClockUI isTimeFlowing;
     void Start()
     {
+        EventSystemTimeScore.current.onGoingSleep += OnGoingSleep;
         isGamePaused = false;
         canvas.enabled = false;
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -108,8 +112,14 @@ public class TabletController : MonoBehaviour
         }
     }
 
-    public void StartDay()
+    public void StartWorkingDay()
     {
         EventSystemTimeScore.current.TimeStart(true);
+        startButton.SetActive(false);
+    }
+
+    void OnGoingSleep(int i)
+    {
+        startButton.SetActive(false);
     }
 }

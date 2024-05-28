@@ -51,4 +51,24 @@ public class EventSystemTimeScore : MonoBehaviour
             onGoingSleep(dayPassed);
         }
     }
+
+    public event Action<float, float,int> onEndDay;
+
+    public void EndDay(float moneyEarned, float rent,int rentPayDay)
+    {
+        if (onEndDay != null)
+        {
+            onEndDay(moneyEarned, rent,rentPayDay);
+        }
+    }
+    
+    public event Action<bool> onPayRent;
+
+    public void PayRent(bool canHePay)
+    {
+        if (onPayRent != null)
+        {
+            onPayRent(canHePay);
+        }
+    }
 }

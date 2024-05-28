@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class DeliverySystem : MonoBehaviour
 {
@@ -31,7 +33,7 @@ public class DeliverySystem : MonoBehaviour
     private float itemValue;
 
     int procentValue;
-    bool isThereTime;
+    bool isThereTime = false;
     
     
     
