@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TaskSpriteController : MonoBehaviour
@@ -28,16 +29,29 @@ public class TaskSpriteController : MonoBehaviour
     {
         if (isPlayerinRange.isPlayerInRange == true)
         {
-            for (int i = 0; i < deliveryItemList.deliveryItemList.Count; i++)
+            for (int i = 0; i < deliveryItemList.deliveryItemList.Count ; i++)
             {
-                gameObjectsList[i].price.text = deliveryItemList.deliveryItemList[i].moneyValue.ToString();
-                gameObjectsList[i].lore.text = deliveryItemList.deliveryItemList[i].lore;
+               
+                    gameObjectsList[i].price.text = deliveryItemList.deliveryItemList[i].moneyValue.ToString();
+                    gameObjectsList[i].lore.text = deliveryItemList.deliveryItemList[i].lore;
                 
-                for (int j = 0; j < deliveryItemList.deliveryItemList[i].SpritesSymptoms.Count ; j++)
-                {
-                    gameObjectsList[i].TasksSpritesSymptoms[j].sprite = deliveryItemList.deliveryItemList[i].SpritesSymptoms[j];
-                }
+                    for (int j = 0; j < deliveryItemList.deliveryItemList[i].SpritesSymptoms.Count ; j++)
+                    {
+                        gameObjectsList[i].TasksSpritesSymptoms[j].sprite = deliveryItemList.deliveryItemList[i].SpritesSymptoms[j];
+                    } 
+                    
+                // gameObjectsList[i].price.text = deliveryItemList.deliveryItemList[i].moneyValue.ToString();
+                // gameObjectsList[i].lore.text = deliveryItemList.deliveryItemList[i].lore;
+                //
+                // for (int j = 0; j < deliveryItemList.deliveryItemList[i].SpritesSymptoms.Count ; j++)
+                // {
+                //     gameObjectsList[i].TasksSpritesSymptoms[j].sprite = deliveryItemList.deliveryItemList[i].SpritesSymptoms[j];
+                // }
             }
+        }
+        else
+        {
+            return;
         }
     }
 

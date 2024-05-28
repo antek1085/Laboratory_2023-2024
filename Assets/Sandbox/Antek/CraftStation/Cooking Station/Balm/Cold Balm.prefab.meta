@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Sandbox/Antek/CraftStation/Cooking Station/Balm/Cold Balm.prefab.meta
 guid: fe1103e921cbb9e47adaa5eb22d6de2d
+========
+guid: 1f94f4329fbb8fb408c4a3075a25d10d
+>>>>>>>> Test:Assets/Scripts/MiniGry/MiniGra1/MiniGame0.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 

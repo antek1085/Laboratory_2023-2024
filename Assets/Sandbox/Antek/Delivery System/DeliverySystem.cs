@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class DeliverySystem : MonoBehaviour
 {
@@ -28,20 +30,23 @@ public class DeliverySystem : MonoBehaviour
     [Header("Score")]
     [SerializeField] private SOFloat playerMoney;
 
-    private int itemValue;
+    private float itemValue;
 
     int procentValue;
+    bool isThereTime = false;
     
     
     
     void Start()
     {
+        EventSystemTimeScore.current.onTimeEnd += OnTimeEnd;
+        EventSystemTimeScore.current.onTimeStart += OnTimeStart;
         isCorutineOn = false;
     }
     
     void Update()
     {
-        if (isCorutineOn == false && deliveryItemList.Count <= 4)
+        if (isCorutineOn == false && deliveryItemList.Count < 2 && isThereTime == true)
         {
             isCorutineOn = true;
             StartCoroutine(RandomDelivery());
@@ -86,17 +91,25 @@ public class DeliverySystem : MonoBehaviour
             IEnumerable<itemSymptoms> resoult = deliveryItemList[0].symptoms.Intersect(deliveredItem.symptoms);
 
             procentValue = deliveryItemList[0].symptoms.Count() / resoult.Count() * 100;
-
-            //deliveryItemNumber = deliveryItemList.IndexOf(deliveredItem._item);
+            
             itemValue = deliveredItem.GetComponent<ItemID>().moneyValue;
             itemValue *= procentValue;
             deliveredItem = null;
-            if (deliveryItemNumber != -1)
-            {
-                deliveryItemList.RemoveAt(deliveryItemNumber);
-                deliveryItemNumber = -1;
-                playerMoney.Value += itemValue;
-            }
+            deliveryItemList.RemoveAt(0);
+            deliveryItemNumber = -1;
+            EventSystemTimeScore.current.MoneyAdded(itemValue);
         }
+    }
+
+    void OnTimeStart(bool time)
+    {
+        isThereTime = time;
+        deliveryItemList.Clear();
+    }
+
+    void OnTimeEnd(bool time)
+    {
+        isThereTime = time;
+        deliveryItemList.Clear();
     }
 }

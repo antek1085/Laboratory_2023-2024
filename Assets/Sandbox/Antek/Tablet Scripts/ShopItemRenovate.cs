@@ -29,7 +29,8 @@ public class ShopItemRenovate : MonoBehaviour
     {
         if (money.Value >= price && isItemBought == false)
         {
-            money.Value -= price;
+            EventSystemTimeScore.current.MoneyAdded(-price);
+            
             itemToChange.sprite = spriteItem;
             //this.gameObject.GetComponent<Button>().interactable = false;
             isItemBought = true;
