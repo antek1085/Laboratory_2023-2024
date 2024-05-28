@@ -42,15 +42,15 @@ public class PickUpItems : MonoBehaviour
             
                             CurrentObjectRigidbody.isKinematic = true;
                             isInHand = true;
-                            switch (spriteOnUi.sprite.texture.name)
+                            switch (hitInfo.transform.GetComponent<ItemID>().mainItemCategory)
                                 {
-                                    case "Pills":
+                                    case itemCategory.pills:
                                         Audio.Play("PillsPickUpEvent");
                                         break;
-                                    case "syrop":
+                                    case itemCategory.syrup:
                                         Audio.Play("SyropPickUpEvent");
                                         break;
-                                    case "Balm":
+                                    case itemCategory.ointment:
                                         Audio.Play("BalsamPickUpEvent");
                                         break;
                                     default:

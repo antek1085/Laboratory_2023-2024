@@ -13,27 +13,9 @@ MonoBehaviour:
   m_Name: Baza Danych
   m_EditorClassIdentifier: 
   itemList:
-  - {fileID: 11400000, guid: aa60b7893b8d17a46a4e5383b1108843, type: 2}
-  - {fileID: 11400000, guid: 4778f1b25cc23ea4292440cde9406484, type: 2}
-  - {fileID: 11400000, guid: c95fd7faaa08a704b988a3657ae95744, type: 2}
-  - {fileID: 11400000, guid: cce304f191383434199e563eb623f834, type: 2}
-  - {fileID: 11400000, guid: 375c4ea624b39794198587e68a1f81c3, type: 2}
   - {fileID: 11400000, guid: 2939027db3aad084eb1489928f3e4d2b, type: 2}
   - {fileID: 11400000, guid: 12fc1513bd111c1449409f5aa4b33754, type: 2}
-  - {fileID: 11400000, guid: 056ce9914506e46448b08f10d0405ae1, type: 2}
-  - {fileID: 11400000, guid: fdd5deb3aa4990b4da786f64484fff6d, type: 2}
-  - {fileID: 11400000, guid: 12899428c4e9d21439bc2613dba2088b, type: 2}
-  - {fileID: 11400000, guid: 65cced184dc682a42a1be096d31013f1, type: 2}
-  - {fileID: 11400000, guid: 20c548bce1195fb4dbbf48d544e95104, type: 2}
   - {fileID: 11400000, guid: 180dc8c5a46221f4094640bf8dca54b5, type: 2}
-  - {fileID: 11400000, guid: 2314724570b805c4dabe5deb67153bd8, type: 2}
-  - {fileID: 11400000, guid: fd7690c41a52ce141b800eca904e2820, type: 2}
   - {fileID: 11400000, guid: b282839261212844cb3d6488950ccb76, type: 2}
-  - {fileID: 11400000, guid: f97e995dd4ec9d64cbb7870e3805be95, type: 2}
-  - {fileID: 11400000, guid: 134ed4e51ba4c2a448b021bb36601aeb, type: 2}
   - {fileID: 11400000, guid: f8db91f71f0bc4b428ebddebe5ebef94, type: 2}
-  - {fileID: 11400000, guid: 48852baa8e4b1f047bb755f74938f7ce, type: 2}
-  - {fileID: 11400000, guid: 040ac5fd0efb60143827d2add27a10f7, type: 2}
   - {fileID: 11400000, guid: dea7fc73545dc3d44a249992fbf083a1, type: 2}
-  - {fileID: 11400000, guid: ba0f787eff5fde44ba10df768eaa5f65, type: 2}
-  - {fileID: 11400000, guid: e013953e77255164399bc9fc12092fac, type: 2}
