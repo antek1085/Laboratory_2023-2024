@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b44fe2eea9f8e43962dad011868965, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _item: {fileID: 11400000, guid: 51e02da0071340043b0d3a0c78d6635f, type: 2}
+  _item: {fileID: 11400000, guid: ebd23cda0c503b3419769d82ea028206, type: 2}
   mainItemCategory: 0
   symptoms: 08000000
   SpritesSymptoms:
@@ -153,7 +153,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 86faf486877b24d469a3d1ca80800c19, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 75c23f6329cfa7046ab03b86b44cc637, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

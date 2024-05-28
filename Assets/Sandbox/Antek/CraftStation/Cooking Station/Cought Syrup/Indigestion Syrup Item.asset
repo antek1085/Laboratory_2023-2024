@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Indigestion Syrup Item
   m_EditorClassIdentifier: 
   itemToSpawn: {fileID: 3210830801740295105, guid: a565ca875cfee174da3d4938c8d063b0, type: 3}
-  sprite: {fileID: 21300000, guid: d8ea5ba811543744c9beb1bd1602a366, type: 3}
+  sprite: {fileID: 21300000, guid: 2e7baf199c0e5a04396e360bb4e96fec, type: 3}

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Pain Balm Item
   m_EditorClassIdentifier: 
   itemToSpawn: {fileID: 3031819129872793892, guid: d000f941624f22945bcee6aaf9edb0e0, type: 3}
-  sprite: {fileID: 21300000, guid: 86faf486877b24d469a3d1ca80800c19, type: 3}
+  sprite: {fileID: 21300000, guid: 4264996ef74c9ee45b390406fb0503cb, type: 3}

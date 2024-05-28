@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Cold Balm Item
   m_EditorClassIdentifier: 
   itemToSpawn: {fileID: 3031819129872793892, guid: fe1103e921cbb9e47adaa5eb22d6de2d, type: 3}
-  sprite: {fileID: 21300000, guid: 86faf486877b24d469a3d1ca80800c19, type: 3}
+  sprite: {fileID: 21300000, guid: fa40f3d6c74f6b14192d9fbab116007f, type: 3}

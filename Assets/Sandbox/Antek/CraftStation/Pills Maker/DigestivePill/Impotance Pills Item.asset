@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Impotance Pills Item
   m_EditorClassIdentifier: 
   itemToSpawn: {fileID: 6449609256073094675, guid: 1760a546b28478d44baba89d70296d57, type: 3}
-  sprite: {fileID: 21300000, guid: 83dae3079a81f714284f2d50c23a69fe, type: 3}
+  sprite: {fileID: 21300000, guid: 8306e996529cdc048aed4f3be0898bda, type: 3}

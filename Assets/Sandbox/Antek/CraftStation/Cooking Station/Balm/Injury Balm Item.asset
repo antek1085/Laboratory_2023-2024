@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Injury Balm Item
   m_EditorClassIdentifier: 
   itemToSpawn: {fileID: 3031819129872793892, guid: 101681e5953560d4bb08c4d5c1211d74, type: 3}
-  sprite: {fileID: 21300000, guid: 86faf486877b24d469a3d1ca80800c19, type: 3}
+  sprite: {fileID: 21300000, guid: efc5179f5260ea341be94550e0dd9b71, type: 3}
