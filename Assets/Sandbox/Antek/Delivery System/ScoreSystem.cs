@@ -43,6 +43,7 @@ public class ScoreSystem : MonoBehaviour
     {
         dayCount += dayPassed;
         EventSystemTimeScore.current.EndDay(numberOfMoneyEarnedToday, rentToPay, rentPayDay);
+        SaveSystemEvents.current.SaveGame(numberOfMoney,rentToPay,dayCount);
         if (dayCount % rentPayDay == 0)
         {
             if (rentToPay > numberOfMoney)
