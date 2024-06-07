@@ -18,6 +18,8 @@ public class MenuControlerScript : MonoBehaviour
     [SerializeField] private GameObject menuButtons;
     [SerializeField] private GameObject optionButtons;
 
+    [SerializeField] private GameObject saveSlotsButtons;
+
     [SerializeField] private Slider musicSlider;
    
         
@@ -39,11 +41,16 @@ public class MenuControlerScript : MonoBehaviour
         }
     }
 
-   public void StartButton()
+   public void StartGame()
    {
        loadingScreen.SetActive(true);
        menuButtons.SetActive(false);
        StartCoroutine(LoadSceneAsync());
+   }
+
+   public void StartButton()
+   {
+       saveSlotsButtons.SetActive(true);
    }
 
     IEnumerator LoadSceneAsync()

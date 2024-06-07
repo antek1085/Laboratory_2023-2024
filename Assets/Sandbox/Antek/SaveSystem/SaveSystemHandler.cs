@@ -12,7 +12,8 @@ public class SaveSystemHandler : MonoBehaviour
     float rentToPay;
     int dayCount;
     
-    
+    int saveNumber;
+    FileInfo saveSelected;
 
     void Awake()
     {
@@ -20,7 +21,7 @@ public class SaveSystemHandler : MonoBehaviour
         {
             Directory.CreateDirectory(SAVE_FOLDER);
         }
-        SaveSystemEvents.current.onSaveGame += OnSaveGame;
+        //SaveSystemEvents.current.onSaveGame += OnSaveGame;
     }
 
 
@@ -47,6 +48,7 @@ public class SaveSystemHandler : MonoBehaviour
 
     private void Save()
     {
+
         SaveObject saveObject = new SaveObject()
         {
             moneyAmount = money,
@@ -55,16 +57,21 @@ public class SaveSystemHandler : MonoBehaviour
         };
         string json = JsonUtility.ToJson(saveObject);
 
-        File.WriteAllText(SAVE_FOLDER + "/save.txt", json);
+        File.WriteAllText(SAVE_FOLDER + "/save" + saveNumber +".txt", json);
 
     }
 
 
     private void Load()
     {
-        if (File.Exists(SAVE_FOLDER + "/save.txt"))
+        DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER);
+        FileInfo[] saveFiles = directoryInfo.GetFiles();
+
+        saveSelected = saveFiles[saveNumber];
+        
+        if (File.Exists(SAVE_FOLDER + "/save"+saveNumber+".txt"))
         {
-            string saveString = File.ReadAllText(SAVE_FOLDER + "/save.txt");
+            string saveString = File.ReadAllText(SAVE_FOLDER + saveSelected.FullName);
             if (saveString != null)
             {
                 SaveObject saveObject = JsonUtility.FromJson<SaveObject>(saveString);
