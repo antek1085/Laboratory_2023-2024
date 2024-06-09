@@ -3,6 +3,8 @@ using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class SaveSystemHandler : MonoBehaviour
 {
@@ -14,44 +16,20 @@ public class SaveSystemHandler : MonoBehaviour
     
     int saveNumber;
     FileInfo saveSelected;
-    [SerializeField] private SOInt saveNumberSO;
+    [FormerlySerializedAs("saveNumberSO")]
+    [SerializeField] private SOInt SaveFileNumber;
 
     void Awake()
     {
+        SaveSystemEvents.current.onSaveGame += OnSaveGame;
+        
         if (!Directory.Exists(SAVE_FOLDER))
         {
             Directory.CreateDirectory(SAVE_FOLDER);
         }
-        SaveSystemEvents.current.onSaveGame += OnSaveGame;
-        SaveSystemEvents.current.onButtonClick += OnButtonClick;
     }
 
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void OnButtonClick(int saveFileNumber)
-    {
-        saveNumber = saveFileNumber;
-        saveNumberSO.value = saveNumber;
-        if (File.Exists(SAVE_FOLDER + "/save" + saveNumber + ".txt"))
-        {
-            Load();
-        }
-        else
-        {
-            Save();
-        }
-    }
-
+    
 
     void OnSaveGame(float moneyE, float rentToPayE, int dayPassedE)
     {
@@ -64,7 +42,7 @@ public class SaveSystemHandler : MonoBehaviour
 
     public void Save()
     {
-        saveNumber = saveNumberSO.value;
+        saveNumber = SaveFileNumber.value;
 
         SaveObject saveObject = new SaveObject()
         {
@@ -81,7 +59,7 @@ public class SaveSystemHandler : MonoBehaviour
 
     public void Load()
     {
-        saveNumber = saveNumberSO.value;
+        saveNumber = SaveFileNumber.value;
         
         DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER);
         FileInfo[] saveFiles = directoryInfo.GetFiles();

@@ -56,6 +56,7 @@ public class MenuControlerScript : MonoBehaviour
 
     IEnumerator LoadSceneAsync()
     {
+        new WaitForEndOfFrame();
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levelToLoad);
         asyncLoad.allowSceneActivation = false;
         
