@@ -51,6 +51,7 @@ public class MenuControlerScript : MonoBehaviour
    public void StartButton()
    {
        saveSlotsButtons.SetActive(true);
+       menuButtons.SetActive(false);
    }
 
     IEnumerator LoadSceneAsync()

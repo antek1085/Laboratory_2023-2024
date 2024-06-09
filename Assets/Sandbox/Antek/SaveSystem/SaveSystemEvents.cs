@@ -23,4 +23,17 @@ public class SaveSystemEvents : MonoBehaviour
          onSaveGame(moneyEarned, rent,dayPassed);
       }
    }
+
+   public event Action<int> onButtonClick;
+
+   public void ButtonClick(int saveFileNumber)
+   {
+      if (onButtonClick != null)
+      {
+         onButtonClick(saveFileNumber);
+      }
+   }
+
+
+
 }

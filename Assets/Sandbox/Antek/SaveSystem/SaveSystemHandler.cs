@@ -14,6 +14,7 @@ public class SaveSystemHandler : MonoBehaviour
     
     int saveNumber;
     FileInfo saveSelected;
+    [SerializeField] private SOInt saveNumberSO;
 
     void Awake()
     {
@@ -21,7 +22,8 @@ public class SaveSystemHandler : MonoBehaviour
         {
             Directory.CreateDirectory(SAVE_FOLDER);
         }
-        //SaveSystemEvents.current.onSaveGame += OnSaveGame;
+        SaveSystemEvents.current.onSaveGame += OnSaveGame;
+        SaveSystemEvents.current.onButtonClick += OnButtonClick;
     }
 
 
@@ -36,6 +38,20 @@ public class SaveSystemHandler : MonoBehaviour
         
     }
 
+    void OnButtonClick(int saveFileNumber)
+    {
+        saveNumber = saveFileNumber;
+        saveNumberSO.value = saveNumber;
+        if (File.Exists(SAVE_FOLDER + "/save" + saveNumber + ".txt"))
+        {
+            Load();
+        }
+        else
+        {
+            Save();
+        }
+    }
+
 
     void OnSaveGame(float moneyE, float rentToPayE, int dayPassedE)
     {
@@ -46,8 +62,9 @@ public class SaveSystemHandler : MonoBehaviour
 
 
 
-    private void Save()
+    public void Save()
     {
+        saveNumber = saveNumberSO.value;
 
         SaveObject saveObject = new SaveObject()
         {
@@ -62,8 +79,10 @@ public class SaveSystemHandler : MonoBehaviour
     }
 
 
-    private void Load()
+    public void Load()
     {
+        saveNumber = saveNumberSO.value;
+        
         DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER);
         FileInfo[] saveFiles = directoryInfo.GetFiles();
 

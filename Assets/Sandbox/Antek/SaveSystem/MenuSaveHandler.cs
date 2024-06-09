@@ -20,8 +20,8 @@ public class MenuSaveHandler : MonoBehaviour
     {
         DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER);
         FileInfo[] saveFiles = directoryInfo.GetFiles();
-        
-        
+
+
 
         for (int i = 0; i < saveFiles.Length; i++)
         {
@@ -30,22 +30,18 @@ public class MenuSaveHandler : MonoBehaviour
             {
                 saveString = File.ReadAllText(SAVE_FOLDER + saveSelected.FullName);
                 saveObject = JsonUtility.FromJson<SaveObject>(saveString);
-                
-                if(saveObject != null)
-                { 
+
+                if (saveObject != null)
+                {
                     saveSlots[i].text = "day:" + saveObject.dayCount + " Money:" + saveObject.moneyAmount;
                 }
                 else
                 {
                     saveSlots[i].text = "Empty Save Slot";
-                }  
+                }
             }
 
         }
-    }
-    void Start()
-    {
-       
     }
 
 
