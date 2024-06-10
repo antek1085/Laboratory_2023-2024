@@ -15,8 +15,8 @@ public class DayEndSpot : MonoBehaviour
     //[Header("Ending Screen values")]
     float moneyEarnedToday;
     float rent;
-    int dayPassed;
-    int rentPayDay = 99;
+    [SerializeField] int dayPassed;
+    [SerializeField] int rentPayDay = 99;
     Scene thisScene;
 
     bool canHePayRent;
@@ -31,7 +31,7 @@ public class DayEndSpot : MonoBehaviour
         if (other.tag == "Player")
         {
             interractionText.enabled = true;
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyUp(KeyCode.R))
             {
                 dayPassed++;
                 EventSystemTimeScore.current.GoingSleep(1);

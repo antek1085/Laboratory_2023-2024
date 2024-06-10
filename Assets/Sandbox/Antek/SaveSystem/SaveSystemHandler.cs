@@ -23,7 +23,6 @@ public class SaveSystemHandler : MonoBehaviour
 
     void OnEnable()
     {
-       // SaveSystemEvents.current.onSaveGame += OnSaveGame;
     }
 
     void Awake()
@@ -32,11 +31,11 @@ public class SaveSystemHandler : MonoBehaviour
         {
             Directory.CreateDirectory(SAVE_FOLDER);
         }
-        SaveSystemEvents.current.onSaveGame += OnSaveGame;
     }
 
     void Start()
     {
+        SaveSystemEvents.current.OnSaveGame += OnSaveGame;
         Load();
     }
 
@@ -80,7 +79,7 @@ public class SaveSystemHandler : MonoBehaviour
         
         if (File.Exists(SAVE_FOLDER + "/save"+saveNumber+".txt"))
         {
-            string saveString = File.ReadAllText(SAVE_FOLDER + saveSelected.FullName);
+            string saveString = File.ReadAllText(SAVE_FOLDER + saveSelected.Name);
             if (saveString != null)
             {
                 SaveObject saveObject = JsonUtility.FromJson<SaveObject>(saveString);
@@ -92,7 +91,7 @@ public class SaveSystemHandler : MonoBehaviour
 
     void OnDestroy()
     {
-        SaveSystemEvents.current.onSaveGame -= OnSaveGame;
+        SaveSystemEvents.current.OnSaveGame -= OnSaveGame;
     }
 
 

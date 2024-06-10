@@ -6389,6 +6389,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 347455254310665058, guid: a445c9bb9f65ad5429b2d0946b8624ef, type: 3}
+      propertyPath: m_Name
+      value: PauseMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 533283245127249918, guid: a445c9bb9f65ad5429b2d0946b8624ef, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6905,6 +6909,8 @@ MonoBehaviour:
   dayEndingScreen: {fileID: 0}
   endingScreenLoosing: {fileID: 1316480217}
   endingScreenContinuing: {fileID: 1872438248}
+  dayPassed: 1
+  rentPayDay: 99
 --- !u!65 &1408433630
 BoxCollider:
   m_ObjectHideFlags: 0

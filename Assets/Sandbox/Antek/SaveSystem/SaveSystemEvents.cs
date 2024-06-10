@@ -14,34 +14,34 @@ public class SaveSystemEvents : MonoBehaviour
    }
    
    
-   public event Action<float, float, int> onSaveGame;
+   public event Action<float, float, int> OnSaveGame;
    
    public void SaveGame(float moneyEarned, float rent,int dayPassed)
    {
-      if (onSaveGame != null)
+      if (OnSaveGame != null)
       {
-         onSaveGame(moneyEarned, rent,dayPassed);
+         OnSaveGame(moneyEarned, rent,dayPassed);
       }
    }
 
-   public event Action<int> onButtonClick;
+   public event Action<int> OnButtonClick;
 
    public void ButtonClick(int saveFileNumber)
    {
-      if (onButtonClick != null)
+      if (OnButtonClick != null)
       {
-         onButtonClick(saveFileNumber);
+         OnButtonClick(saveFileNumber);
       }
    }
 
 
-   public event Action<float, int> onLoadGame;
+   public event Action<float, int> OnLoadGame;
 
    public void LoadGame(float rentAmount, int dayCount)
    {
-      if (onLoadGame != null)
+      if (OnLoadGame != null)
       {
-         onLoadGame(rentAmount, dayCount);
+         OnLoadGame(rentAmount, dayCount);
       }
    }
 

@@ -34,7 +34,6 @@ public class MenuControlerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(delay);
         if (delay < -1)
         {
             delay = 2;
@@ -86,6 +85,7 @@ public class MenuControlerScript : MonoBehaviour
     public void BackButton()
     {
         optionButtons.SetActive(false);
+        saveSlotsButtons.SetActive(false);
         menuButtons.SetActive(true);
     }
 

@@ -22,44 +22,49 @@ public class MenuSaveHandler : MonoBehaviour
     
     int saveNumber;
     [SerializeField] private SOInt SaveFileNumber;
+    private FileInfo[] saveFiles;
     
 
     void Awake()
     {
+        saveFiles = new FileInfo[3];
+        
         if (!Directory.Exists(SAVE_FOLDER))
         {
             Directory.CreateDirectory(SAVE_FOLDER);
         }
         
-        SaveSystemEvents.current.onButtonClick += OnButtonClick;
+        SaveSystemEvents.current.OnButtonClick += OnButtonClick;
+    }
+
+    private void OnEnable()
+    {
+        DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER); 
+        saveFiles = directoryInfo.GetFiles();
         
-        
-        DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER);
-        FileInfo[] saveFiles = directoryInfo.GetFiles();
-
-
-
-        for (int i = 0; i < saveFiles.Length -1; i++)
+        for (int i = 0; i < 2; i++)
         {
-            saveSelected = saveFiles[i];
-            if (saveSelected != null)
+            if (saveFiles[i] != null)
             {
-                saveString = File.ReadAllText(SAVE_FOLDER + "/save" + i + ".txt");
-                saveObject = JsonUtility.FromJson<SaveObject>(saveString);
+                saveSelected = saveFiles[i];
+                if (saveSelected != null && saveSelected.Name == "save" + i + ".txt")
+                {
+                    saveString = File.ReadAllText(SAVE_FOLDER + "/save" + i + ".txt");
+                    saveObject = JsonUtility.FromJson<SaveObject>(saveString);
 
-                if (saveObject != null)
-                {
-                    saveSlots[i].text = "day:" + saveObject.dayCount + " Money:" + saveObject.moneyAmount;
-                }
-                else
-                {
-                    saveSlots[i].text = "Empty Save Slot";
-                }
+                    if (saveObject != null)
+                    {
+                        saveSlots[i].text = "day:" + saveObject.dayCount + " Money:" + saveObject.moneyAmount;
+                    }
+                    else
+                    {
+                        saveSlots[i].text = "Empty Save Slot";
+                    }
+                }   
             }
-
         }
     }
-    
+
     void OnButtonClick(int saveFileNumber)
     {
         saveNumber = saveFileNumber;
@@ -104,7 +109,7 @@ public class MenuSaveHandler : MonoBehaviour
         
         if (File.Exists(SAVE_FOLDER + "/save"+saveNumber+".txt"))
         {
-            string saveString = File.ReadAllText(SAVE_FOLDER + saveSelected.FullName);
+            string saveString = File.ReadAllText(SAVE_FOLDER + saveSelected.Name);
             if (saveString != null)
             {
                 SaveObject saveObject = JsonUtility.FromJson<SaveObject>(saveString);

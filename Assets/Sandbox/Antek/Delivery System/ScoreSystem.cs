@@ -28,7 +28,7 @@ public class ScoreSystem : MonoBehaviour
     {
         EventSystemTimeScore.current.onMoneyAdded += OnMoneyAdded;
         EventSystemTimeScore.current.onGoingSleep += OnGoingSleep;
-        SaveSystemEvents.current.onLoadGame += OnLoadGame;
+       
     }
 
     void OnDestroy()
@@ -39,6 +39,7 @@ public class ScoreSystem : MonoBehaviour
     }
     private void Start()
     {
+        SaveSystemEvents.current.OnLoadGame += OnLoadGame;
         //rentToPay *= multiplier;
     }
 
