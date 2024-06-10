@@ -35,5 +35,16 @@ public class SaveSystemEvents : MonoBehaviour
    }
 
 
+   public event Action<float, int> onLoadGame;
+
+   public void LoadGame(float rentAmount, int dayCount)
+   {
+      if (onLoadGame != null)
+      {
+         onLoadGame(rentAmount, dayCount);
+      }
+   }
+
+
 
 }

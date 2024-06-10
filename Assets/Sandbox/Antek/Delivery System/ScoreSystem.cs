@@ -24,11 +24,21 @@ public class ScoreSystem : MonoBehaviour
     private Scene thisScene;
     [SerializeField] SOFloat SOmoney;
 
-
-    private void Start()
+    void OnEnable()
     {
         EventSystemTimeScore.current.onMoneyAdded += OnMoneyAdded;
         EventSystemTimeScore.current.onGoingSleep += OnGoingSleep;
+        SaveSystemEvents.current.onLoadGame += OnLoadGame;
+    }
+
+    void OnDestroy()
+    {
+        EventSystemTimeScore.current.onMoneyAdded -= OnMoneyAdded;
+        EventSystemTimeScore.current.onGoingSleep -= OnGoingSleep;
+        
+    }
+    private void Start()
+    {
         //rentToPay *= multiplier;
     }
 
@@ -37,6 +47,7 @@ public class ScoreSystem : MonoBehaviour
     {
         numberOfMoney += money;
         numberOfMoneyEarnedToday += money;
+        SOmoney.Value = numberOfMoney;
     }
 
     void OnGoingSleep(int dayPassed)
@@ -57,9 +68,14 @@ public class ScoreSystem : MonoBehaviour
         }
     }
 
+    void OnLoadGame(float rentAmount, int dayCount)
+    {
+        rentToPay = rentAmount;
+        this.dayCount = dayCount;
+    }
+
     private void Update()
     {
-        SOmoney.Value = numberOfMoney;
         rentText.text = "Rent:" + numberOfMoney + " / " + rentToPay;
     }
     

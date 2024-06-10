@@ -19,23 +19,35 @@ public class SaveSystemHandler : MonoBehaviour
     [FormerlySerializedAs("saveNumberSO")]
     [SerializeField] private SOInt SaveFileNumber;
 
+    [SerializeField] private SOFloat SOmoney;
+
+    void OnEnable()
+    {
+       // SaveSystemEvents.current.onSaveGame += OnSaveGame;
+    }
+
     void Awake()
     {
-        SaveSystemEvents.current.onSaveGame += OnSaveGame;
-        
         if (!Directory.Exists(SAVE_FOLDER))
         {
             Directory.CreateDirectory(SAVE_FOLDER);
         }
+        SaveSystemEvents.current.onSaveGame += OnSaveGame;
     }
 
-    
+    void Start()
+    {
+        Load();
+    }
+
+
 
     void OnSaveGame(float moneyE, float rentToPayE, int dayPassedE)
     {
         money = moneyE;
         rentToPay = rentToPayE;
         dayCount = dayPassedE;
+        Save();
     }
 
 
@@ -72,8 +84,15 @@ public class SaveSystemHandler : MonoBehaviour
             if (saveString != null)
             {
                 SaveObject saveObject = JsonUtility.FromJson<SaveObject>(saveString);
+                SOmoney.Value = saveObject.moneyAmount;
+                SaveSystemEvents.current.LoadGame(saveObject.rentAmount, saveObject.dayCount);
             }
         }
+    }
+
+    void OnDestroy()
+    {
+        SaveSystemEvents.current.onSaveGame -= OnSaveGame;
     }
 
 

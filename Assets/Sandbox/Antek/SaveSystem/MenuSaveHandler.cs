@@ -39,7 +39,7 @@ public class MenuSaveHandler : MonoBehaviour
 
 
 
-        for (int i = 0; i < saveFiles.Length; i++)
+        for (int i = 0; i < saveFiles.Length -1; i++)
         {
             saveSelected = saveFiles[i];
             if (saveSelected != null)
