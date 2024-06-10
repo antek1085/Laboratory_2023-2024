@@ -15,7 +15,7 @@ public class DeleteMenuButton : MonoBehaviour
     
     string saveString;
     SaveObject saveObject;
-    private TextMeshPro componentInChildren;
+    [SerializeField] TextMeshProUGUI componentInChildren;
 
     
     
@@ -25,7 +25,7 @@ public class DeleteMenuButton : MonoBehaviour
     private void Awake()
     {
          button = GetComponent<Button>();
-         componentInChildren = GetComponentInChildren<TextMeshPro>();
+         
     }
 
     private void OnEnable()
@@ -44,27 +44,35 @@ public class DeleteMenuButton : MonoBehaviour
         // }
         
         
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < saveFiles.Length; i++)
         {
-            saveSelected = saveFiles[i];
-            if (saveSelected != null && saveSelected.Name == "save" + i + ".txt")
+            if (saveFiles[i].Name == "save" + SaveFileSlot + ".txt")
             {
-                saveString = File.ReadAllText(SAVE_FOLDER + "/save" + i + ".txt");
-                saveObject = JsonUtility.FromJson<SaveObject>(saveString);
-                if (saveObject != null)
+                FileInfo saveSelected = saveFiles[i];
+                if (saveSelected != null)
                 {
-                    button.interactable = true;
-                    componentInChildren.text = "day:" + saveObject.dayCount + " Money:" + saveObject.moneyAmount;
-                }
-                else
-                {
-                    button.interactable = false;
-                    componentInChildren.text = "Empty Save Slot";
-                }
-            }
+                    saveString = File.ReadAllText(SAVE_FOLDER + "/save" + SaveFileSlot + ".txt");
+                    saveObject = JsonUtility.FromJson<SaveObject>(saveString);
 
+                    if (saveObject != null)
+                    {
+                        button.interactable = true;
+                        componentInChildren.text = "day:" + saveObject.dayCount + " Money:" + saveObject.moneyAmount;
+                        break;
+                    }
+                }   
+            }
+            else
+            {
+                button.interactable = false;
+                componentInChildren.text = "Empty Save Slot";
+            }
         }
-        
+        if (saveFiles.Length == 0)
+        {
+            button.interactable = false;
+            componentInChildren.text = "Empty Save Slot";
+        }
         
     }
 
@@ -72,6 +80,8 @@ public class DeleteMenuButton : MonoBehaviour
     public void DeleteSave()
     {
         File.Delete(SAVE_FOLDER + "/save" + SaveFileSlot + ".txt");
+        button.interactable = false;
+        componentInChildren.text = "Empty Save Slot";
         transform.parent.gameObject.SetActive(false);
     }
     

@@ -279,6 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saveFileSlot: 1
+  saveSlots: {fileID: 551348465}
 --- !u!1 &25664264
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +313,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 911097626}
-  - {fileID: 1730760766}
   m_Father: {fileID: 1389280524}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -450,6 +450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bfae830fbdc224418b4bc001c6a7af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentInChildren: {fileID: 911097627}
   SaveFileSlot: 0
 --- !u!1 &96130079
 GameObject:
@@ -484,7 +485,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1620765845}
-  - {fileID: 572421397}
   m_Father: {fileID: 1389280524}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -536,7 +536,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 25664270}
+      - m_Target: {fileID: 96130085}
         m_TargetAssemblyTypeName: DeleteMenuButton, Assembly-CSharp
         m_MethodName: DeleteSave
         m_Mode: 1
@@ -622,6 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bfae830fbdc224418b4bc001c6a7af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentInChildren: {fileID: 1620765846}
   SaveFileSlot: 1
 --- !u!1 &137321067
 GameObject:
@@ -1533,41 +1534,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551348463}
   m_CullTransparentMesh: 1
---- !u!1 &572421396
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 572421397}
-  m_Layer: 5
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &572421397
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572421396}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 96130080}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &645927932
 GameObject:
   m_ObjectHideFlags: 0
@@ -2323,7 +2289,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 25664270}
+      - m_Target: {fileID: 828007798}
         m_TargetAssemblyTypeName: DeleteMenuButton, Assembly-CSharp
         m_MethodName: DeleteSave
         m_Mode: 1
@@ -2409,6 +2375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bfae830fbdc224418b4bc001c6a7af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentInChildren: {fileID: 806005243}
   SaveFileSlot: 2
 --- !u!1 &849222424
 GameObject:
@@ -3894,6 +3861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saveFileSlot: 2
+  saveSlots: {fileID: 1384250472}
 --- !u!1 &1459574779
 GameObject:
   m_ObjectHideFlags: 0
@@ -4053,6 +4021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saveFileSlot: 0
+  saveSlots: {fileID: 1572285681}
 --- !u!1 &1462713514
 GameObject:
   m_ObjectHideFlags: 0
@@ -4877,41 +4846,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1631178436}
   m_CullTransparentMesh: 1
---- !u!1 &1730760765
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1730760766}
-  m_Layer: 5
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1730760766
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1730760765}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 25664265}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1793011982
 GameObject:
   m_ObjectHideFlags: 0

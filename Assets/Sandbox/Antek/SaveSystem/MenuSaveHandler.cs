@@ -22,12 +22,11 @@ public class MenuSaveHandler : MonoBehaviour
     
     int saveNumber;
     [SerializeField] private SOInt SaveFileNumber;
-    private FileInfo[] saveFiles;
-    
+
 
     void Awake()
     {
-        saveFiles = new FileInfo[3];
+        rentToPay -= Time.deltaTime * 0.5f;
         
         if (!Directory.Exists(SAVE_FOLDER))
         {
@@ -39,30 +38,6 @@ public class MenuSaveHandler : MonoBehaviour
 
     private void OnEnable()
     {
-        DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER); 
-        saveFiles = directoryInfo.GetFiles();
-        
-        for (int i = 0; i < 2; i++)
-        {
-            if (saveFiles[i] != null)
-            {
-                saveSelected = saveFiles[i];
-                if (saveSelected != null && saveSelected.Name == "save" + i + ".txt")
-                {
-                    saveString = File.ReadAllText(SAVE_FOLDER + "/save" + i + ".txt");
-                    saveObject = JsonUtility.FromJson<SaveObject>(saveString);
-
-                    if (saveObject != null)
-                    {
-                        saveSlots[i].text = "day:" + saveObject.dayCount + " Money:" + saveObject.moneyAmount;
-                    }
-                    else
-                    {
-                        saveSlots[i].text = "Empty Save Slot";
-                    }
-                }   
-            }
-        }
     }
 
     void OnButtonClick(int saveFileNumber)
