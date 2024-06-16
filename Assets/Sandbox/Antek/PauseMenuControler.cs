@@ -24,6 +24,7 @@ public class PauseMenuControler : MonoBehaviour
             Time.timeScale = 0f;
             canvas.SetActive(true);
             isPaused = true;
+            Audio.PauseMusic();
             return;
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && isPaused == true)
@@ -31,6 +32,7 @@ public class PauseMenuControler : MonoBehaviour
             Time.timeScale = 1;
             canvas.SetActive(false);
             isPaused = false;
+            Audio.ResumeMusic();
         }
     }
 
@@ -39,6 +41,7 @@ public class PauseMenuControler : MonoBehaviour
         Time.timeScale = 1;
         canvas.SetActive(false);
         isPaused = false;
+        Audio.ResumeMusic();
     }
 
     public void Restart()

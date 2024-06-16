@@ -9704,11 +9704,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
       propertyPath: FailEvent.Path
-      value: event:/FailPlop
+      value: event:/Miscellaneous/FailPlop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: MusicEvent.Path
+      value: event:/Music/Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: MortarEvent.Path
+      value: event:/Workstations/MortarSingle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: PickUpEvent.Path
+      value: event:/PickUp/PickUp
       objectReference: {fileID: 0}
     - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
       propertyPath: SucessEvent.Path
-      value: event:/SucessPlop
+      value: event:/Miscellaneous/SucessPlop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: ClickUIEvent.Path
+      value: event:/Miscellaneous/ClickUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: BellRingEvent.Path
+      value: event:/Miscellaneous/BellRing
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: FootstepEvent.Path
+      value: event:/Footsteps/Footsteps
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: TrashbinEvent.Path
+      value: event:/Miscellaneous/Trashbin
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: PlaceDownEvent.Path
+      value: event:/PickUp/PlaceDown
       objectReference: {fileID: 0}
     - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
       propertyPath: FailEvent.Guid.Data1
@@ -9727,6 +9759,30 @@ PrefabInstance:
       value: -703603903
       objectReference: {fileID: 0}
     - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: LabstationEvent.Path
+      value: event:/Workstations/LabstationSingle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: PillcutterEvent.Path
+      value: event:/Workstations/PillcutterSingle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: PillsPickUpEvent.Path
+      value: event:/PickUp/PillsPickUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: SyropPickUpEvent.Path
+      value: event:/PickUp/SyropPickUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: BalsamPickUpEvent.Path
+      value: event:/PickUp/BalsamPickUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: PlantHarvestEvent.Path
+      value: event:/Miscellaneous/PlantHarvest
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
       propertyPath: SucessEvent.Guid.Data1
       value: 118186263
       objectReference: {fileID: 0}
@@ -9741,6 +9797,22 @@ PrefabInstance:
     - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
       propertyPath: SucessEvent.Guid.Data4
       value: 2113993451
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: TrashbinEvent.Guid.Data1
+      value: -910500078
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: TrashbinEvent.Guid.Data2
+      value: 1230415798
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: TrashbinEvent.Guid.Data3
+      value: 1033131194
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120046227845879091, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
+      propertyPath: TrashbinEvent.Guid.Data4
+      value: 1492117360
       objectReference: {fileID: 0}
     - target: {fileID: 8369048595808100105, guid: e404c77f7a6854f4aad3e2eca3175249, type: 3}
       propertyPath: m_Name

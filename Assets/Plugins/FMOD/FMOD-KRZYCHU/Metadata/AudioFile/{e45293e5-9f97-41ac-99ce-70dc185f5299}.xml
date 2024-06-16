@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{e45293e5-9f97-41ac-99ce-70dc185f5299}">
 		<property name="assetPath">
-			<value>ObjectInteraction/UI_Click_SFX.mp3</value>
+			<value>ObjectInteraction/UI_Hover_SFX.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
