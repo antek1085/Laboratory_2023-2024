@@ -138,6 +138,7 @@ public class CookingCraftingStation : MonoBehaviour
                 }
                 playerInputText.enabled = false;
                 Destroy(other.gameObject);
+                Audio.Play("PlaceDownEvent");
             }
         }
         if (other.tag == "Player")

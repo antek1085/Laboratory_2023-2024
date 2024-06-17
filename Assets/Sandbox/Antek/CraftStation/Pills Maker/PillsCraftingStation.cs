@@ -81,6 +81,7 @@ public class PillsCraftingStation : MonoBehaviour
               }
               playerInputText.enabled = false;
               Destroy(other.gameObject);
+              Audio.Play("PlaceDownEvent");
             }
         }
         if (other.tag == "Player")
