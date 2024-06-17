@@ -52,6 +52,9 @@ public class Audio
             case "TrashbinEvent":
                 manager.PlayTrashbin();
                 break;
+            case "KachingEvent":
+                manager.PlayKaching();
+                break;
         }
     }
     public static void PauseMusic() 
@@ -82,6 +85,7 @@ public class AudioManager : MonoBehaviour //Kod przypisuje siê do pustego obiekt
     [SerializeField] EventReference BalsamPickUpEvent;
     [SerializeField] EventReference BellRingEvent;
     [SerializeField] EventReference TrashbinEvent;
+    [SerializeField] EventReference KachingEvent;
     [SerializeField] float rate; //Czêstotliwoœæ grania dŸwiêku
     [SerializeField] GameObject player; //Obiekt pe³ni¹cy rolê gracza
     [SerializeField] Movement controller; //kod odpowiadaj¹cy za poruszanie siê gracza
@@ -178,6 +182,11 @@ public class AudioManager : MonoBehaviour //Kod przypisuje siê do pustego obiekt
     public void PlayTrashbin()
     {
         RuntimeManager.PlayOneShotAttached(TrashbinEvent, player);
+    }
+
+    public void PlayKaching()
+    {
+        RuntimeManager.PlayOneShotAttached(KachingEvent, player);
     }
 
     private void Start()

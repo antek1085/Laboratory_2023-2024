@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{ef3dc83b-553d-4019-a992-f9c0846ce8e3}">
+		<property name="assetPath">
+			<value>ObjectInteraction/CashRegister_SFX.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.1608163265306124</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3a41c2f6-364e-48b5-8031-049fac76c4a6}</destination>
+		</relationship>
+	</object>
+</objects>
