@@ -28,7 +28,7 @@ public class RenovateButton : MonoBehaviour
     {
         if (money.Value >= renovateCost)
         {
-            money.Value -= renovateCost;
+            EventSystemTimeScore.current.MoneyAdded(-renovateCost);
             renovateButton.SetActive(false);
             renovateContent.SetActive(true);
             room.sprite = cleanRoom;

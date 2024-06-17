@@ -22,8 +22,8 @@ public class AnimatorControler : MonoBehaviour
     }
 
     void Update()
-    { 
-        
+    {
+
         if (Input.GetAxis("Horizontal") != 0)
         { 
             animator.GetBool(isWalking);

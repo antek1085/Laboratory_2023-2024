@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4764088788164300394}
   - component: {fileID: 4103958735925572697}
   - component: {fileID: 5717000162778361762}
-  - component: {fileID: -1432818091294477680}
+  - component: {fileID: 6292622506761466660}
   m_Layer: 6
   m_Name: Mashed Nettle
   m_TagString: Material
@@ -48,7 +48,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _item: {fileID: 11400000, guid: ff1e3d09918e3924d93b3e6910e92ed9, type: 2}
-  time: 5
+  mainItemCategory: 0
+  symptoms: 070000000600000008000000
+  SpritesSymptoms:
+  - {fileID: 21300000, guid: 5bd7437d5f2bfca479b944bfea11dcc8, type: 3}
+  - {fileID: 21300000, guid: 3a852fa719f15c64ab78b4b2270b0b04, type: 3}
+  - {fileID: 21300000, guid: f0a36b72497d6af4190a5643233e908f, type: 3}
+  allSpritesSymptoms: []
+  moneyValue: 0
+  lore: 
 --- !u!54 &4103958735925572697
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -128,8 +136,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &-1432818091294477680
-BoxCollider:
+--- !u!135 &6292622506761466660
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -147,5 +155,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}

@@ -95,8 +95,9 @@ public class MortarCraftingStation : MonoBehaviour
     {
         firstMaterial = null;
         Audio.Play("MortarEvent"); //MJ - Nieprzetestowane
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         Instantiate(recipeList.itemList[i].Result.itemToSpawn, itemSpawn.transform.position,itemSpawn.transform.rotation);
+        Audio.Play("BellRingEvent");
         isCrafting = false;
         StopAllCoroutines();
     }
@@ -105,8 +106,9 @@ public class MortarCraftingStation : MonoBehaviour
     {
         firstMaterial = null;
         Audio.Play("MortarEvent"); //MJ - Nieprzetestowane
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         Instantiate(dung, itemSpawn.transform.position,itemSpawn.transform.rotation);
+        Audio.Play("BellRingEvent");
         isCrafting = false;
         StopAllCoroutines();
     }

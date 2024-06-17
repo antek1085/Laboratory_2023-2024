@@ -1605,6 +1605,10 @@ PrefabInstance:
       propertyPath: time
       value: 
       objectReference: {fileID: 661860418}
+    - target: {fileID: 4654946433478306994, guid: a445c9bb9f65ad5429b2d0946b8624ef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5147018769662109738, guid: a445c9bb9f65ad5429b2d0946b8624ef, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1705,6 +1709,10 @@ PrefabInstance:
       propertyPath: time
       value: 
       objectReference: {fileID: 661860418}
+    - target: {fileID: 8274173499493270131, guid: a445c9bb9f65ad5429b2d0946b8624ef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8597163660781345582, guid: a445c9bb9f65ad5429b2d0946b8624ef, type: 3}
       propertyPath: time
       value: 

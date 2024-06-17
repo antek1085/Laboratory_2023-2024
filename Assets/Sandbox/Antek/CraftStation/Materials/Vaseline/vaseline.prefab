@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: -6137414156337261}
   - component: {fileID: 3470059332464790502}
   - component: {fileID: 5053638310782130444}
-  - component: {fileID: -3951310658899654942}
   - component: {fileID: -748916022760214965}
+  - component: {fileID: 3289041595662905947}
   m_Layer: 6
   m_Name: vaseline
   m_TagString: Material
@@ -49,7 +49,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _item: {fileID: 11400000, guid: 0f735011f31007448bc4010f72d215bb, type: 2}
-  time: 0
+  mainItemCategory: 0
+  symptoms: 
+  SpritesSymptoms: []
+  allSpritesSymptoms: []
+  moneyValue: 0
+  lore: 
 --- !u!212 &3470059332464790502
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -129,8 +134,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &-3951310658899654942
-BoxCollider:
+--- !u!114 &-748916022760214965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7920385685303446375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 546cc5083d2799b4a9fdfe765132ba3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &3289041595662905947
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -148,17 +165,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-748916022760214965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7920385685303446375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 546cc5083d2799b4a9fdfe765132ba3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

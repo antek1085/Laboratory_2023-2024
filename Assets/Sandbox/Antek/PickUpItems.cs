@@ -42,9 +42,23 @@ public class PickUpItems : MonoBehaviour
             
                             CurrentObjectRigidbody.isKinematic = true;
                             isInHand = true;
-                            Audio.Play("PickUpEvent"); //MJ - Nieprzetestowane
-                           // CurrentObjectCollider.enabled = false;
-                           return;
+                            switch (hitInfo.transform.GetComponent<ItemID>().mainItemCategory)
+                                {
+                                    case itemCategory.pills:
+                                        Audio.Play("PillsPickUpEvent");
+                                        break;
+                                    case itemCategory.syrup:
+                                        Audio.Play("SyropPickUpEvent");
+                                        break;
+                                    case itemCategory.ointment:
+                                        Audio.Play("BalsamPickUpEvent");
+                                        break;
+                                    default:
+                                        Audio.Play("PickUpEvent");
+                                        break;
+                                }
+                    // CurrentObjectCollider.enabled = false;
+                    return;
                         }
                     }
 

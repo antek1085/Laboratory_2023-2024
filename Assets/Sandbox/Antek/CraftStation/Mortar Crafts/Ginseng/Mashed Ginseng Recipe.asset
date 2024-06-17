@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb64e33015604854ea2e1f0b4dd9db75, type: 3}
+  m_Name: Mashed Ginseng Recipe
+  m_EditorClassIdentifier: 
+  firstItem: {fileID: 11400000, guid: a35181eb416ade34c8d11c1ff44183b6, type: 2}
+  result: {fileID: 11400000, guid: cee3f453bcb6def4ab8575501fcdf792, type: 2}

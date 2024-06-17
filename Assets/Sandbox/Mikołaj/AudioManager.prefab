@@ -93,7 +93,63 @@ MonoBehaviour:
       Data3: 1649382075
       Data4: -33544813
     Path: event:/PillcutterSingle
+  SucessEvent:
+    Guid:
+      Data1: 118186263
+      Data2: 1273414871
+      Data3: -2065146210
+      Data4: 2113993451
+    Path: event:/SucessPlop
+  FailEvent:
+    Guid:
+      Data1: 384052248
+      Data2: 1203465937
+      Data3: 1784702911
+      Data4: -703603903
+    Path: event:/FailPlop
+  PlantHarvestEvent:
+    Guid:
+      Data1: -1448078764
+      Data2: 1168303749
+      Data3: -539068021
+      Data4: -1397047477
+    Path: event:/PlantHarvest
+  ClickUIEvent:
+    Guid:
+      Data1: 221461324
+      Data2: 1296610563
+      Data3: -1598385778
+      Data4: 792399465
+    Path: event:/ClickUI
+  PillsPickUpEvent:
+    Guid:
+      Data1: -1823462067
+      Data2: 1085764611
+      Data3: -866187386
+      Data4: -1473760025
+    Path: event:/PillsPickUp
+  SyropPickUpEvent:
+    Guid:
+      Data1: -1158962850
+      Data2: 1132627127
+      Data3: 1594459275
+      Data4: 635944451
+    Path: event:/SyropPickUp
+  BalsamPickUpEvent:
+    Guid:
+      Data1: -468608764
+      Data2: 1216359180
+      Data3: 667376788
+      Data4: -1076393978
+    Path: event:/BalsamPickUp
+  BellRingEvent:
+    Guid:
+      Data1: -258395626
+      Data2: 1113148124
+      Data3: -430596729
+      Data4: -1072032574
+    Path: event:/BellRing
   rate: 0.3
   player: {fileID: 0}
   controller: {fileID: 0}
-  FootstepRate: 10
+  FootstepRate: 6

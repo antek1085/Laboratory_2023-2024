@@ -96,7 +96,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _item: {fileID: 11400000, guid: 627b5d847b8738d42bcca0ae074f5d93, type: 2}
-  time: 5
+  mainItemCategory: 0
+  symptoms: 060000000400000002000000
+  SpritesSymptoms:
+  - {fileID: 21300000, guid: 3a852fa719f15c64ab78b4b2270b0b04, type: 3}
+  - {fileID: 21300000, guid: 8987e587a2494f949b4001f15ffc405d, type: 3}
+  - {fileID: 21300000, guid: 0b2dc97d333bba8499ddadb1a7d5f8a6, type: 3}
+  allSpritesSymptoms: []
+  moneyValue: 0
+  lore: 
 --- !u!212 &3739871275523629140
 SpriteRenderer:
   m_ObjectHideFlags: 0

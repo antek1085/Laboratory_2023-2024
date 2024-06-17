@@ -70,7 +70,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _item: {fileID: 11400000, guid: de1b67562be9c7c4ab9cd590383b040f, type: 2}
-  time: 5
+  mainItemCategory: 0
+  symptoms: 060000000400000002000000
+  SpritesSymptoms:
+  - {fileID: 21300000, guid: 3a852fa719f15c64ab78b4b2270b0b04, type: 3}
+  - {fileID: 21300000, guid: 8987e587a2494f949b4001f15ffc405d, type: 3}
+  - {fileID: 21300000, guid: 0b2dc97d333bba8499ddadb1a7d5f8a6, type: 3}
+  allSpritesSymptoms: []
+  moneyValue: 0
+  lore: 
 --- !u!54 &1632188381774765999
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -96,7 +104,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 96
   m_CollisionDetection: 0
 --- !u!212 &5403296793405780704
 SpriteRenderer:

@@ -1,4 +1,4 @@
-using System;
+ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,20 +15,25 @@ public class TabletController : MonoBehaviour
 
     [Header("Shop Button")]
     [SerializeField] GameObject shopButton;
-    
+
+    [Header("Start Day Button")]
+    [SerializeField] GameObject startButton;
+     
     
     [SerializeField] Canvas canvas;
     int whatTab;
 
-    private bool isPlayerInRange;
+    public bool isPlayerInRange;
     
     [SerializeField] Sprite highLightItem;
     private Sprite normalItem;
     private SpriteRenderer spriteRenderer;
     private bool isGamePaused;
-    
+
+    public ClockUI isTimeFlowing;
     void Start()
     {
+        EventSystemTimeScore.current.onGoingSleep += OnGoingSleep;
         isGamePaused = false;
         canvas.enabled = false;
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -40,14 +45,16 @@ public class TabletController : MonoBehaviour
         
         if (isPlayerInRange == true)
         {
-            if (Input.GetKeyDown(KeyCode.R) && isGamePaused == false) 
+            if (Input.GetKeyDown(KeyCode.R) && isGamePaused == false)
             {
+                isTimeFlowing.isTimeFlowing = false;
                 canvas.enabled = true;
                 Time.timeScale = 0;
                 isGamePaused = true;
             }
             else if (Input.GetKeyDown(KeyCode.R) && isGamePaused == true)
             {
+                isTimeFlowing.isTimeFlowing = true;
                 isGamePaused = false;
                 Time.timeScale = 1;
                 canvas.enabled = false;
@@ -103,5 +110,16 @@ public class TabletController : MonoBehaviour
             plantButton.SetActive(false);
             shopButton.SetActive(true);
         }
+    }
+
+    public void StartWorkingDay()
+    {
+        EventSystemTimeScore.current.TimeStart(true);
+        startButton.SetActive(false);
+    }
+
+    void OnGoingSleep(int i)
+    {
+        startButton.SetActive(false);
     }
 }

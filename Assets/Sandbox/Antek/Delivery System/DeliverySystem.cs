@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class DeliverySystem : MonoBehaviour
 {
@@ -11,8 +14,7 @@ public class DeliverySystem : MonoBehaviour
     private ItemID newItem;
     
     [Header("Don't Touch")]
-    public List<Item> deliveryItemList = new List<Item>();
-    public List<float> deliverItemTimer = new List<float>();
+    public List<ItemID> deliveryItemList = new List<ItemID>();
     private bool isCorutineOn;
 
     [Header("Time for Designers")]
@@ -28,16 +30,23 @@ public class DeliverySystem : MonoBehaviour
     [Header("Score")]
     [SerializeField] private SOFloat playerMoney;
 
-    private int itemValue; 
+    private float itemValue;
+
+    int procentValue;
+    bool isThereTime = false;
+    
+    
     
     void Start()
     {
+        EventSystemTimeScore.current.onTimeEnd += OnTimeEnd;
+        EventSystemTimeScore.current.onTimeStart += OnTimeStart;
         isCorutineOn = false;
     }
     
     void Update()
     {
-        if (isCorutineOn == false && deliveryItemList.Count <= 4)
+        if (isCorutineOn == false && deliveryItemList.Count < 2 && isThereTime == true)
         {
             isCorutineOn = true;
             StartCoroutine(RandomDelivery());
@@ -49,14 +58,10 @@ public class DeliverySystem : MonoBehaviour
         }
         
         
-          for (int i = 0; i < deliveryItemList.Count; i++)
+          /*for (int i = 0; i < deliveryItemList.Count; i++)
           {
-              deliverItemTimer[i] -= Time.deltaTime;
-              if (deliverItemTimer[i] < 0)
-              {
-                  StartCoroutine(DeleteDeliveryItem(i));
-              }
-          }
+              StartCoroutine(DeleteDeliveryItem(i));
+          }*/
     }
     
     IEnumerator RandomDelivery()
@@ -64,8 +69,8 @@ public class DeliverySystem : MonoBehaviour
         yield return new WaitForSeconds(spawnTimeOfDelivery);
         listNumber = Random.Range(0, deliveryListDev.itemList.Count -1);
         newItem = deliveryListDev.itemList[listNumber];
-        deliveryItemList.Add(newItem._item);
-        deliverItemTimer.Add(newItem.time);
+        //deliveryItemList.Add(newItem._item);
+        deliveryItemList.Add(newItem);
         isCorutineOn = false;
     }
 
@@ -73,7 +78,6 @@ public class DeliverySystem : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
         deliveryItemList.RemoveAt(i);
-        deliverItemTimer.RemoveAt(i);
         StopCoroutine(DeleteDeliveryItem(i));
     }
 
@@ -84,16 +88,28 @@ public class DeliverySystem : MonoBehaviour
             
         if (deliveredItem != null)
         {
-            deliveryItemNumber = deliveryItemList.IndexOf(deliveredItem._item);
+            IEnumerable<itemSymptoms> resoult = deliveryItemList[0].symptoms.Intersect(deliveredItem.symptoms);
+
+            procentValue = deliveryItemList[0].symptoms.Count() / resoult.Count() * 100;
+            
             itemValue = deliveredItem.GetComponent<ItemID>().moneyValue;
+            itemValue *= procentValue;
             deliveredItem = null;
-            if (deliveryItemNumber != -1)
-            {
-                deliveryItemList.RemoveAt(deliveryItemNumber);                          
-                deliverItemTimer.RemoveAt(deliveryItemNumber);
-                deliveryItemNumber = -1;
-                playerMoney.Value += itemValue;
-            }
+            deliveryItemList.RemoveAt(0);
+            deliveryItemNumber = -1;
+            EventSystemTimeScore.current.MoneyAdded(itemValue);
         }
+    }
+
+    void OnTimeStart(bool time)
+    {
+        isThereTime = time;
+        deliveryItemList.Clear();
+    }
+
+    void OnTimeEnd(bool time)
+    {
+        isThereTime = time;
+        deliveryItemList.Clear();
     }
 }

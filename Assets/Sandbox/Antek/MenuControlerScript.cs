@@ -18,6 +18,8 @@ public class MenuControlerScript : MonoBehaviour
     [SerializeField] private GameObject menuButtons;
     [SerializeField] private GameObject optionButtons;
 
+    [SerializeField] private GameObject saveSlotsButtons;
+
     [SerializeField] private Slider musicSlider;
    
         
@@ -32,22 +34,28 @@ public class MenuControlerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(delay);
         if (delay < -1)
         {
             delay = 2;
         }
     }
 
-   public void StartButton()
+   public void StartGame()
    {
        loadingScreen.SetActive(true);
        menuButtons.SetActive(false);
        StartCoroutine(LoadSceneAsync());
    }
 
+   public void StartButton()
+   {
+       saveSlotsButtons.SetActive(true);
+       menuButtons.SetActive(false);
+   }
+
     IEnumerator LoadSceneAsync()
     {
+        new WaitForEndOfFrame();
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levelToLoad);
         asyncLoad.allowSceneActivation = false;
         
@@ -77,6 +85,7 @@ public class MenuControlerScript : MonoBehaviour
     public void BackButton()
     {
         optionButtons.SetActive(false);
+        saveSlotsButtons.SetActive(false);
         menuButtons.SetActive(true);
     }
 

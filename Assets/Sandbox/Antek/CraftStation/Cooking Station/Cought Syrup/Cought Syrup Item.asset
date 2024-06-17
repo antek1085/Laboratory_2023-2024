@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Cought Syrup Item
   m_EditorClassIdentifier: 
   itemToSpawn: {fileID: 3210830801740295105, guid: 69e46eeefc7abdc4ea73aa0b79285915, type: 3}
-  sprite: {fileID: 21300000, guid: d8ea5ba811543744c9beb1bd1602a366, type: 3}
+  sprite: {fileID: 21300000, guid: 032b5ace067e7f44e905fc275bfe728d, type: 3}

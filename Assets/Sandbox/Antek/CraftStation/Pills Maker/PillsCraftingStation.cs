@@ -106,8 +106,9 @@ public class PillsCraftingStation : MonoBehaviour
         Debug.Log("Sadwitch");
         firstMaterial = null; secondMaterial = null;
         Audio.Play("PillcutterEvent"); //MJ - Nieprzetestowane
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         Instantiate(recipeList.itemList[i].Result.itemToSpawn, itemSpawn.transform.position,itemSpawn.transform.rotation);
+        Audio.Play("BellRingEvent");
         isCrafting = false;
         StopAllCoroutines();
     }
@@ -116,8 +117,9 @@ public class PillsCraftingStation : MonoBehaviour
     {
         firstMaterial = null; secondMaterial = null;
         Audio.Play("PillcutterEvent"); //MJ - Nieprzetestowane
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         Instantiate(dung, itemSpawn.transform.position,itemSpawn.transform.rotation);
+        Audio.Play("BellRingEvent");
         isCrafting = false;
         StopAllCoroutines();
     }

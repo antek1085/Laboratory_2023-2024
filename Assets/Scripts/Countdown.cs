@@ -32,6 +32,8 @@ public class Countdown : MonoBehaviour
             countdownTime -= 1f;
         }
         EventCraftMortar.current.MiniGameEnd(miniGameId);
+        countdownTime = 5f;
+
     }
 
     
