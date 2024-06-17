@@ -17,22 +17,18 @@ public class SaveSlotsMenuButtons : MonoBehaviour
     private FileInfo[] saveFiles;
     SaveObject saveObject;
     string saveString;
+    private Button _button;
+    private FileInfo saveSelected;
 
     [SerializeField] TextMeshProUGUI saveSlots;
+    DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER);
 
 
     void Awake()
     {
-        DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER); 
-        saveFiles = directoryInfo.GetFiles();
-        
-        if (saveFiles.Length -1 >= saveFileSlot || saveFiles.Length  == saveFileSlot)
-        {
-            GetComponent<Button>().interactable = true;
-        }
-        //saveSlots = GetComponent<TextMeshProUGUI>();
+      _button = GetComponent<Button>();
     }
-
+    
 
     public void OnButtonClick()
     {
@@ -41,13 +37,35 @@ public class SaveSlotsMenuButtons : MonoBehaviour
     }
 
     private void OnEnable()
-    {   
+    {
+        saveFiles = directoryInfo.GetFiles();
+        saveSelected = null;
         
+        
+        if (saveFiles.Length -1 >= saveFileSlot || saveFiles.Length  == saveFileSlot)
+        {
+            _button.interactable = true;
+        }
+        else
+        {
+            _button.interactable = false;
+        }
+        
+        
+        Refresh();
+        if (saveFiles.Length == 0)
+        {
+            saveSlots.text = "Empty Save Slot";
+        }
+    }
+
+    private void Refresh()
+    {
         for (int i = 0; i < saveFiles.Length; i++)
         {
-            if (saveFiles[i].Name == "save" + saveFileSlot + ".txt")
+            if (saveFiles[i].Name.Contains(saveFileSlot.ToString()))
             {
-                FileInfo saveSelected = saveFiles[i];
+                 saveSelected = saveFiles[i];
                 if (saveSelected != null)
                 {
                     saveString = File.ReadAllText(SAVE_FOLDER + "/save" + saveFileSlot + ".txt");
@@ -65,12 +83,8 @@ public class SaveSlotsMenuButtons : MonoBehaviour
                 saveSlots.text = "Empty Save Slot";
             }
         }
-        if (saveFiles.Length == 0)
-        {
-            saveSlots.text = "Empty Save Slot";
-        }
     }
-    
+
     private class SaveObject
     {
         public float moneyAmount;
