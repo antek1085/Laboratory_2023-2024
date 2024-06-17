@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -18,6 +19,9 @@ public class DayEndSpot : MonoBehaviour
     [SerializeField] int dayPassed;
     [SerializeField] int rentPayDay = 99;
     Scene thisScene;
+    
+    [SerializeField] private SOInt SaveFileNumber;
+    static readonly string SAVE_FOLDER = Application.dataPath + "/Saves/";
 
     bool canHePayRent;
     void Start()
@@ -72,7 +76,8 @@ public class DayEndSpot : MonoBehaviour
 
      public void ResetLevel()
      {
-         SceneManager.LoadScene(thisScene.name);
+         File.Delete(SAVE_FOLDER + "/save" + SaveFileNumber.value + ".txt");
+         SceneManager.LoadScene("Antek StartMenu");
      }
 
      public void NextDay()
