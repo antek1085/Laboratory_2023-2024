@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using TMPro;
+using UnityEngine.UI;
 
 
 public class SaveSlotsMenuButtons : MonoBehaviour
@@ -22,6 +23,13 @@ public class SaveSlotsMenuButtons : MonoBehaviour
 
     void Awake()
     {
+        DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER); 
+        saveFiles = directoryInfo.GetFiles();
+        
+        if (saveFiles.Length -1 >= saveFileSlot || saveFiles.Length  == saveFileSlot)
+        {
+            GetComponent<Button>().interactable = true;
+        }
         //saveSlots = GetComponent<TextMeshProUGUI>();
     }
 
@@ -33,9 +41,7 @@ public class SaveSlotsMenuButtons : MonoBehaviour
     }
 
     private void OnEnable()
-    {
-        DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER); 
-        saveFiles = directoryInfo.GetFiles();
+    {   
         
         for (int i = 0; i < saveFiles.Length; i++)
         {
