@@ -63,7 +63,7 @@ public class RedPoint : MonoBehaviour
             fieldCount += 1;
             Audio.Play("SucessEvent");
 
-            if (fieldCount >= 4)
+            if (fieldCount >= 8)
             {
                 EventCraftMortar.current.MiniGameEnd(miniGameId);
                 Reset();

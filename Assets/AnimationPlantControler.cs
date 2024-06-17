@@ -22,6 +22,7 @@ public class AnimationPlantControler : MonoBehaviour
     [SerializeField] int firstPhaseTimer;
     [SerializeField] int secondPhaseTimer;
     [SerializeField] int thirdPhaseTimer;
+    [SerializeField] GameObject SpawnPoint;
 
     private void Awake()
     {
@@ -47,7 +48,7 @@ public class AnimationPlantControler : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && timer > thirdPhaseTimer)
         {
             Audio.Play("PlantHarvestEvent");
-            Instantiate(itemToSpawn, new Vector3(0,0,0), Quaternion.Euler(0,0,0));
+            Instantiate(itemToSpawn, SpawnPoint.transform.position, Quaternion.Euler(0,0,0));
             timer = 0;
             _animator.SetBool(thirdPhase, false);
         }
