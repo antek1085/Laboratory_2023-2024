@@ -90,14 +90,25 @@ public class DeliverySystem : MonoBehaviour
         {
             IEnumerable<itemSymptoms> resoult = deliveryItemList[0].symptoms.Intersect(deliveredItem.symptoms);
 
-            procentValue = deliveryItemList[0].symptoms.Count() / resoult.Count() * 100;
+            if (resoult.Count() != 0)
+            {
+                procentValue = deliveryItemList[0].symptoms.Count() / resoult.Count() * 100;
+                itemValue = deliveredItem.GetComponent<ItemID>().moneyValue;
+                itemValue *= procentValue;
+                deliveredItem = null;
+                deliveryItemList.RemoveAt(0);
+                deliveryItemNumber = -1;
+                EventSystemTimeScore.current.MoneyAdded(itemValue);   
+            }
+            else
+            {
+                deliveredItem = null;
+                deliveryItemList.RemoveAt(0);
+                deliveryItemNumber = -1;
+                itemValue = 0;
+                EventSystemTimeScore.current.MoneyAdded(itemValue);   
+            }
             
-            itemValue = deliveredItem.GetComponent<ItemID>().moneyValue;
-            itemValue *= procentValue;
-            deliveredItem = null;
-            deliveryItemList.RemoveAt(0);
-            deliveryItemNumber = -1;
-            EventSystemTimeScore.current.MoneyAdded(itemValue);
         }
     }
 

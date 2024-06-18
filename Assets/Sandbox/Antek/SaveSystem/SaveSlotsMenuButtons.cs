@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class SaveSlotsMenuButtons : MonoBehaviour
 {
-    static readonly string SAVE_FOLDER = Application.dataPath + "/Saves/";
+    static readonly string SAVE_FOLDER = Application.dataPath + "Saves";
     
     [SerializeField] private int saveFileSlot;
     int saveNumber;

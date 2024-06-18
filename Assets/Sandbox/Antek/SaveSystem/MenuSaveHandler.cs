@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class MenuSaveHandler : MonoBehaviour
 {
-    static readonly string SAVE_FOLDER = Application.dataPath + "/Saves/";
+    static readonly string SAVE_FOLDER = Application.dataPath + "Saves";
 
     [SerializeField] List<TextMeshProUGUI> saveSlots;
     SaveObject saveObject;

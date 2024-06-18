@@ -8,7 +8,7 @@ using UnityEngine.Serialization;
 
 public class SaveSystemHandler : MonoBehaviour
 {
-    static readonly string SAVE_FOLDER = Application.dataPath + "/Saves/";
+    static readonly string SAVE_FOLDER = Application.dataPath + "Saves";
 
     float money;
     float rentToPay;

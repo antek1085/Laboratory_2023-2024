@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Sandbox/Antek/Antek StartMenu.unity
     guid: 48d9746f23563a84685934bbee474969
-  - enabled: 1
+  - enabled: 0
     path: Assets/Sandbox/Antek/Thanks for demo/Antek EndingScene.unity
     guid: df9215b3b0b4d3140b1c40f484ba8ef4
   - enabled: 1
