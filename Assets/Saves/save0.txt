@@ -1,1 +1,1 @@
-{"moneyAmount":0.0,"rentAmount":-0.001480151666328311,"dayCount":1}
+{"moneyAmount":0.0,"rentAmount":-0.009984700940549374,"dayCount":0}

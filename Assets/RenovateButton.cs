@@ -17,6 +17,8 @@ public class RenovateButton : MonoBehaviour
     private Transform textChild;
     private TextMeshProUGUI text;
 
+    private bool isRoomRenovated = false;
+
     void Start()
     {
         textChild = this.gameObject.transform.GetChild(0);
@@ -29,9 +31,13 @@ public class RenovateButton : MonoBehaviour
         if (money.Value >= renovateCost)
         {
             EventSystemTimeScore.current.MoneyAdded(-renovateCost);
+            isRoomRenovated = true;
             renovateButton.SetActive(false);
             renovateContent.SetActive(true);
             room.sprite = cleanRoom;
         }
     }
+    
+    
+    
 }

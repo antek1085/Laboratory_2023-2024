@@ -79,12 +79,15 @@ public class SaveSystemHandler : MonoBehaviour
         
         if (File.Exists(SAVE_FOLDER + "/save"+saveNumber+".txt"))
         {
-            string saveString = File.ReadAllText(SAVE_FOLDER + saveSelected.Name);
+            string saveString = File.ReadAllText(SAVE_FOLDER + "/save"+ saveNumber +".txt");
             if (saveString != null)
             {
                 SaveObject saveObject = JsonUtility.FromJson<SaveObject>(saveString);
                 SOmoney.Value = saveObject.moneyAmount;
-                SaveSystemEvents.current.LoadGame(saveObject.rentAmount, saveObject.dayCount);
+                if (saveObject.dayCount != 0)
+                { 
+                    SaveSystemEvents.current.LoadGame(saveObject.rentAmount, saveObject.dayCount);  
+                }
             }
         }
     }
