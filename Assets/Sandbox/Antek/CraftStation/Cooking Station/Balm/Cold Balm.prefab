@@ -55,14 +55,14 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5bd7437d5f2bfca479b944bfea11dcc8, type: 3}
   allSpritesSymptoms: []
   moneyValue: 40
-  lore: 'Dear Doctor,  I am writing to you seeking assistance with a persistent health
-    issue. My name is Olivia Brown, and for the past week, I have been struggling
-    with cold symptoms, including congestion, cough, and headache. The symptoms have
-    been making it difficult for me to carry out my daily activities, and I am eager
-    to find relief. I have heard about your expertise in providing remedies for colds
-    and flu and was wondering if you could recommend a suitable combination of syrup,
-    tablets, and ointment to help alleviate my symptoms. Your assistance in this
-    matter would be greatly appreciated.  Warm regards, Olivia Brown '
+  lore: "\u201CHey doc, I could really use your help. I thought it was just a sniffle
+    at first, but now it feels like I've been hit by a freight train. My nose is
+    a leaky faucet, my throat is on fire, and I've got a headache that's making it
+    impossible to think straight. My mother-in-law has already tried several \u201Chome
+    remedies\u201D on me, but it only made the matter worse. (Perhaps she was simply
+    trying to poison me?). My boss is already giving me grief about missing work,
+    and I can't afford to take more sick days. Could you whip up something that will
+    get me back on my feet? I'd really appreciate it!\u201D"
 --- !u!54 &2338337875846987797
 Rigidbody:
   m_ObjectHideFlags: 0

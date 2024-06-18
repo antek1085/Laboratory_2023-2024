@@ -55,16 +55,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3336133fa1366914d8c8f73338743bea, type: 3}
   allSpritesSymptoms: []
   moneyValue: 60
-  lore: 'Subject: Seeking Assistance for Chronic Sleep Problems  Dear Doctor,  My
-    name is Olivia Brown, and I am writing to you about my ongoing struggle with
-    chronic sleep problems. Over the past several months, I have been experiencing
-    difficulty falling asleep and frequently wake up multiple times throughout the
-    night. This persistent sleep disruption has left me feeling exhausted and unable
-    to concentrate during the day. Despite trying various sleep hygiene techniques
-    and relaxation methods, I have been unable to find relief. I have heard about
-    your expertise in addressing sleep disorders and was wondering if you could provide
-    any recommendations or solutions to help me overcome this issue. Your assistance
-    would be greatly appreciated.  Warm regards, Olivia Brown '
+  lore: "\u201CI need your help doc\u2026 I\u2019m afraid that counting the sheep
+    no longer helps me, as a matter of fact, I\u2019ve reached a point where I\u2019m
+    holding conversations with them (it also DOES NOT help) Would you kindly give
+    me something that will straight up knock me out so I can finally get some well-
+    deserved sleep? (I don\u2019t like the taste of syrup, so I\u2019d prefer pills
+    if possible)\u201D"
 --- !u!212 &4595033786614792064
 SpriteRenderer:
   m_ObjectHideFlags: 0

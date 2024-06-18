@@ -55,14 +55,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f0a36b72497d6af4190a5643233e908f, type: 3}
   allSpritesSymptoms: []
   moneyValue: 50
-  lore: 'Subject: Seeking Assistance for Erectile Dysfunction  Dear Doctor,  I''m
-    writing to you about a sensitive matter that I''ve been struggling with. My name
-    is Daniel Taylor, and I''ve been dealing with erectile dysfunction for some time
-    now. It''s been a difficult journey, and I''m eager to find a solution that works
-    for me. I''ve heard about your expertise in providing remedies for such issues
-    and was hoping you could recommend a treatment plan that involves both ointments
-    and tablets. Your guidance and understanding would mean a lot to me as I navigate
-    through this challenging time.  Warm regards, Daniel Taylor '
+  lore: "\u201CGood evening doctor, I hope you\u2019re having a wonderful day. I\u2019m
+    writing to you on behalf of my husband which\u2026 Let\u2019s just say that a
+    certain well-known blue pills starting with letter \u201CV\u201D no longer have
+    any effect on him. Do you think that you could procure something more\u2026 potent?
+    Thank you very much in advance.\u201D"
 --- !u!54 &2338337875846987797
 Rigidbody:
   m_ObjectHideFlags: 0

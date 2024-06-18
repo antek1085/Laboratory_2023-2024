@@ -60,12 +60,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1b914b2196080cd4ba97878d3d857b35, type: 3}
   - {fileID: 462188089, guid: 1d3b29f07f874ad45a2975f7a3c2fd9e, type: 3}
   moneyValue: 55
-  lore: 'Subject: Urgent! I Need Help with a Cough.  Dear Doctor,  My name is Hannah
-    Covenoug. For the past few weeks, I''ve been suffering from a terrible cough
-    that doesn''t give me any peace, day or night. My neighbors say that your father
-    had an extraordinary remedy for such a problem. Is it possible that you could
-    prepare something for me to help me get rid of this troublesome cough? I would
-    be very grateful for any assistance.  Yours sincerely, Hannah Covenough. '
+  lore: "\u201CMy cough keeps getting worse no matter how much I smoke! I\u2019m
+    smoking every time I cough in order to soothe my throat, but there\u2019s just
+    no end to it! People around me keep telling me that it\u2019s because \u201CI
+    neglect my health\u201D or \u201Csmoke too much\u201D but I know better. All
+    I need is that wonderful syrup of yours and I\u2019ll be as good as new!\u201D"
 --- !u!54 &5052788264695176913
 Rigidbody:
   m_ObjectHideFlags: 0

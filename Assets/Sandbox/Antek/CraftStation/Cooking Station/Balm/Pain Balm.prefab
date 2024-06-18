@@ -55,14 +55,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0b2dc97d333bba8499ddadb1a7d5f8a6, type: 3}
   allSpritesSymptoms: []
   moneyValue: 55
-  lore: 'Subject: Seeking Help for Persistent Knee Pain  Dear Doctor,  My name is
-    Emily Brown, and I''m writing to you about a persistent issue I''ve been experiencing
-    with my knees. For the past several weeks, I''ve been struggling with excruciating
-    pain in both knees, which has made it challenging to walk or engage in physical
-    activities. I''ve tried over-the-counter medications, but they haven''t provided
-    much relief. I''ve heard about your expertise in creating custom remedies and
-    was wondering if you could recommend something to help alleviate my pain. Your
-    guidance would be greatly appreciated.  Warm regards, Emily Brown. '
+  lore: "\u201CGuess what? Turns out that putting a lightbulb into your mouth and
+    then pulling it out is actually impossible! (Yeah, I didn\u2019t believe it too
+    until I tried it out myself!) Long story short, I\u2019ve spend an entire night
+    at ER and I\u2019m currently dealing with some intense pain throbbing across
+    my whole mouth. Although to tell you the truth, the thing that pains me the most
+    is the fact that I lost 10 bucks in that bet\u2026 Could you make me some good
+    painkillers? I\u2019ll owe you a big one.\u201D"
 --- !u!54 &2338337875846987797
 Rigidbody:
   m_ObjectHideFlags: 0

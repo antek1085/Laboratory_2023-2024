@@ -55,16 +55,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8987e587a2494f949b4001f15ffc405d, type: 3}
   allSpritesSymptoms: []
   moneyValue: 45
-  lore: 'Subject: Seeking Assistance for Persistent Fever  Dear Doctor,  My name
-    is Ava Johnson, and I am writing to you seeking assistance with a persistent
-    fever. For the past several days, I have been feeling unwell and experiencing
-    bouts of fever, which have left me feeling exhausted and unable to carry out
-    my daily activities. Despite trying to manage my symptoms with rest and fluids,
-    the fever persists, and I am becoming increasingly concerned about my health.
-    I have heard about your expertise in crafting remedies for various illnesses
-    and was hoping you could provide some advice or recommend a treatment to help
-    alleviate my fever. Your assistance would be greatly appreciated.  Warm regards,
-    Ava Johnson '
+  lore: "\u201CI\u2019ll admit it. I intentionally tried to get sick in order to
+    avoid attending an awkward meeting at work, but it seems like I REALLY overdid
+    it\u2026 I\u2019m currently writing this message to you with my thermometer showing
+    41 degrees\u2026 I\u2019ve learned my lesson, now PLEASE help me out.\u201D"
 --- !u!54 &2338337875846987797
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -55,15 +55,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8987e587a2494f949b4001f15ffc405d, type: 3}
   allSpritesSymptoms: []
   moneyValue: 50
-  lore: 'Subject: Urgent Assistance Needed for Severe Fever  Dear Doctor,  I hope
-    this message finds you well. My name is Liam Wilson, and I am writing to you
-    in urgent need of assistance. For the past two days, I have been battling a severe
-    fever accompanied by chills and body aches. Despite taking fever-reducing medications,
-    my temperature remains dangerously high, and I am feeling extremely unwell. I
-    have heard about your expertise in treating various ailments and was wondering
-    if you could recommend a course of action or provide a remedy to help bring down
-    my fever and alleviate my symptoms. Your prompt assistance would be greatly appreciated. 
-    Best regards, Liam Wilson '
+  lore: "\u201CI\u2019ll admit it. I intentionally tried to get sick in order to
+    avoid attending an awkward meeting at work, but it seems like I REALLY overdid
+    it\u2026 I\u2019m currently writing this message to you with my thermometer showing
+    41 degrees\u2026 I\u2019ve learned my lesson, now PLEASE help me out.\u201D"
 --- !u!212 &4595033786614792064
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -55,14 +55,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f0a36b72497d6af4190a5643233e908f, type: 3}
   allSpritesSymptoms: []
   moneyValue: 45
-  lore: 'Subject: Seeking Help for Erectile Dysfunction  Dear Doctor,  I hope this
-    email finds you well. My name is David Smith, and I''m writing to you about a
-    sensitive issue I''ve been experiencing. For some time now, I''ve been struggling
-    with erectile dysfunction, which has been causing me significant distress and
-    affecting my confidence and relationships. I''ve heard about your expertise in
-    providing remedies for such issues and was wondering if you could recommend a
-    suitable treatment plan involving both ointments and tablets. Any advice or assistance
-    you could offer would be greatly appreciated.  Warm regards, David Smith '
+  lore: "\u201CGood evening doctor, I hope you\u2019re having a wonderful day. I\u2019m
+    writing to you on behalf of my husband which\u2026 Let\u2019s just say that a
+    certain well-known blue pills starting with letter \u201CV\u201D no longer have
+    any effect on him. Do you think that you could procure something more\u2026 potent?
+    Thank you very much in advance.\u201D"
 --- !u!212 &4595033786614792064
 SpriteRenderer:
   m_ObjectHideFlags: 0

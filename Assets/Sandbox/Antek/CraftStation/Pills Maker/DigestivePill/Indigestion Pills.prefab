@@ -55,15 +55,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3a852fa719f15c64ab78b4b2270b0b04, type: 3}
   allSpritesSymptoms: []
   moneyValue: 40
-  lore: 'Subject: Requesting Assistance for Digestive Problems  Dear Doctor,  I am
-    writing to you seeking assistance with a troubling health issue I''ve been experiencing.
-    My name is Olivia Johnson, and I have been dealing with persistent digestive
-    problems for the past month. The discomfort, bloating, and irregular bowel movements
-    have been causing me considerable distress and affecting my daily life. I have
-    heard about your expertise in providing remedies for digestive issues and was
-    hoping you could recommend a suitable syrup or tablet to help alleviate my symptoms.
-    Any advice or assistance you could provide would be greatly appreciated.  Warm
-    regards, Olivia Johnson '
+  lore: "\u201CWho knew that eating a kebab from a shady stand with a questionable
+    reputation and non-existent sanitary control might bring some consequences? Could
+    you make something that might help me out by any chance? Don\u2019t get me wrong,
+    it was worth the sacrifice I\u2019ve inflicted on my digestive system, and if
+    I could, I would probably do it again. But the thing is, I have a rather important
+    meeting tomorrow...\u201D"
 --- !u!212 &4595033786614792064
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -55,16 +55,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e28fc8153182b184db1b933736484e7c, type: 3}
   allSpritesSymptoms: []
   moneyValue: 50
-  lore: 'Subject: Seeking Assistance for Amputation Recovery  Dear Doctor,  I am
-    reaching out to you for assistance with my current situation. My name is Michael
-    Wilson, and I recently underwent an amputation procedure due to complications
-    from a chronic medical condition. The loss of my limb has presented significant
-    challenges in my daily life, and I am in need of support as I adapt to this new
-    reality. I have heard about your expertise in providing assistance to individuals
-    undergoing injuries and was hoping you could recommend a healing ointment or
-    suggest resources involving ointments to help me with my recovery and rehabilitation.
-    Your assistance in this matter would be greatly appreciated.  Sincerely, Michael
-    Wilson '
+  lore: "\u201CBuying an extra-large LEGO set for my son\u2019s birthday was one
+    of the biggest mistakes I\u2019ve ever made as a mother\u2026 Our whole family
+    is currently suffering from various feet injuries due to a rather obvious reason.
+    Please tell me that you can make something to help us out! You\u2019ll be a lifesaver!\u201D"
 --- !u!54 &2338337875846987797
 Rigidbody:
   m_ObjectHideFlags: 0

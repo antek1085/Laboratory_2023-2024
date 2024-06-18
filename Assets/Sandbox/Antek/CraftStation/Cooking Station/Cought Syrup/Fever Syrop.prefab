@@ -60,14 +60,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1b914b2196080cd4ba97878d3d857b35, type: 3}
   - {fileID: 462188089, guid: 1d3b29f07f874ad45a2975f7a3c2fd9e, type: 3}
   moneyValue: 45
-  lore: 'Subject: Seeking Relief for High Fever  Dear Doctor,  I am writing to you
-    in urgent need of assistance. My name is Emily White, and I have been experiencing
-    a high fever for the past few days. Despite taking over-the-counter medications,
-    my temperature remains dangerously elevated, and I am feeling extremely unwell.
-    I have heard about your expertise in crafting remedies for various ailments and
-    was hoping you could provide some guidance or recommend a treatment to help bring
-    down my fever. Your prompt assistance would be greatly appreciated.  Warm regards,
-    Emily White '
+  lore: "\u201CI\u2019ll admit it. I intentionally tried to get sick in order to
+    avoid attending an awkward meeting at work, but it seems like I REALLY overdid
+    it\u2026 I\u2019m currently writing this message to you with my thermometer showing
+    41 degrees\u2026 I\u2019ve learned my lesson, now PLEASE help me out.\u201D"
 --- !u!54 &5052788264695176913
 Rigidbody:
   m_ObjectHideFlags: 0

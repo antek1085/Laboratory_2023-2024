@@ -60,15 +60,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1b914b2196080cd4ba97878d3d857b35, type: 3}
   - {fileID: 462188089, guid: 1d3b29f07f874ad45a2975f7a3c2fd9e, type: 3}
   moneyValue: 40
-  lore: 'Subject: Seeking Help for Chronic Insomnia  Dear Doctor,  My name is Emma
-    Wilson, and I am reaching out to you in hopes of finding relief for my chronic
-    insomnia. For the past several months, I have been unable to get a good night''s
-    sleep, which has taken a significant toll on my physical and mental well-being.
-    Despite trying various relaxation techniques and over-the-counter sleep aids,
-    I continue to struggle with falling and staying asleep. I have heard about your
-    expertise in crafting remedies for sleep disorders and was wondering if you could
-    offer any advice or suggestions to help me overcome this debilitating condition.
-    Your assistance would be greatly appreciated.  Warm regards, Emma Wilson '
+  lore: "\u201CI need your help doc\u2026 I\u2019m afraid that counting the sheep
+    no longer helps me, as a matter of fact, I\u2019ve reached a point where I\u2019m
+    holding conversations with them (it also DOES NOT help) Would you kindly give
+    me something that will straight up knock me out so I can finally get some well-
+    deserved sleep? (I don\u2019t like the taste of syrup, so I\u2019d prefer pills
+    if possible)\u201D"
 --- !u!54 &5052788264695176913
 Rigidbody:
   m_ObjectHideFlags: 0
