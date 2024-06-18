@@ -16,23 +16,23 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = score.ToString() + " / 10";
     }
 
     public void AddPoint()
     {
         score += 1;
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = score.ToString() + " / 10";
     }
     public void RemovePoint()
     {
         score -= 1;
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = score.ToString() + " / 10";
     }
 
     public void ResetPoint()
     {
         score = 0;
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = score.ToString() + " / 10";
     }
 }

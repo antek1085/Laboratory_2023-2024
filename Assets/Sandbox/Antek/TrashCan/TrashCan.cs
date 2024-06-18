@@ -48,6 +48,7 @@ public class TrashCan : MonoBehaviour
             {
                 playerInputText.enabled = false;
                 Destroy(other.gameObject);
+                Audio.Play("TrashbinEvent");
             }
         }
     }

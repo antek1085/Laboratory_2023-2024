@@ -49,7 +49,22 @@ public class Audio
             case "BellRingEvent":
                 manager.PlayBellRing();
                 break;
+            case "TrashbinEvent":
+                manager.PlayTrashbin();
+                break;
+            case "KachingEvent":
+                manager.PlayKaching();
+                break;
         }
+    }
+    public static void PauseMusic() 
+    {
+        if (manager) manager.PauseMusic(true);
+    }
+
+    public static void ResumeMusic()
+    {
+        if (manager) manager.PauseMusic(false);
     }
 }
 public class AudioManager : MonoBehaviour //Kod przypisuje siê do pustego obiektu na scenie
@@ -69,15 +84,29 @@ public class AudioManager : MonoBehaviour //Kod przypisuje siê do pustego obiekt
     [SerializeField] EventReference SyropPickUpEvent;
     [SerializeField] EventReference BalsamPickUpEvent;
     [SerializeField] EventReference BellRingEvent;
+    [SerializeField] EventReference TrashbinEvent;
+    [SerializeField] EventReference KachingEvent;
     [SerializeField] float rate; //Czêstotliwoœæ grania dŸwiêku
     [SerializeField] GameObject player; //Obiekt pe³ni¹cy rolê gracza
     [SerializeField] Movement controller; //kod odpowiadaj¹cy za poruszanie siê gracza
     [SerializeField] float FootstepRate;
     float time;
+    FMOD.Studio.EventInstance backgroundMusic;
 
     public void PlayMusic()
     {
-        RuntimeManager.PlayOneShot(MusicEvent);
+        backgroundMusic = FMODUnity.RuntimeManager.CreateInstance(MusicEvent);
+        backgroundMusic.start();
+    }
+
+    public void PauseMusic(bool pause)
+    {
+        backgroundMusic.setPaused(pause);
+    }
+
+    public void OnDestroy()
+    {
+        backgroundMusic.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 
     public void PlayPickUp()
@@ -148,6 +177,16 @@ public class AudioManager : MonoBehaviour //Kod przypisuje siê do pustego obiekt
     public void PlayBellRing()
     {
         RuntimeManager.PlayOneShotAttached(BellRingEvent, player);
+    }
+
+    public void PlayTrashbin()
+    {
+        RuntimeManager.PlayOneShotAttached(TrashbinEvent, player);
+    }
+
+    public void PlayKaching()
+    {
+        RuntimeManager.PlayOneShotAttached(KachingEvent, player);
     }
 
     private void Start()

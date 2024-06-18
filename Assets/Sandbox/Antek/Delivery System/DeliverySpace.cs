@@ -31,6 +31,7 @@ public class DeliverySpace : MonoBehaviour
                 isInTrigger = false;
                 deliveredItemID = item.GetComponent<ItemID>();
                 item = item.gameObject;
+                Audio.Play("KachingEvent");
                 StartCoroutine(Destroy());
             }
             

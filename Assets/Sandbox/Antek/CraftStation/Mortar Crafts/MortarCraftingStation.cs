@@ -70,6 +70,7 @@ public class MortarCraftingStation : MonoBehaviour
                 firstMaterial = other.GetComponent<ItemID>()._item;
                 playerInputText.enabled = false;
                 Destroy(other.gameObject);
+                Audio.Play("PlaceDownEvent");
             }
         }
 

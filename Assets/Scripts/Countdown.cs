@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Countdown : MonoBehaviour
 {
-    public float countdownTime = 5f;
+    protected const float ScoreLimit = 100f;
+    [SerializeField] public float CheckRate = 5f;
+    protected float countdownTime = ScoreLimit;
     private bool countingDown = false;
     [SerializeField] int miniGameId;
 
@@ -28,13 +30,21 @@ public class Countdown : MonoBehaviour
         while (countdownTime > 0 && countingDown)
         {
              Debug.Log("Time left: " + countdownTime.ToString("F1") + " seconds");
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSecondsRealtime(1f/CheckRate);
             countdownTime -= 1f;
+            ShowScore();
         }
+        ShowScore();
         EventCraftMortar.current.MiniGameEnd(miniGameId);
-        countdownTime = 5f;
+        countdownTime = ScoreLimit;
 
     }
 
-    
+    private void ShowScore()
+    {
+        float display = ScoreLimit - countdownTime;
+        if (display > 100) display = 100;
+        if (display < 0) display = 0;
+        UIManager2.instance.ShowScore(display);
+    }
 }

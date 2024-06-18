@@ -15,11 +15,17 @@ public class TabletController : MonoBehaviour
 
     [Header("Shop Button")]
     [SerializeField] GameObject shopButton;
+    
+    [Header("Tutorial Button")]
+    [SerializeField] GameObject tutorialButton;
 
     [Header("Start Day Button")]
     [SerializeField] GameObject startButton;
-     
-    
+
+    [Header("Close Button")]
+    [SerializeField] GameObject closeButton;
+
+
     [SerializeField] Canvas canvas;
     int whatTab;
 
@@ -52,7 +58,7 @@ public class TabletController : MonoBehaviour
                 Time.timeScale = 0;
                 isGamePaused = true;
             }
-            else if (Input.GetKeyDown(KeyCode.R) && isGamePaused == true)
+            else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Escape)) && isGamePaused == true)
             {
                 isTimeFlowing.isTimeFlowing = true;
                 isGamePaused = false;
@@ -89,6 +95,7 @@ public class TabletController : MonoBehaviour
             workButton.SetActive(true);
             plantButton.SetActive(false);
             shopButton.SetActive(false);
+            tutorialButton.SetActive(false);
         }
     }
     public void PlantButton()
@@ -99,6 +106,7 @@ public class TabletController : MonoBehaviour
             workButton.SetActive(false);
             plantButton.SetActive(true);
             shopButton.SetActive(false);
+            tutorialButton.SetActive(false);
         }
     }
     public void ShopButton()
@@ -109,7 +117,28 @@ public class TabletController : MonoBehaviour
             workButton.SetActive(false);
             plantButton.SetActive(false);
             shopButton.SetActive(true);
+            tutorialButton.SetActive(false);
         }
+    }
+
+    public void TutorialButton()
+    {
+        if (whatTab != 4)
+        {
+            whatTab = 4;
+            workButton.SetActive(false);
+            plantButton.SetActive(false);
+            shopButton.SetActive(false);
+            tutorialButton.SetActive(true);
+        }
+    }
+
+    public void CloseButton()
+    {
+        isTimeFlowing.isTimeFlowing = true;
+        isGamePaused = false;
+        Time.timeScale = 1;
+        canvas.enabled = false;
     }
 
     public void StartWorkingDay()
