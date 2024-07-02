@@ -58,7 +58,7 @@ MonoBehaviour:
   lore: "\u201CGood evening doctor, I hope you\u2019re having a wonderful day. I\u2019m
     writing to you on behalf of my husband which\u2026 Let\u2019s just say that a
     certain well-known blue pills starting with letter \u201CV\u201D no longer have
-    any effect on him. Do you think that you could procure something more\u2026 potent?
+    any effect on him. Do you think that you could procure something more\u2026 <color=red>potent</color>?
     Thank you very much in advance.\u201D"
 --- !u!212 &4595033786614792064
 SpriteRenderer:

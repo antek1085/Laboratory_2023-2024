@@ -76,6 +76,7 @@ public class AnimatorControler : MonoBehaviour
             animator.GetBool(isWalkingFront);
             animator.SetBool(isWalkingFront ,false);
         }
+
         if(Input.GetAxis("Vertical") > 0 && Input.GetAxis("Horizontal") == 0)
         {
             newRotation.x = 90;

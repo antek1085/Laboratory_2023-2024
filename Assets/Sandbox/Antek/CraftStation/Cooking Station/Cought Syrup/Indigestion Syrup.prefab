@@ -63,9 +63,9 @@ MonoBehaviour:
   lore: "\u201CWho knew that eating a kebab from a shady stand with a questionable
     reputation and non-existent sanitary control might bring some consequences? Could
     you make something that might help me out by any chance? Don\u2019t get me wrong,
-    it was worth the sacrifice I\u2019ve inflicted on my digestive system, and if
-    I could, I would probably do it again. But the thing is, I have a rather important
-    meeting tomorrow...\u201D"
+    it was worth the sacrifice I\u2019ve inflicted on my <color=red>digestive</color>
+    system, and if I could, I would probably do it again. But the thing is, I have
+    a rather important meeting tomorrow...\u201D"
 --- !u!54 &5052788264695176913
 Rigidbody:
   m_ObjectHideFlags: 0

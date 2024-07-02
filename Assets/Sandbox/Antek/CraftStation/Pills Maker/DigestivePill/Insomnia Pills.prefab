@@ -58,9 +58,9 @@ MonoBehaviour:
   lore: "\u201CI need your help doc\u2026 I\u2019m afraid that counting the sheep
     no longer helps me, as a matter of fact, I\u2019ve reached a point where I\u2019m
     holding conversations with them (it also DOES NOT help) Would you kindly give
-    me something that will straight up knock me out so I can finally get some well-
-    deserved sleep? (I don\u2019t like the taste of syrup, so I\u2019d prefer pills
-    if possible)\u201D"
+    me something that will straight up knock me out so I can finally get some well-deserved
+    <color=red>sleep</color>? (I don\u2019t like the taste of syrup, so I\u2019d
+    prefer <color=red>pills</color> if possible)\u201D"
 --- !u!212 &4595033786614792064
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -24,8 +24,9 @@ public class PlayerRotation : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
         Vector2 InputVector = new Vector2(horizontal, vertical);
 
-        if(InputVector == Vector2.zero)
-            return;
+        if(InputVector == Vector2.zero) 
+                InputVector = new Vector2(0, -1);
+
         transform.rotation = Quaternion.Euler(0,Vector2.SignedAngle(Vector2.up, InputVector),0);
     }
 }

@@ -57,8 +57,9 @@ MonoBehaviour:
   moneyValue: 50
   lore: "\u201CBuying an extra-large LEGO set for my son\u2019s birthday was one
     of the biggest mistakes I\u2019ve ever made as a mother\u2026 Our whole family
-    is currently suffering from various feet injuries due to a rather obvious reason.
-    Please tell me that you can make something to help us out! You\u2019ll be a lifesaver!\u201D"
+    is currently suffering from various feet <color=red>injuries</color> due to a
+    rather obvious reason. Please tell me that you can make something to help us
+    out! You\u2019ll be a lifesaver!\u201D"
 --- !u!54 &2338337875846987797
 Rigidbody:
   m_ObjectHideFlags: 0

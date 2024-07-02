@@ -58,10 +58,10 @@ MonoBehaviour:
   lore: "\u201CGuess what? Turns out that putting a lightbulb into your mouth and
     then pulling it out is actually impossible! (Yeah, I didn\u2019t believe it too
     until I tried it out myself!) Long story short, I\u2019ve spend an entire night
-    at ER and I\u2019m currently dealing with some intense pain throbbing across
-    my whole mouth. Although to tell you the truth, the thing that pains me the most
-    is the fact that I lost 10 bucks in that bet\u2026 Could you make me some good
-    painkillers? I\u2019ll owe you a big one.\u201D"
+    at ER and I\u2019m currently dealing with some intense <color=red>pain</color>
+    throbbing across my whole mouth. Although to tell you the truth, the thing that
+    pains me the most is the fact that I lost 10 bucks in that bet\u2026 Could you
+    make me some good <color=red>painkillers</color>? I\u2019ll owe you a big one.\u201D"
 --- !u!212 &4595033786614792064
 SpriteRenderer:
   m_ObjectHideFlags: 0
