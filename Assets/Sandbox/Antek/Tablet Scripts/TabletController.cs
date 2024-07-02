@@ -51,14 +51,14 @@ public class TabletController : MonoBehaviour
         
         if (isPlayerInRange == true)
         {
-            if (Input.GetKeyDown(KeyCode.R) && isGamePaused == false)
+            if (Input.GetKeyDown(KeyCode.E) && isGamePaused == false)
             {
                 isTimeFlowing.isTimeFlowing = false;
                 canvas.enabled = true;
                 Time.timeScale = 0;
                 isGamePaused = true;
             }
-            else if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Escape)) && isGamePaused == true)
+            else if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Escape)) && isGamePaused == true)
             {
                 isTimeFlowing.isTimeFlowing = true;
                 isGamePaused = false;

@@ -603,6 +603,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.0000024677395
       objectReference: {fileID: 0}
+    - target: {fileID: 3473907718388136662, guid: a3b2d6f987ce2794eb16acb6e1418720, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50.3
+      objectReference: {fileID: 0}
     - target: {fileID: 3507795353568126776, guid: a3b2d6f987ce2794eb16acb6e1418720, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -823,6 +827,34 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.056949124
       objectReference: {fileID: 0}
+    - target: {fileID: 7742057866605690270, guid: a3b2d6f987ce2794eb16acb6e1418720, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7742057866605690270, guid: a3b2d6f987ce2794eb16acb6e1418720, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7742057866605690270, guid: a3b2d6f987ce2794eb16acb6e1418720, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7742057866605690270, guid: a3b2d6f987ce2794eb16acb6e1418720, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7742057866605690270, guid: a3b2d6f987ce2794eb16acb6e1418720, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7742057866605690270, guid: a3b2d6f987ce2794eb16acb6e1418720, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7742057866605690270, guid: a3b2d6f987ce2794eb16acb6e1418720, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 7895428404469429033, guid: a3b2d6f987ce2794eb16acb6e1418720, type: 3}
       propertyPath: m_Size.x
       value: 1.7443067
@@ -851,6 +883,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 938824414, guid: ed6b12789f85db24aa79f632d1d67685, type: 3}
+    - target: {fileID: 8489040236437989823, guid: a3b2d6f987ce2794eb16acb6e1418720, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8572115191672206753, guid: a3b2d6f987ce2794eb16acb6e1418720, type: 3}
       propertyPath: m_Color.a
       value: 1

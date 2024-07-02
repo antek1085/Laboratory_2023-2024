@@ -19,12 +19,12 @@ public class PickUpItems : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.E))
+        if (Input.GetKeyUp(KeyCode.E) || Input.GetKeyUp(KeyCode.R))
         {
             Ray PickUpRay = new Ray(transform.position, transform.forward);
            
                     
-                    if(Physics.SphereCast(PickUpRay,0.7f, out RaycastHit hitInfo,PickUpRange,PickUpLayer))
+                    if(Physics.SphereCast(PickUpRay,0.7f, out RaycastHit hitInfo,PickUpRange,PickUpLayer) && Input.GetKeyUp(KeyCode.E))
                     {
                         if (CurrentObjectRigidbody && isInHand == false) 
                         {
@@ -57,12 +57,12 @@ public class PickUpItems : MonoBehaviour
                                         Audio.Play("PickUpEvent");
                                         break;
                                 }
-                    // CurrentObjectCollider.enabled = false;
-                    return;
+                            // CurrentObjectCollider.enabled = false;
+                            return;
                         }
                     }
 
-                    if (CurrentObjectRigidbody && isInHand)
+                    if (CurrentObjectRigidbody && isInHand && Input.GetKeyUp(KeyCode.R))
                     {
                         CurrentObjectRigidbody.isKinematic = true;
                         CurrentObjectCollider.enabled = true;
@@ -73,7 +73,7 @@ public class PickUpItems : MonoBehaviour
                         hitInfo.transform.GetComponent<SpriteRenderer>().enabled = true;
                         spriteOnUi.sprite = null;
                         Audio.Play("PlaceDownEvent"); //MJ - Nieprzetestowane
-            }
+                    }
                     
         }
         
@@ -81,9 +81,8 @@ public class PickUpItems : MonoBehaviour
         {
             CurrentObjectRigidbody.position = Hand.position;
             //CurrentObjectRigidbody.rotation = Hand.rotation;
-        }
-
-        if (CurrentObjectRigidbody == null)
+        } 
+          else       //if (CurrentObjectRigidbody == null)
         {
             spriteOnUi.sprite = null;
             isInHand = false;
