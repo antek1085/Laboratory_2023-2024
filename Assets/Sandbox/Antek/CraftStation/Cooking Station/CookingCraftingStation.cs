@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CookingCraftingStation : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class CookingCraftingStation : MonoBehaviour
     private Item firstItem;
     private Item secondItem;
     private Item thirdItem;
+
+    [SerializeField] private List<Image> imageList;
 
     [SerializeField] private ItemDBThreeIngridients recipeList;
     
@@ -35,6 +38,10 @@ public class CookingCraftingStation : MonoBehaviour
         EventCraftMortar.current.onMiniGameEnd += OnMiniGameEnd;
         spriteRenderer = GetComponent<SpriteRenderer>();
         normalItem = spriteRenderer.sprite;
+        for (int j = 0; j < imageList.Count -1; j++)
+        {
+            imageList[j].enabled = false;
+        }
     }
 
     // Update is called once per frame
@@ -49,30 +56,12 @@ public class CookingCraftingStation : MonoBehaviour
             {
                 isCrafting = true;
                 playerInputText.enabled = false;
+                for (int j = 0; j < imageList.Count; j++)
+                {
+                    imageList[j].sprite = null;
+                    imageList[j].enabled = false;
+                }
                 EventCraftMortar.current.MiniGameStart(miniGameId);
-                // for (int i = 0; i < recipeList.itemList.Count; i++) 
-                // {
-                //     Debug.Log("Loop");
-                //     firstItem = recipeList.itemList[i].FirstItem;
-                //     secondItem = recipeList.itemList[i].SecondItem;
-                //     thirdItem = recipeList.itemList[i].ThirdItem;
-                //     if (firstMaterial == firstItem || firstMaterial == secondItem || firstMaterial == thirdItem)
-                //     { 
-                //         if (secondMaterial == firstItem || secondMaterial == secondItem || secondMaterial == thirdItem)
-                //         {
-                //             if (thirdMaterial == firstItem || thirdMaterial == secondItem || thirdMaterial == thirdItem)
-                //             { 
-                //                 StartCoroutine(ItemCraft(i)); 
-                //                 break;
-                //             }
-                //         }
-                //     }
-                // }
-                //             
-                // if (firstMaterial != null && secondMaterial != null && thirdMaterial != null)
-                // { 
-                //     StartCoroutine(DungSpawn());
-                // }
             }
             
         }
@@ -126,14 +115,20 @@ public class CookingCraftingStation : MonoBehaviour
             {
                 if (firstMaterial != null && secondMaterial != null)
                 {
+                    imageList[2].enabled = true;
+                    imageList[2].sprite = other.GetComponent<ItemID>()._item.sprite;
                     thirdMaterial = other.GetComponent<ItemID>()._item;
                 }
                 else if (firstMaterial != null)
                 {
+                    imageList[1].enabled = true;
+                    imageList[1].sprite = other.GetComponent<ItemID>()._item.sprite;
                     secondMaterial = other.GetComponent<ItemID>()._item;
                 }
                 else
                 {
+                    imageList[0].enabled = true;
+                    imageList[0].sprite = other.GetComponent<ItemID>()._item.sprite;
                     firstMaterial = other.GetComponent<ItemID>()._item;
                 }
                 playerInputText.enabled = false;
@@ -143,6 +138,13 @@ public class CookingCraftingStation : MonoBehaviour
         }
         if (other.tag == "Player")
         {
+            for (int j = 0; j < imageList.Count; j++)
+            {
+                if (imageList[j].sprite != null)
+                {
+                    imageList[j].enabled = true;
+                }
+            }
             spriteRenderer.sprite = highLightItem;
         }
     }
@@ -155,6 +157,10 @@ public class CookingCraftingStation : MonoBehaviour
         }
         else
         {
+            for (int j = 0; j < imageList.Count; j++)
+            {
+                imageList[j].enabled = false;
+            }
             spriteRenderer.sprite = normalItem;
         }
     }

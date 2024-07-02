@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class DeleteMenuButton : MonoBehaviour
 {
-    static readonly string SAVE_FOLDER = Application.persistentDataPath + "Saves";
+    static readonly string SAVE_FOLDER = Application.dataPath + "Saves";
     FileInfo saveSelected;
     private Button button;
     
