@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using TMPro;
 using Image = UnityEngine.UI.Image;
 
 public class TabletController : MonoBehaviour
@@ -32,6 +33,7 @@ public class TabletController : MonoBehaviour
     public bool isPlayerInRange;
     
     [SerializeField] Sprite highLightItem;
+    [SerializeField] TextMeshProUGUI playerInputText;
     private Sprite normalItem;
     private SpriteRenderer spriteRenderer;
     private bool isGamePaused;
@@ -74,6 +76,8 @@ public class TabletController : MonoBehaviour
         {
             spriteRenderer.sprite = highLightItem;
             isPlayerInRange = true;
+            playerInputText.enabled = true;
+            playerInputText.text = "Press E to interact";
         }
         
     }
@@ -83,7 +87,8 @@ public class TabletController : MonoBehaviour
         if (other.tag == "Player")
         {
             spriteRenderer.sprite = normalItem;
-            isPlayerInRange = false; 
+            isPlayerInRange = false;
+            playerInputText.enabled = false;
         }
     }
 
