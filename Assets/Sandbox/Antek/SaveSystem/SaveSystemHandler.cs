@@ -24,6 +24,7 @@ public class SaveSystemHandler : MonoBehaviour
     [SerializeField] private SOInt SaveFileNumber;
 
     [SerializeField] private SOFloat SOmoney;
+    Scene activeScene;
 
     void OnEnable()
     {
@@ -104,12 +105,14 @@ public class SaveSystemHandler : MonoBehaviour
                 { 
                     SaveSystemEvents.current.LoadGame(saveObject.rentAmount, saveObject.dayCount,saveObject.playerValueSave);
                     itemVector = saveObject.itemVector3;
-                    for (int i = 0; i < itemVector.Count; i++)
-                    {
-                        if (saveObject.itemToSpawn[i] == null) continue;
-                        Instantiate(saveObject.itemToSpawn[i], saveObject.itemVector3[i], new Quaternion(90, 0, 0, 0));
-                    }
-                    itemVector.Clear();
+                    StartCoroutine(SaveWait());
+                    /* for (int i = 0; i < itemVector.Count; i++)
+                     {
+                         if(activeScene.name != "Weronika Sandbox 1") return;
+                         if (saveObject.itemToSpawn[i] == null) continue;
+                         Instantiate(saveObject.itemToSpawn[i], saveObject.itemVector3[i], new Quaternion(90, 0, 0, 0));
+                     }
+                     itemVector.Clear();*/
                 }
             }
         }
@@ -133,8 +136,17 @@ public class SaveSystemHandler : MonoBehaviour
 
     IEnumerator SaveWait()
     {
-        yield return new WaitForSeconds(1);
-        Save();
-        StopAllCoroutines();
+        Debug.Log("start");
+        string saveString = File.ReadAllText(SAVE_FOLDER + "/save"+ saveNumber +".txt");
+        SaveObject saveObject = JsonUtility.FromJson<SaveObject>(saveString);
+        yield return new WaitForSeconds(2);
+        Debug.Log("Post");
+        for (int i = 0; i < itemVector.Count; i++)
+        {
+            Debug.Log(i + "Test");
+            if (saveObject.itemToSpawn[i] == null) continue;
+            Instantiate(saveObject.itemToSpawn[i], saveObject.itemVector3[i], new Quaternion(90, 0, 0, 0));
+        }
+        itemVector.Clear();
     }
 }

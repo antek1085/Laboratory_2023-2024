@@ -39,8 +39,8 @@ public class DayEndSpot : MonoBehaviour
         {
             helpRadek = false;
             dayPassed++;
-            EventSystemTimeScore.current.GoingSleep(1);
             SaveSystemEvents.current.MakeItemSave();
+            EventSystemTimeScore.current.GoingSleep(1);
             if (dayPassed % rentPayDay == 0 && dayPassed!= 0)
             {
                 if (canHePayRent == false)
