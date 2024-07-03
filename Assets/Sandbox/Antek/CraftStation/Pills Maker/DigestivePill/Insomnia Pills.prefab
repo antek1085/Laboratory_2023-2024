@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b44fe2eea9f8e43962dad011868965, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _item: {fileID: 11400000, guid: c89e67749e033b24d9c56633e862dc51, type: 2}
+  _item: {fileID: 11400000, guid: a5de4451aa601f64da2f6970e8a0d8de, type: 2}
   mainItemCategory: 2
   symptoms: 03000000
   SpritesSymptoms:
