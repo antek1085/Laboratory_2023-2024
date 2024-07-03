@@ -18,47 +18,14 @@ public class ItemID : MonoBehaviour
 
      public string lore;
 
-      void Awake()
+     private void Awake()
      {
-          /*Debug.Log(name);
-          for (int i = 0; i < symptoms.Count -1; i++)
-          {
-               switch (symptoms[i])
-               {
-                    
-                    case itemSymptoms.nothing:
-                         SpritesSymptoms.Add(allSpritesSymptoms[0]);
-                         break;
-                    case itemSymptoms.cought:
-                         SpritesSymptoms.Add(allSpritesSymptoms[1]);
-                         break;
-                    case itemSymptoms.pain:
-                         SpritesSymptoms.Add(allSpritesSymptoms[2]);
-                         break;
-                    case itemSymptoms.insomnia:
-                         SpritesSymptoms.Add(allSpritesSymptoms[3]);
-                         break;
-                    case itemSymptoms.fever:
-                         SpritesSymptoms.Add(allSpritesSymptoms[4]);
-                         break;
-                    case itemSymptoms.cuts:
-                         SpritesSymptoms.Add(allSpritesSymptoms[5]);
-                         break;
-                    case itemSymptoms.indigestion:
-                         SpritesSymptoms.Add(allSpritesSymptoms[6]);
-                         break;
-                    case itemSymptoms.cold:
-                         SpritesSymptoms.Add(allSpritesSymptoms[7]);
-                         break;
-                    case itemSymptoms.impotence:
-                         SpritesSymptoms.Add(allSpritesSymptoms[8]);
-                         break;
-                    default:
-                         Debug.Log("Sprite nie podpięty");
-                         break;
-               }
-          }
-          */
+          SaveSystemEvents.current.OnMakeItemSave += OnMakeItemSave;
+     }
+
+     void OnMakeItemSave()
+     {
+          SaveSystemEvents.current.ItemSave(_item.itemToSpawn, transform.position);
      }
 }
 

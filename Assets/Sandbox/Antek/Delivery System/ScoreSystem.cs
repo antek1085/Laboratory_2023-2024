@@ -15,6 +15,8 @@ public class ScoreSystem : MonoBehaviour
     private int dayCount;
 
     [SerializeField] private int rentPayDay;
+    [SerializeField] private Transform player;
+    public Dictionary<Quaternion, Vector3> playerValues = new Dictionary<Quaternion, Vector3>();
 
 
     [Header("End of level")]
@@ -53,9 +55,11 @@ public class ScoreSystem : MonoBehaviour
 
     void OnGoingSleep(int dayPassed)
     {
-        dayCount += dayPassed;
+        dayCount += dayPassed; 
+        playerValues.Add(player.rotation,player.position);
         EventSystemTimeScore.current.EndDay(numberOfMoneyEarnedToday, rentToPay, rentPayDay);
-        SaveSystemEvents.current.SaveGame(numberOfMoney,rentToPay,dayCount);
+        SaveSystemEvents.current.SaveGame(numberOfMoney,rentToPay,dayCount,playerValues);
+        playerValues.Clear();
         if (dayCount % rentPayDay == 0)
         {
             if (rentToPay > numberOfMoney)
@@ -69,10 +73,12 @@ public class ScoreSystem : MonoBehaviour
         }
     }
 
-    void OnLoadGame(float rentAmount, int dayCount)
+    void OnLoadGame(float rentAmount, int dayCount, Dictionary<Quaternion, Vector3> playerValuesSave)
     {
         rentToPay = rentAmount;
         this.dayCount = dayCount;
+        //player.rotation = playerValues.GetEnumerator().Current.Key;
+        //player.position = playerValues.GetEnumerator().Current.Value;
     }
 
     private void Update()

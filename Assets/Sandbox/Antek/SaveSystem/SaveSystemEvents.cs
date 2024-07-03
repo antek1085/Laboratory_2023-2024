@@ -14,13 +14,13 @@ public class SaveSystemEvents : MonoBehaviour
    }
    
    
-   public event Action<float, float, int> OnSaveGame;
+   public event Action<float, float, int,Dictionary<Quaternion,Vector3>> OnSaveGame;
    
-   public void SaveGame(float moneyEarned, float rent,int dayPassed)
+   public void SaveGame(float moneyEarned, float rent,int dayPassed,Dictionary<Quaternion,Vector3> playerValueSaves)
    {
       if (OnSaveGame != null)
       {
-         OnSaveGame(moneyEarned, rent,dayPassed);
+         OnSaveGame(moneyEarned, rent,dayPassed,playerValueSaves);
       }
    }
 
@@ -35,16 +35,34 @@ public class SaveSystemEvents : MonoBehaviour
    }
 
 
-   public event Action<float, int> OnLoadGame;
+   public event Action<float, int,Dictionary<Quaternion,Vector3>> OnLoadGame;
 
-   public void LoadGame(float rentAmount, int dayCount)
+   public void LoadGame(float rentAmount, int dayCount,Dictionary<Quaternion,Vector3> playerValueSaves)
    {
       if (OnLoadGame != null)
       {
-         OnLoadGame(rentAmount, dayCount);
+         OnLoadGame(rentAmount, dayCount,playerValueSaves);
       }
    }
 
+   public event Action<GameObject, Vector3> OnItemSave;
 
+   public void ItemSave(GameObject item, Vector3 itemTransform)
+   {
+      if (OnItemSave != null)
+      {
+         OnItemSave(item,itemTransform);
+      }
+   }
+
+   public event Action OnMakeItemSave;
+
+   public void MakeItemSave()
+   {
+      if (OnMakeItemSave != null)
+      {
+         OnMakeItemSave();
+      }
+   }
 
 }
