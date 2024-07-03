@@ -64,7 +64,6 @@ public class MenuControlerScript : MonoBehaviour
             loading = Mathf.Clamp01(asyncLoad.progress / 0.9f);
             delay -= Time.deltaTime;
             slider.value = 1 - (delay / asyncLoad.progress);
-            Debug.Log(-1 - (delay / asyncLoad.progress));
             
             yield return null;
         }

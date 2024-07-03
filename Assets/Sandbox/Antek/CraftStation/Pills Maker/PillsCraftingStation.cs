@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PillsCraftingStation : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class PillsCraftingStation : MonoBehaviour
     [SerializeField] private ItemsDBTwoIngridients recipeList;
     
     [SerializeField] Transform playerTransform;
+    [SerializeField] private List<Image> imageList;
     private float distance;
     private bool isCrafting = false;
 
@@ -32,6 +34,10 @@ public class PillsCraftingStation : MonoBehaviour
         EventCraftMortar.current.onMiniGameEnd += OnMiniGameEnd;
         spriteRenderer = GetComponent<SpriteRenderer>();
         normalItem = spriteRenderer.sprite;
+        for (int j = 0; j < imageList.Count -1; j++)
+        {
+            imageList[j].enabled = false;
+        }
     }
     
     void Update()
@@ -44,6 +50,11 @@ public class PillsCraftingStation : MonoBehaviour
             playerInputText.text = "Click Space to start crafting";
             if (Input.GetKey(KeyCode.Space) && distance < 6)
             {
+                for (int j = 0; j < imageList.Count -1; j++)
+                {
+                    imageList[j].sprite = null;
+                    imageList[j].enabled = false;
+                }
                 isCrafting = true;
                 playerInputText.enabled = false;
                 EventCraftMortar.current.MiniGameStart(miniGameId);
@@ -73,10 +84,14 @@ public class PillsCraftingStation : MonoBehaviour
                 Debug.Log("1");
                 if (firstMaterial != null)
               {
+                  imageList[1].enabled = true;
+                  imageList[1].sprite = other.GetComponent<ItemID>()._item.sprite;
                   secondMaterial = other.GetComponent<ItemID>()._item;
               }
               else
               {
+                  imageList[0].enabled = true;
+                  imageList[0].sprite = other.GetComponent<ItemID>()._item.sprite;
                   firstMaterial = other.GetComponent<ItemID>()._item;
               }
               playerInputText.enabled = false;
@@ -86,6 +101,13 @@ public class PillsCraftingStation : MonoBehaviour
         }
         if (other.tag == "Player")
         {
+            for (int j = 0; j < imageList.Count; j++)
+            {
+                if (imageList[j].sprite != null)
+                {
+                    imageList[j].enabled = true;
+                }
+            }
             spriteRenderer.sprite = highLightItem;
         }
     }
@@ -98,6 +120,10 @@ public class PillsCraftingStation : MonoBehaviour
         }
         else
         {
+            for (int j = 0; j < imageList.Count; j++)
+            {
+                imageList[j].enabled = false;
+            }
             spriteRenderer.sprite = normalItem;
         }
     }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MortarCraftingStation : MonoBehaviour
 { 
@@ -14,6 +15,7 @@ public class MortarCraftingStation : MonoBehaviour
     private Item firstItem;
     [SerializeField] ItemsDBOneIngridient recipeList;
     [SerializeField] Transform playerTransform;
+    [SerializeField] private List<Image> imageList;
     private float distance;
     private bool isCrafting = false;
     
@@ -28,6 +30,10 @@ public class MortarCraftingStation : MonoBehaviour
         EventCraftMortar.current.onMiniGameEnd += OnMiniGameEnd;
         spriteRenderer = GetComponent<SpriteRenderer>();
         normalItem = spriteRenderer.sprite;
+        for (int j = 0; j < imageList.Count -1; j++)
+        {
+            imageList[j].enabled = false;
+        }
     }
     
     void Update()
@@ -40,6 +46,8 @@ public class MortarCraftingStation : MonoBehaviour
             playerInputText.text = "Click Space to start crafting";
             if (Input.GetKey(KeyCode.Space) && distance < 5)
             {
+                imageList[0].sprite = null;
+                imageList[0].enabled = false;
                 EventCraftMortar.current.MiniGameStart(miniGameId);
                 isCrafting = true;
                 playerInputText.enabled = false;
@@ -68,6 +76,8 @@ public class MortarCraftingStation : MonoBehaviour
             if (Input.GetKey(KeyCode.R) && distance < 5)
             {
                 firstMaterial = other.GetComponent<ItemID>()._item;
+                imageList[0].enabled = true;
+                imageList[0].sprite = other.GetComponent<ItemID>()._item.sprite;
                 playerInputText.enabled = false;
                 Destroy(other.gameObject);
                 Audio.Play("PlaceDownEvent");
@@ -76,6 +86,7 @@ public class MortarCraftingStation : MonoBehaviour
 
         if (other.tag == "Player")
         {
+            imageList[0].enabled = true;
             spriteRenderer.sprite = highLightItem;
         }
     }
@@ -88,6 +99,7 @@ public class MortarCraftingStation : MonoBehaviour
         }
         else
         {
+            imageList[0].enabled = false;
             spriteRenderer.sprite = normalItem;
         }
     }

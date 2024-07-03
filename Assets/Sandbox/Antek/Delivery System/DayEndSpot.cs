@@ -24,12 +24,37 @@ public class DayEndSpot : MonoBehaviour
     static readonly string SAVE_FOLDER = Application.dataPath + "/Saves/";
 
     bool canHePayRent;
+    private bool helpRadek = false;
     void Start()
     {
         EventSystemTimeScore.current.onEndDay += OnEndDay;
         EventSystemTimeScore.current.onPayRent += OnPayRent;
         thisScene = SceneManager.GetActiveScene();
     }
+
+
+    private void Update()
+    {
+        if (helpRadek == true)
+        {
+            helpRadek = false;
+            dayPassed++;
+            SaveSystemEvents.current.MakeItemSave();
+            EventSystemTimeScore.current.GoingSleep(1);
+            if (dayPassed % rentPayDay == 0 && dayPassed!= 0)
+            {
+                if (canHePayRent == false)
+                {
+                    endingScreenLoosing.SetActive(true);
+                }
+            }
+            else
+            {
+                endingScreenContinuing.SetActive(true);
+            }
+        }
+    }
+
     void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
@@ -37,19 +62,7 @@ public class DayEndSpot : MonoBehaviour
             interractionText.enabled = true;
             if (Input.GetKeyUp(KeyCode.R))
             {
-                dayPassed++;
-                EventSystemTimeScore.current.GoingSleep(1);
-                if (dayPassed % rentPayDay == 0)
-                {
-                    if (canHePayRent == false)
-                    {
-                        endingScreenLoosing.SetActive(true);
-                    }
-                }
-                else
-                {
-                    endingScreenContinuing.SetActive(true);
-                }
+                helpRadek = true;
             }
         }
     }
