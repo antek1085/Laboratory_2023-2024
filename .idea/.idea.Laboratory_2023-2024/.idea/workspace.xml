@@ -68,7 +68,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Lab\Projekt Studia 2023_2024 Apteka.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Build_Apteka\Projekt Studia 2023_2024 Apteka.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Antek\Desktop\Lab" />
       <option name="PASS_PARENT_ENVS" value="1" />

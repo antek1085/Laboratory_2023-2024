@@ -27,6 +27,11 @@ public class ItemID : MonoBehaviour
      {
           SaveSystemEvents.current.ItemSave(_item.itemToSpawn, transform.position);
      }
+
+     void OnDestroy()
+     {
+          SaveSystemEvents.current.OnMakeItemSave -= OnMakeItemSave;
+     }
 }
 
      public enum itemCategory

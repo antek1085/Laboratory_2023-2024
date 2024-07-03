@@ -26,15 +26,11 @@ public class DeliverySpace : MonoBehaviour
     {
         if (isInTrigger == true)
         {
-            if (Input.GetKey(KeyCode.R))
-            {
-                isInTrigger = false;
-                deliveredItemID = item.GetComponent<ItemID>();
-                item = item.gameObject;
-                Audio.Play("KachingEvent");
-                StartCoroutine(Destroy());
-            }
-            
+            isInTrigger = false;
+            deliveredItemID = item.GetComponent<ItemID>();
+            item = item.gameObject;
+            Audio.Play("KachingEvent");
+            StartCoroutine(Destroy());
         }
     }
 
@@ -44,7 +40,10 @@ public class DeliverySpace : MonoBehaviour
         {
             item = other.gameObject;
             text.enabled = true;
-            isInTrigger = true;
+            if (Input.GetKey(KeyCode.R))
+            {
+                isInTrigger = true;
+            }
         }
     }
 
