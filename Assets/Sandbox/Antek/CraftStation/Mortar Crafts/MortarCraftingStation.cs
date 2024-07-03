@@ -82,6 +82,12 @@ public class MortarCraftingStation : MonoBehaviour
                 Destroy(other.gameObject);
                 Audio.Play("PlaceDownEvent");
             }
+            if (Input.GetKey(KeyCode.F) && distance < 5)
+            {
+                imageList[0].enabled = false;
+                imageList[0].sprite = null;
+                firstItem = null;
+            }
         }
 
         if (other.tag == "Player")
