@@ -98,6 +98,16 @@ public class PillsCraftingStation : MonoBehaviour
               Destroy(other.gameObject);
               Audio.Play("PlaceDownEvent");
             }
+            if (Input.GetKey(KeyCode.F) && distance < 5)
+            {
+                for (int i = 0; i < imageList.Count -1; i++)
+                {
+                    imageList[i].enabled = false;
+                    imageList[i].sprite = null;
+                }
+                firstMaterial = null;
+                secondMaterial = null;
+            }
         }
         if (other.tag == "Player")
         {
